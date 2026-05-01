@@ -30,9 +30,25 @@ export default function WaitlistForm({ id = "waitlist-form" }: { id?: string }) 
 
     setStatus("loading");
 
-    // TODO: replace with Supabase / email capture API call
-    await new Promise((r) => setTimeout(r, 800));
-    setStatus("success");
+    try {
+      const res = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: email.trim() }),
+      });
+
+      const data: { success: boolean; error?: string } = await res.json();
+
+      if (data.success) {
+        setStatus("success");
+      } else {
+        setErrorMessage(data.error ?? "Something went wrong. Please try again.");
+        setStatus("error");
+      }
+    } catch {
+      setErrorMessage("Something went wrong. Please try again.");
+      setStatus("error");
+    }
   }
 
   if (status === "success") {

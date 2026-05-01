@@ -76,12 +76,11 @@ export default function Home() {
       <section className="bg-surface">
         <div className="mx-auto w-full max-w-7xl px-6 py-[80px] lg:px-12 lg:py-[120px]">
 
-          {/* Section label with orange accent line */}
           <div className="mb-16 lg:mb-20">
             <div aria-hidden="true" className="mb-3 h-[2px] w-10 bg-orange" />
-            <p className="font-display text-xs font-semibold uppercase tracking-[0.18em] text-text-muted">
-              Why this exists
-            </p>
+            <h2 className="font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
+              Why this exists.
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 items-stretch gap-8 lg:grid-cols-2 lg:gap-10">
@@ -365,33 +364,30 @@ export default function Home() {
       {/* ── Section 5: Founder ── */}
       <section>
         <div className="mx-auto w-full max-w-7xl px-6 py-[80px] lg:px-12 lg:py-[120px]">
+          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
 
-          <div className="mb-12 lg:mb-16">
-            <div aria-hidden="true" className="mb-3 h-[2px] w-10 bg-orange" />
-            <h2 className="font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
-              Why I&apos;m building this.
-            </h2>
-          </div>
+            {/* Image — first in DOM (top on mobile), pushed to right column on desktop */}
+            <div
+              className="relative w-full overflow-hidden rounded-2xl border border-border lg:order-last"
+              style={{ aspectRatio: "1035/691", maxHeight: "560px" }}
+            >
+              <Image
+                src="/founder.jpg"
+                alt="Founder of FirePrep, an active firefighter"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover"
+              />
+            </div>
 
-          <div className="mx-auto max-w-4xl">
-            <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-14">
-
-              {/* Photo placeholder — left column, desktop only */}
-              <div className="hidden lg:block lg:shrink-0">
-                <div
-                  className="w-[280px] overflow-hidden rounded-2xl border border-border"
-                  style={{
-                    height: "360px",
-                    background:
-                      "linear-gradient(160deg, #1a1918 0%, #0f0f0f 50%, #1a0d00 85%, #090400 100%)",
-                  }}
-                />
-                <p className="mt-3 text-sm text-text-secondary">
-                  Active firefighter. Building FirePrep.
-                </p>
+            {/* Right — Header + body paragraphs */}
+            <div>
+              <div className="mb-8">
+                <div aria-hidden="true" className="mb-3 h-[2px] w-10 bg-orange" />
+                <h2 className="font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
+                  Why I&apos;m building this.
+                </h2>
               </div>
-
-              {/* Body paragraphs */}
               <div className="space-y-6 text-lg leading-relaxed text-text-secondary">
                 <p>
                   I&apos;m an active firefighter. Before I got hired, I went
@@ -409,11 +405,11 @@ export default function Home() {
                   practice.
                 </p>
                 <p>
-                  I&apos;m not an oral board evaluator. I haven&apos;t sat on
-                  a panel. What I have is the candidate&apos;s perspective —
-                  across many processes, across departments, and the kind of
-                  pattern recognition you only get from going through it more
-                  than once.
+                  What I have is the candidate&apos;s perspective — across many
+                  processes, across departments, and the kind of pattern
+                  recognition you only get from going through it more than once.
+                  I built FirePrep to share that with the next person walking
+                  in.
                 </p>
                 <p>
                   This is being built openly. Waitlist members get input on
@@ -421,10 +417,9 @@ export default function Home() {
                   prep tool I wish I&apos;d had on attempt one.
                 </p>
               </div>
-
             </div>
-          </div>
 
+          </div>
         </div>
       </section>
 
@@ -440,46 +435,71 @@ export default function Home() {
           </div>
 
           <div className="mx-auto max-w-4xl">
-            <div className="divide-y divide-border">
 
-              <div className="pb-10 lg:pb-12">
-                <p className="mb-3 font-display text-sm tracking-widest text-orange">01</p>
-                <h3 className="mb-4 font-display text-2xl font-bold leading-snug text-text-primary lg:text-3xl">
-                  Practice realistic oral board questions.
-                </h3>
-                <p className="text-base leading-relaxed text-text-secondary">
-                  5–10 questions per session, drawn from a bank built around
-                  standard fire service competencies. Speak your answer out
-                  loud — recorded, transcribed, ready to grade.
-                </p>
-              </div>
-
-              <div className="py-10 lg:py-12">
-                <p className="mb-3 font-display text-sm tracking-widest text-orange">02</p>
-                <h3 className="mb-4 font-display text-2xl font-bold leading-snug text-text-primary lg:text-3xl">
-                  Get scored against a real rubric.
-                </h3>
-                <p className="text-base leading-relaxed text-text-secondary">
-                  Every answer evaluated against 4–6 criteria — the same
-                  categories panels use. See exactly which criteria you hit,
-                  which you missed, and what to fix on the next attempt.
-                </p>
-              </div>
-
-              <div className="pt-10 lg:pt-12">
-                <p className="mb-3 font-display text-sm tracking-widest text-orange">03</p>
-                <h3 className="mb-4 font-display text-2xl font-bold leading-snug text-text-primary lg:text-3xl">
-                  Track your weak spots over time.
-                </h3>
-                <p className="text-base leading-relaxed text-text-secondary">
-                  Competency scores roll up across sessions. See where
-                  you&apos;re consistently strong and where you keep losing
-                  points. Walk into the real panel knowing what you&apos;ve
-                  fixed.
-                </p>
-              </div>
-
+            {/* Point 01 — no top divider */}
+            <div className="pb-10 lg:pb-12">
+              <p className="mb-3 font-mono text-xs tracking-widest text-orange">
+                01 — INPUT
+              </p>
+              <h3 className="mb-4 font-display text-2xl font-bold leading-snug text-text-primary lg:text-3xl">
+                Real questions, real timing.
+              </h3>
+              <p className="text-base leading-relaxed text-text-secondary lg:text-lg">
+                Practice questions drawn from the kinds of behavioral and
+                situational scenarios oral boards actually ask. Speak your
+                answer out loud, on the clock, the way you&apos;ll have to in
+                front of the panel.
+              </p>
             </div>
+
+            {/* Point 02 */}
+            <div className="border-t border-border-subtle py-10 lg:py-12">
+              <p className="mb-3 font-mono text-xs tracking-widest text-orange">
+                02 — EVALUATION
+              </p>
+              <h3 className="mb-4 font-display text-2xl font-bold leading-snug text-text-primary lg:text-3xl">
+                Scored against fire-service competencies.
+              </h3>
+              <p className="text-base leading-relaxed text-text-secondary lg:text-lg">
+                Every answer evaluated against the same competency areas oral
+                boards score: composure under pressure, decision-making,
+                communication, integrity, and fire service knowledge. Built on
+                structured interview research methodology and informed by NFPA
+                1001&apos;s professional qualification framework.
+              </p>
+            </div>
+
+            {/* Point 03 */}
+            <div className="border-t border-border-subtle py-10 lg:py-12">
+              <p className="mb-3 font-mono text-xs tracking-widest text-orange">
+                03 — OUTPUT
+              </p>
+              <h3 className="mb-4 font-display text-2xl font-bold leading-snug text-text-primary lg:text-3xl">
+                AI grading, not generic feedback.
+              </h3>
+              <p className="text-base leading-relaxed text-text-secondary lg:text-lg">
+                AI evaluates each criterion individually. See exactly which
+                criteria you hit, which you missed, and what specifically to fix
+                on the next attempt — not vague &ldquo;good job&rdquo; feedback.
+              </p>
+            </div>
+
+            {/* Point 04 */}
+            <div className="border-t border-border-subtle pt-10 lg:pt-12">
+              <p className="mb-3 font-mono text-xs tracking-widest text-orange">
+                04 — ANALYSIS
+              </p>
+              <h3 className="mb-4 font-display text-2xl font-bold leading-snug text-text-primary lg:text-3xl">
+                Trends that show your prep working.
+              </h3>
+              <p className="text-base leading-relaxed text-text-secondary lg:text-lg">
+                Competency scores roll up across all your sessions. See where
+                you&apos;re consistently strong, where you keep losing points,
+                and walk into the real panel knowing exactly what you&apos;ve
+                fixed.
+              </p>
+            </div>
+
           </div>
 
         </div>

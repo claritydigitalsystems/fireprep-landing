@@ -37,7 +37,7 @@
 
   /* Fonts */
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Mono", "Roboto Mono", Consolas, "Courier New", monospace;
   --font-display: var(--font-oswald);
   --font-body: var(--font-inter-tight);
 
