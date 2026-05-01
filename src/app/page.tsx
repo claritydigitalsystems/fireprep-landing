@@ -1,13 +1,10 @@
 import Image from "next/image";
 import { Ban, ChevronDown, ChevronRight, Gauge, Hourglass, Mic, Target, Timer, TrendingUp } from "lucide-react";
-import Navbar from "./components/Navbar";
 import WaitlistForm from "./components/WaitlistForm";
 
 export default function Home() {
   return (
-    <>
     <main className="flex flex-col">
-      <Navbar />
 
       {/* ── Section 1: Hero ── */}
       <section className="relative">
@@ -528,38 +525,5 @@ export default function Home() {
       </section>
 
     </main>
-
-    {/* ── Footer ── */}
-    <footer className="border-t border-border">
-      <div className="mx-auto w-full max-w-7xl px-6 py-8 lg:px-12 lg:py-10">
-        <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
-
-          {/* Left — wordmark + tagline */}
-          <div>
-            <span className="font-display text-lg font-bold tracking-wider text-text-primary">
-              <span className="text-orange">FIRE</span>PREP
-            </span>
-            <p className="mt-1 text-xs text-text-secondary">
-              Built by an active firefighter.
-            </p>
-          </div>
-
-          {/* Right — links + copyright */}
-          <div className="flex flex-col gap-2 sm:items-end">
-            <p className="text-xs text-text-muted">
-              <a href="/privacy" className="transition-colors hover:text-text-secondary">Privacy</a>
-              {" · "}
-              <a href="/terms" className="transition-colors hover:text-text-secondary">Terms</a>
-              {" · "}
-              <a href="mailto:hello@fireprep.com" className="transition-colors hover:text-text-secondary">Contact</a>
-            </p>
-            <p className="text-xs text-text-muted">© 2026 FirePrep</p>
-          </div>
-
-        </div>
-      </div>
-    </footer>
-
-    </>
   );
 }
