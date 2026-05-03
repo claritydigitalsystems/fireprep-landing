@@ -266,9 +266,9 @@ export default function Home() {
           backgroundPosition: "center",
         }}
       >
-        {/* Video — desktop only; hidden on mobile to save bandwidth */}
+        {/* Video — shown on all screen sizes */}
         <video
-          className="absolute inset-0 hidden h-full w-full object-cover md:block"
+          className="absolute inset-0 h-full w-full object-cover"
           autoPlay
           muted
           loop
