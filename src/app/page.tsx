@@ -13,18 +13,18 @@ export default function Home() {
 
             {/* Left — copy */}
             <div>
-              <p className="mb-5 font-display text-xs font-semibold uppercase tracking-[0.18em] text-orange">
+              <p className="mb-5 font-display text-sm font-semibold uppercase tracking-[0.18em] text-orange">
                 Join the Waitlist · Launching Soon
               </p>
 
-              <h1 className="mb-6 font-display text-5xl font-bold leading-tight tracking-tight text-text-primary lg:text-6xl">
-                Train for the oral board the way panels grade it.
+              <h1 className="mb-6 font-display text-5xl font-bold leading-tight tracking-tight text-text-primary whitespace-nowrap md:text-6xl lg:text-7xl">
+                Land your career.
               </h1>
 
               <p className="mb-6 text-lg leading-relaxed text-text-secondary lg:text-xl">
-                Built by active firefighters for entry-level candidates.
-                AI-graded practice sessions mapped to the same competency
-                frameworks oral boards use.
+                Oral board practice graded against real fire-service competency
+                frameworks. See exactly which criteria you&apos;re hitting,
+                which you&apos;re missing, and what to fix before the panel.
               </p>
 
               <div className="mb-8">
