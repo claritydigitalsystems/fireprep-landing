@@ -185,16 +185,16 @@ export default function Home() {
             <div className="flex flex-col lg:flex-row lg:items-stretch">
 
               {/* Node 01 — Practice */}
-              <div className="flex-1 rounded-2xl border border-border bg-surface-raised p-6 lg:p-8">
+              <div className="flex-1 rounded-2xl border border-border bg-gradient-to-br from-zinc-900 to-orange-950/10 p-6 lg:p-8">
                 <div className="mb-4 flex items-center justify-between">
-                  <p className="font-display text-xl tracking-widest text-orange">01</p>
+                  <p className="font-display text-xl tracking-widest text-orange-400">01</p>
                   <Mic className="h-6 w-6 text-orange" aria-hidden="true" />
                 </div>
                 <h3 className="mb-3 font-display text-2xl font-bold uppercase text-text-primary lg:text-3xl">
                   Practice
                 </h3>
                 <p className="text-base leading-relaxed text-text-secondary">
-                  Answer real fire service questions. Spoken aloud — recorded,
+                  Spoken-aloud answers, on the clock. Real questions, recorded,
                   transcribed, and ready to grade.
                 </p>
               </div>
@@ -204,22 +204,22 @@ export default function Home() {
                 aria-hidden="true"
                 className="flex shrink-0 items-center justify-center py-5 text-orange opacity-50 lg:px-5 lg:py-0"
               >
-                <ChevronRight className="hidden h-7 w-7 lg:block" />
-                <ChevronDown className="h-7 w-7 lg:hidden" />
+                <ChevronRight className="hidden h-12 w-12 lg:block" />
+                <ChevronDown className="h-12 w-12 lg:hidden" />
               </div>
 
               {/* Node 02 — Score */}
-              <div className="flex-1 rounded-2xl border border-border bg-surface-raised p-6 lg:p-8">
+              <div className="flex-1 rounded-2xl border border-border bg-gradient-to-br from-zinc-900 to-orange-950/20 p-6 lg:p-8">
                 <div className="mb-4 flex items-center justify-between">
-                  <p className="font-display text-sm tracking-widest text-orange">02</p>
+                  <p className="font-display text-xl tracking-widest text-orange-400">02</p>
                   <Target className="h-6 w-6 text-orange" aria-hidden="true" />
                 </div>
                 <h3 className="mb-3 font-display text-2xl font-bold uppercase text-text-primary lg:text-3xl">
                   Score
                 </h3>
                 <p className="text-base leading-relaxed text-text-secondary">
-                  Every answer evaluated on 4–6 criteria. See what you hit,
-                  what you missed, what to fix.
+                  Every answer broken down by criterion. See exactly which parts
+                  you hit, which you missed, and what to fix on the next one.
                 </p>
               </div>
 
@@ -228,22 +228,22 @@ export default function Home() {
                 aria-hidden="true"
                 className="flex shrink-0 items-center justify-center py-5 text-orange opacity-50 lg:px-5 lg:py-0"
               >
-                <ChevronRight className="hidden h-7 w-7 lg:block" />
-                <ChevronDown className="h-7 w-7 lg:hidden" />
+                <ChevronRight className="hidden h-12 w-12 lg:block" />
+                <ChevronDown className="h-12 w-12 lg:hidden" />
               </div>
 
               {/* Node 03 — Track */}
-              <div className="flex-1 rounded-2xl border border-border bg-surface-raised p-6 lg:p-8">
+              <div className="flex-1 rounded-2xl border border-border bg-gradient-to-br from-zinc-900 to-orange-950/40 p-6 lg:p-8">
                 <div className="mb-4 flex items-center justify-between">
-                  <p className="font-display text-sm tracking-widest text-orange">03</p>
+                  <p className="font-display text-xl tracking-widest text-orange-400">03</p>
                   <TrendingUp className="h-6 w-6 text-orange" aria-hidden="true" />
                 </div>
                 <h3 className="mb-3 font-display text-2xl font-bold uppercase text-text-primary lg:text-3xl">
                   Track
                 </h3>
                 <p className="text-base leading-relaxed text-text-secondary">
-                  Competency scores roll up across sessions. Know where you&apos;re
-                  losing points before the panel.
+                  Competency averages across every session. Know where you stand
+                  before the panel does.
                 </p>
               </div>
 
@@ -291,10 +291,15 @@ export default function Home() {
 
         {/* Overlay text */}
         <div className="relative z-20 flex h-full items-center justify-center px-6">
-          <h2 className="max-w-4xl text-center font-display text-4xl font-bold uppercase tracking-tight text-text-primary md:text-6xl">
-            Walk in knowing what they&apos;re{" "}
-            <span className="text-orange">scoring.</span>
-          </h2>
+          <div className="max-w-4xl text-center">
+            <h2 className="mb-3 font-display text-4xl font-bold uppercase tracking-tight text-text-primary md:text-6xl">
+              No more guessing.
+            </h2>
+            <h2 className="font-display text-4xl font-bold uppercase leading-snug tracking-tight text-text-primary md:text-6xl">
+              Walk in knowing exactly what panels are{" "}
+              <span className="text-orange">scoring.</span>
+            </h2>
+          </div>
         </div>
       </section>
 
