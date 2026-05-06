@@ -28,14 +28,32 @@ export default function Navbar() {
           <span className="text-orange">FIRE</span>PREP
         </button>
 
-        {/* Join Waitlist — scrolls to hero form */}
-        <button
-          type="button"
-          onClick={scrollToWaitlist}
-          className="cursor-pointer rounded-lg bg-orange px-5 py-2 text-sm font-semibold text-zinc-950 transition-colors hover:bg-orange-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-        >
-          Join Waitlist
-        </button>
+        {/* Right-side group: nav links + CTA */}
+        <div className="flex items-center gap-8">
+          <div className="hidden items-center gap-8 md:flex">
+            <a
+              href="#methodology"
+              className="text-sm text-zinc-300 transition-colors hover:text-white"
+            >
+              How it works
+            </a>
+            <a
+              href="#about"
+              className="text-sm text-zinc-300 transition-colors hover:text-white"
+            >
+              About
+            </a>
+          </div>
+
+          {/* Join Waitlist — scrolls to hero form */}
+          <button
+            type="button"
+            onClick={scrollToWaitlist}
+            className="cursor-pointer rounded-lg bg-orange px-5 py-2 text-sm font-semibold text-zinc-950 transition-colors hover:bg-orange-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+          >
+            Join Waitlist
+          </button>
+        </div>
 
       </div>
     </nav>

@@ -40,7 +40,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${oswald.variable} ${interTight.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${oswald.variable} ${interTight.variable} h-full scroll-smooth antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <Navbar />
