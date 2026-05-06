@@ -311,13 +311,12 @@ export default function Home() {
           <div className="mb-14 lg:mb-16">
             <div aria-hidden="true" className="mb-3 h-[2px] w-10 bg-orange" />
             <h2 className="mb-5 font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
-              Built for entry-level and lateral candidates — whether it&apos;s
-              your first attempt or your fifth.
+              Built for entry-level and lateral candidates — first attempt or
+              fifth.
             </h2>
             <p className="max-w-3xl text-xl leading-relaxed text-text-secondary">
-              Generic prep books are static. FirePrep questions are curated,
-              regularly updated, and randomized — closer to how real panels
-              actually run.
+              Generic prep books are static. Our questions are curated,
+              updated, and randomized — closer to how real panels actually run.
             </p>
           </div>
 
@@ -328,8 +327,8 @@ export default function Home() {
             <div className="rounded-2xl border border-border border-t-[3px] border-t-orange bg-surface-raised p-8">
               <Ban className="mb-6 h-9 w-9 text-orange" aria-hidden="true" />
               <p className="font-display text-lg font-semibold leading-snug text-text-primary lg:text-xl">
-                Generic interview prep doesn&apos;t translate to the fire
-                service.
+                Generic interview prep doesn&apos;t translate to fire service
+                hiring. Different criteria, different rhythm, different stakes.
               </p>
             </div>
 
@@ -337,8 +336,8 @@ export default function Home() {
             <div className="rounded-2xl border border-border border-t-[3px] border-t-orange bg-surface-raised p-8">
               <Timer className="mb-6 h-9 w-9 text-orange" aria-hidden="true" />
               <p className="font-display text-lg font-semibold leading-snug text-text-primary lg:text-xl">
-                Reading questions in your head isn&apos;t practice. Answering
-                them out loud, on the clock, while being scored is.
+                Reading questions in your head isn&apos;t practice. Out loud,
+                on the clock, while being scored — that&apos;s practice.
               </p>
             </div>
 
@@ -346,9 +345,8 @@ export default function Home() {
             <div className="rounded-2xl border border-border border-t-[3px] border-t-orange bg-surface-raised p-8">
               <Gauge className="mb-6 h-9 w-9 text-orange" aria-hidden="true" />
               <p className="font-display text-lg font-semibold leading-snug text-text-primary lg:text-xl">
-                You don&apos;t just need to answer well. You need to show,
-                under pressure and time limits, why they need you on this
-                department.
+                A good answer in your living room isn&apos;t a good answer in
+                front of a panel. Pressure changes everything.
               </p>
             </div>
 
@@ -356,8 +354,8 @@ export default function Home() {
             <div className="rounded-2xl border border-border border-t-[3px] border-t-orange bg-surface-raised p-8">
               <Hourglass className="mb-6 h-9 w-9 text-orange" aria-hidden="true" />
               <p className="font-display text-lg font-semibold leading-snug text-text-primary lg:text-xl">
-                Falling short isn&apos;t a hiccup — it&apos;s potentially a
-                career delayed by years. Make the next attempt the last.
+                Most candidates don&apos;t fail because they aren&apos;t
+                qualified. They fail because they don&apos;t know what to fix.
               </p>
             </div>
 
