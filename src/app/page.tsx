@@ -87,32 +87,33 @@ export default function Home() {
               className="rounded-2xl border border-border bg-background p-10 lg:p-12"
               style={{ borderLeft: "2px solid #444444" }}
             >
-              <h2 className="mb-8 font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
+              <h2 className="font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
                 The prep gap
               </h2>
+              <div className="h-[3px] w-12 bg-zinc-700 mt-2 mb-8" />
               <div className="space-y-8">
                 <div>
-                  <p className="mb-1 font-display text-sm tracking-widest text-text-muted">01</p>
+                  <p className="mb-1 font-display text-lg tracking-widest text-text-muted">01</p>
                   <p className="mb-2 font-display text-lg font-bold leading-snug text-text-primary lg:text-xl">
                     Most candidates rehearse blind.
                   </p>
                   <p className="text-base leading-relaxed text-text-secondary">
-                    Reading common-question lists online and rehearsing in your
-                    head doesn&apos;t prepare you for the panel.
+                    Reading question lists and rehearsing in your head doesn&apos;t
+                    prepare you for the panel.
                   </p>
                 </div>
                 <div>
-                  <p className="mb-1 font-display text-sm tracking-widest text-text-muted">02</p>
+                  <p className="mb-1 font-display text-lg tracking-widest text-text-muted">02</p>
                   <p className="mb-2 font-display text-lg font-bold leading-snug text-text-primary lg:text-xl">
-                    Panels score communication, not experience.
+                    Panels score against criteria you&apos;ve never seen.
                   </p>
                   <p className="text-base leading-relaxed text-text-secondary">
-                    They evaluate against specific criteria, weighted in specific
-                    ways, that almost no candidate has actually seen.
+                    Specific competencies, weighted in specific ways, that almost
+                    no candidate has reviewed.
                   </p>
                 </div>
                 <div>
-                  <p className="mb-1 font-display text-sm tracking-widest text-text-muted">03</p>
+                  <p className="mb-1 font-display text-lg tracking-widest text-text-muted">03</p>
                   <p className="mb-2 font-display text-lg font-bold leading-snug text-text-primary lg:text-xl">
                     &ldquo;Prepared&rdquo; and &ldquo;prepared correctly&rdquo; are different things.
                   </p>
@@ -124,38 +125,40 @@ export default function Home() {
             </div>
 
             {/* Right — What FirePrep does: activated, thicker orange border, subtle glow */}
-            <div className="rounded-2xl border border-border border-l-[3px] border-l-orange bg-surface-raised p-10 lg:p-12 shadow-[0_0_28px_rgba(249,115,22,0.07)]">
-              <h2 className="mb-8 font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
+            <div className="rounded-2xl border border-border border-l-[3px] border-l-orange bg-surface-raised p-10 lg:p-12 shadow-[0_0_28px_rgba(249,115,22,0.07)] bg-orange-950/30">
+              <h2 className="font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
                 What FirePrep does
               </h2>
+              <div className="h-[3px] w-12 bg-orange-500 mt-2 mb-8" />
               <div className="space-y-8">
                 <div>
-                  <p className="mb-1 font-display text-xl tracking-widest text-orange">01</p>
+                  <p className="mb-1 font-display text-lg tracking-widest text-orange-400">01</p>
                   <p className="mb-2 font-display text-lg font-bold leading-snug text-text-primary lg:text-xl">
-                    Practice the same competencies panels evaluate.
+                    Practice out loud, on the clock.
                   </p>
                   <p className="text-base leading-relaxed text-text-secondary">
-                    Composure under pressure, decision-making, communication,
-                    integrity, fire service knowledge.
+                    Real questions, real timing — the way you&apos;ll have to
+                    deliver in the room.
                   </p>
                 </div>
                 <div>
-                  <p className="mb-1 font-display text-sm tracking-widest text-orange">02</p>
+                  <p className="mb-1 font-display text-lg tracking-widest text-orange-400">02</p>
                   <p className="mb-2 font-display text-lg font-bold leading-snug text-text-primary lg:text-xl">
-                    Get scored against a structured rubric.
+                    Get scored on the same competencies panels use.
                   </p>
                   <p className="text-base leading-relaxed text-text-secondary">
-                    Every answer evaluated on specific criteria. See exactly what
-                    you hit, what you missed, and what to fix.
+                    Composure, decision-making, communication, integrity,
+                    teamwork.
                   </p>
                 </div>
                 <div>
-                  <p className="mb-1 font-display text-sm tracking-widest text-orange">03</p>
+                  <p className="mb-1 font-display text-lg tracking-widest text-orange-400">03</p>
                   <p className="mb-2 font-display text-lg font-bold leading-snug text-text-primary lg:text-xl">
-                    Feedback the moment you finish.
+                    See exactly which side you&apos;re on.
                   </p>
                   <p className="text-base leading-relaxed text-text-secondary">
-                    Not weeks after the panel rejected you.
+                    Criterion-level feedback the moment you finish — not weeks
+                    after a rejection letter.
                   </p>
                 </div>
               </div>
