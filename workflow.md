@@ -161,4 +161,8 @@ Add `--no-pager` before `show` if the pager traps you. Press `q` to exit if it d
 - **Merge** — combine the commits from one branch into another.
 - **Pull request (PR)** — a proposal on GitHub to merge one branch into another, with a review interface.
 - **Origin** — the default name for the GitHub-hosted version of the repo.
-- **HEAD** — pointer to your current commit on your current branch.
+- **HEAD** — pointer to your current commit on your current branch.⏺ Bash(git push -u origin landing-copy-pass)                                                                                                                                            
+  ⎿  Everything up-to-date                                  
+     branch 'landing-copy-pass' set up to track 'origin/landing-copy-pass'.                                                                                                             
+                                          
+⏺ Already up to date — tracking was confirmed.                                                                                                                                          
