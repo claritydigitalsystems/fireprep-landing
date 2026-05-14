@@ -31,6 +31,9 @@ export const metadata: Metadata = {
   title: "FirePrep — Oral Board Practice for Fire Candidates",
   description:
     "AI-graded oral board practice mapped to the same competency frameworks panels use. Built by an active firefighter for entry-level candidates.",
+  verification: {
+    google: "XgDKkIQuvFZN_fyckMlVsJZYzHuqsui_rpqueLZ4FKQ",
+  },
 };
 
 export default function RootLayout({
