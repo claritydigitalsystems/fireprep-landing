@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -10,12 +11,18 @@ export default function AboutPage() {
   return (
     <main className="bg-background">
       <div className="mx-auto w-full max-w-7xl px-6 py-[80px] lg:px-12 lg:py-[120px]">
-        <div className="mx-auto max-w-2xl">
 
-          {/* Section 1 — no header */}
-          <section className="mb-20 lg:mb-28">
-            <div className="space-y-6 text-lg leading-relaxed text-text-secondary">
-              <p>
+        {/* Hero — H1, body prose, and photo */}
+        <section className="mx-auto mb-20 max-w-5xl pt-8 lg:mb-28 lg:pt-12">
+          <div className="grid grid-cols-1 items-start gap-4 lg:grid-cols-2 lg:gap-6">
+            <div className="space-y-6">
+              <div className="flex items-stretch gap-4">
+                <div aria-hidden="true" className="w-1 self-stretch bg-orange" />
+                <h1 className="font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
+                  Why this exists, and who&apos;s building it.
+                </h1>
+              </div>
+              <p className="text-lg leading-relaxed text-text-secondary">
                 FirePrep is an oral board prep tool for firefighter candidates.
                 It runs full mock interviews — voice in, structured feedback out
                 — built around the same kinds of competencies real hiring panels
@@ -24,14 +31,25 @@ export default function AboutPage() {
                 refining with input from real candidates before opening to the
                 public.
               </p>
-              <p>This page is about why it exists, and who&apos;s building it.</p>
             </div>
-          </section>
-
-          {/* Photo placeholder */}
-          <div className="mb-20 flex h-48 w-48 items-center justify-center rounded-2xl bg-zinc-800 mx-auto text-sm text-text-muted lg:mb-28">
-            Photo placeholder
+            <div className="mx-auto flex flex-col items-center">
+              <Image
+                src="/scott-headshot.jpg"
+                alt="Scott, Indianapolis Fire Department firefighter and FirePrep founder"
+                width={852}
+                height={812}
+                preload
+                className="h-64 w-64 rounded-2xl object-cover lg:h-80 lg:w-80"
+              />
+              <p className="mt-4 text-xs text-zinc-500">
+                Scott · Indianapolis Fire Department · 8 years
+              </p>
+            </div>
           </div>
+        </section>
+
+        <div className="mx-auto max-w-5xl">
+          <div className="mx-auto max-w-2xl">
 
           {/* Section 2 — Why I built this */}
           <section className="mb-20 lg:mb-28">
@@ -65,7 +83,7 @@ export default function AboutPage() {
               <p>
                 By the second process I started studying the structure of oral
                 boards instead of the content. By the third I had a framework.
-                By the fourth I had two offers in the same week and chose IFD.
+                By the fourth I had two offers in the same week and chose my career department.
               </p>
               <p>
                 I wasn&apos;t a better firefighter on attempt four than I was on
@@ -208,6 +226,7 @@ export default function AboutPage() {
             </div>
           </section>
 
+          </div>
         </div>
       </div>
     </main>
