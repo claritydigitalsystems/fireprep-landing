@@ -13,7 +13,7 @@ export default function PrivacyPage() {
         Privacy Policy
       </h1>
       <p className="mb-10 text-sm italic text-text-secondary">
-        Last updated: May 1, 2026
+        Last updated: May 14, 2026
       </p>
 
       <p className="mb-4 leading-relaxed text-text-secondary">
@@ -45,9 +45,10 @@ export default function PrivacyPage() {
         information through this site.
       </p>
       <p className="mb-4 leading-relaxed text-text-secondary">
-        We do not use cookies for tracking or advertising. We do not run
-        analytics tools that profile individual visitors. We do not sell or
-        share your data with third parties for marketing purposes.
+        We use Google Analytics 4 to understand how visitors use our site (see
+        the section below for details). We do not use cookies for advertising.
+        We do not sell or share your data with third parties for marketing
+        purposes.
       </p>
 
       <h2 className="mb-4 mt-10 font-body text-2xl font-semibold text-text-primary">
@@ -64,6 +65,52 @@ export default function PrivacyPage() {
       <p className="mb-4 leading-relaxed text-text-secondary">
         We do not send marketing emails for unrelated products. We do not share
         your email with other companies for them to market to you.
+      </p>
+
+      <h2 className="mb-4 mt-10 font-body text-2xl font-semibold text-text-primary">
+        Analytics
+      </h2>
+      <p className="mb-4 leading-relaxed text-text-secondary">
+        We use Google Analytics 4 (GA4), a service provided by Google, to
+        understand how visitors find and use our site. GA4 helps us see basic
+        information like how many people visit, which pages they view, what
+        device they&apos;re on, and where they&apos;re coming from (for example,
+        a Reddit post or a search engine).
+      </p>
+      <p className="mb-4 leading-relaxed text-text-secondary">
+        To do this, GA4 sets cookies in your browser and collects information
+        including your IP address (anonymized by Google), browser type, device
+        type, pages you visit on our site, and how long you stay. This
+        information is sent to and stored by Google. We use it to improve the
+        site — we do not use it for advertising, and we do not share it with
+        third parties beyond Google.
+      </p>
+      <p className="mb-4 leading-relaxed text-text-secondary">
+        If you prefer not to be tracked by Google Analytics, you can install
+        Google&apos;s official{" "}
+        <a
+          href="https://tools.google.com/dlpage/gaoptout"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-orange underline-offset-2 hover:underline"
+        >
+          Google Analytics Opt-out Browser Add-on
+        </a>
+        , which prevents GA4 from collecting any information about your visits.
+        Most ad-blocking browser extensions (such as uBlock Origin) and
+        privacy-focused browsers (such as Brave) also block GA4 by default.
+      </p>
+      <p className="mb-4 leading-relaxed text-text-secondary">
+        You can review Google&apos;s privacy practices at{" "}
+        <a
+          href="https://policies.google.com/privacy"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-orange underline-offset-2 hover:underline"
+        >
+          policies.google.com/privacy
+        </a>
+        .
       </p>
 
       <h2 className="mb-4 mt-10 font-body text-2xl font-semibold text-text-primary">
