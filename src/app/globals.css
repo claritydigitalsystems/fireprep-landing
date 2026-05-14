@@ -48,7 +48,7 @@
 }
 
 body {
-  background: linear-gradient(to bottom, #0d0d0d 0%, var(--fp-bg) 35%, #060606 100%);
+  background: var(--fp-bg);
   color: var(--fp-text-primary);
   font-family: var(--font-inter-tight), Arial, Helvetica, sans-serif;
 }
@@ -69,5 +69,4 @@ body::after {
   background-repeat: repeat;
   background-size: 300px 300px;
   opacity: 0.06;
-  transform: translateZ(0);
 }

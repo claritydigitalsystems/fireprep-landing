@@ -4,7 +4,7 @@ import WaitlistForm from "./components/WaitlistForm";
 
 export default function Home() {
   return (
-    <main className="flex flex-col bg-background">
+    <main className="flex flex-col">
 
       {/* ── Section 1: Hero ── */}
       <section className="relative">
