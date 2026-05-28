@@ -28,10 +28,10 @@ export default function PrivacyPage() {
         FirstCall is operated by Clarity Digital Systems. If you have any
         questions about this policy, you can reach us at{" "}
         <a
-          href="mailto:scott@firstcallfireprep.com"
+          href="mailto:scott@firstcallprep.com"
           className="text-orange underline-offset-2 hover:underline"
         >
-          scott@firstcallfireprep.com
+          scott@firstcallprep.com
         </a>
         .
       </p>
@@ -120,10 +120,10 @@ export default function PrivacyPage() {
       <p className="mb-4 leading-relaxed text-text-secondary">
         To exercise any of these rights, email{" "}
         <a
-          href="mailto:scott@firstcallfireprep.com"
+          href="mailto:scott@firstcallprep.com"
           className="text-orange underline-offset-2 hover:underline"
         >
-          scott@firstcallfireprep.com
+          scott@firstcallprep.com
         </a>
         . We will respond within 30 days.
       </p>
@@ -151,10 +151,10 @@ export default function PrivacyPage() {
       </h2>
       <p className="leading-relaxed text-text-secondary">
         <a
-          href="mailto:scott@firstcallfireprep.com"
+          href="mailto:scott@firstcallprep.com"
           className="text-orange underline-offset-2 hover:underline"
         >
-          scott@firstcallfireprep.com
+          scott@firstcallprep.com
         </a>
       </p>
       <p className="mt-1 leading-relaxed text-text-secondary">
