@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export default function Navbar() {
   function scrollToTop() {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -23,9 +25,19 @@ export default function Navbar() {
         <button
           type="button"
           onClick={scrollToTop}
-          className="font-display text-lg font-bold tracking-wider text-text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-offset-2 focus-visible:ring-offset-background lg:text-xl"
+          className="focus:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-offset-2 focus-visible:ring-offset-background"
         >
-          <span className="text-orange">FIRE</span>PREP
+          <Image
+            src="/firstcall-logo-dark.png"
+            alt="FirstCall — Fire Interview Prep"
+            width={1393}
+            height={382}
+            priority
+            className="hidden h-9 w-auto lg:block"
+          />
+          <span className="font-display text-lg font-bold tracking-wider text-text-primary lg:hidden">
+            <span className="text-orange">FIRST</span>CALL
+          </span>
         </button>
 
         {/* Right-side group: nav links + CTA */}
