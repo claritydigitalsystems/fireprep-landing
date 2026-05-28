@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service — FirePrep",
-  description: "Terms governing your use of FirePrep's pre-launch waitlist.",
+  title: "Terms of Service — FirstCall",
+  description: "Terms governing your use of FirstCall's pre-launch waitlist.",
 };
 
 export default function TermsPage() {
@@ -17,16 +17,16 @@ export default function TermsPage() {
       </p>
 
       <p className="mb-4 leading-relaxed text-text-secondary">
-        These terms apply to your use of fireprep.com and your participation in
-        the FirePrep waitlist. By submitting your email through this site, you
+        These terms apply to your use of firstcallfireprep.com and your participation in
+        the FirstCall waitlist. By submitting your email through this site, you
         agree to these terms.
       </p>
 
       <h2 className="mb-4 mt-10 font-body text-2xl font-semibold text-text-primary">
-        What FirePrep is
+        What FirstCall is
       </h2>
       <p className="mb-4 leading-relaxed text-text-secondary">
-        FirePrep is a forthcoming web application designed to help fire service
+        FirstCall is a forthcoming web application designed to help fire service
         candidates prepare for oral board interviews. The product is currently
         in development and not yet available.
       </p>
@@ -53,7 +53,7 @@ export default function TermsPage() {
         If you join the waitlist:
       </p>
       <ul className="mb-4 list-disc space-y-2 pl-6 leading-relaxed text-text-secondary">
-        <li>We will notify you by email when FirePrep is available</li>
+        <li>We will notify you by email when FirstCall is available</li>
         <li>
           We will handle your email according to our Privacy Policy
         </li>
@@ -69,17 +69,17 @@ export default function TermsPage() {
         We do not promise:
       </p>
       <ul className="mb-4 list-disc space-y-2 pl-6 leading-relaxed text-text-secondary">
-        <li>A specific launch date for FirePrep</li>
-        <li>That FirePrep will be free, paid, or any specific price</li>
+        <li>A specific launch date for FirstCall</li>
+        <li>That FirstCall will be free, paid, or any specific price</li>
         <li>
-          That you will be granted access to FirePrep when it launches
+          That you will be granted access to FirstCall when it launches
         </li>
         <li>
-          That FirePrep will be available in your region or for your specific
+          That FirstCall will be available in your region or for your specific
           role
         </li>
         <li>
-          That FirePrep will improve your interview outcomes or hiring success
+          That FirstCall will improve your interview outcomes or hiring success
         </li>
       </ul>
       <p className="mb-4 leading-relaxed text-text-secondary">
@@ -106,7 +106,7 @@ export default function TermsPage() {
         Intellectual property
       </h2>
       <p className="mb-4 leading-relaxed text-text-secondary">
-        The FirePrep name, logo, written content, and design on this site belong
+        The FirstCall name, logo, written content, and design on this site belong
         to Clarity Digital Systems. You may not copy, redistribute, or use them
         for commercial purposes without permission.
       </p>
@@ -139,7 +139,7 @@ export default function TermsPage() {
         Changes to these terms
       </h2>
       <p className="mb-4 leading-relaxed text-text-secondary">
-        We may update these terms as FirePrep develops. When we do, we will
+        We may update these terms as FirstCall develops. When we do, we will
         update the &ldquo;Last updated&rdquo; date at the top. Material changes
         will be communicated by email to current waitlist members.
       </p>
@@ -149,10 +149,10 @@ export default function TermsPage() {
       </h2>
       <p className="leading-relaxed text-text-secondary">
         <a
-          href="mailto:scott@claritydigitalsystems.com"
+          href="mailto:scott@firstcallfireprep.com"
           className="text-orange underline-offset-2 hover:underline"
         >
-          scott@claritydigitalsystems.com
+          scott@firstcallfireprep.com
         </a>
       </p>
       <p className="mt-1 leading-relaxed text-text-secondary">

@@ -128,10 +128,10 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right — What FirePrep does: activated, thicker orange border, subtle glow */}
+            {/* Right — What FirstCall does: activated, thicker orange border, subtle glow */}
             <div className="rounded-2xl border border-border border-l-[3px] border-l-orange bg-surface-raised p-10 lg:p-12 shadow-[0_0_28px_rgba(249,115,22,0.07)] bg-orange-950/30">
               <h2 className="font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
-                What FirePrep does
+                What FirstCall does
               </h2>
               <div className="h-[3px] w-12 bg-orange-500 mt-2 mb-8" />
               <div className="space-y-8">
@@ -380,7 +380,7 @@ export default function Home() {
             >
               <Image
                 src="/founder.jpg"
-                alt="Founder of FirePrep, an active firefighter"
+                alt="Founder of FirstCall, an active firefighter"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"

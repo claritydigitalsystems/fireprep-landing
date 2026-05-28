@@ -23,9 +23,9 @@ export default function Footer() {
               {" · "}
               <Link href="/terms" className="transition-colors hover:text-text-secondary">Terms</Link>
               {" · "}
-              <a href="mailto:hello@fireprep.com" className="transition-colors hover:text-text-secondary">Contact</a>
+              <a href="mailto:scott@firstcallfireprep.com" className="transition-colors hover:text-text-secondary">Contact</a>
             </p>
-            <p className="text-xs text-text-muted">© 2026 FirePrep</p>
+            <p className="text-xs text-text-muted">© 2026 FirstCall</p>
           </div>
 
         </div>
