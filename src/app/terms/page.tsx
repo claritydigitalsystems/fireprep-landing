@@ -17,7 +17,7 @@ export default function TermsPage() {
       </p>
 
       <p className="mb-4 leading-relaxed text-text-secondary">
-        These terms apply to your use of firstcallfireprep.com and your participation in
+        These terms apply to your use of firstcallprep.com and your participation in
         the FirstCall waitlist. By submitting your email through this site, you
         agree to these terms.
       </p>
@@ -149,10 +149,10 @@ export default function TermsPage() {
       </h2>
       <p className="leading-relaxed text-text-secondary">
         <a
-          href="mailto:scott@firstcallfireprep.com"
+          href="mailto:scott@firstcallprep.com"
           className="text-orange underline-offset-2 hover:underline"
         >
-          scott@firstcallfireprep.com
+          scott@firstcallprep.com
         </a>
       </p>
       <p className="mt-1 leading-relaxed text-text-secondary">
