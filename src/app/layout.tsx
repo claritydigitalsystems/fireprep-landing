@@ -27,7 +27,7 @@ const interTight = Inter_Tight({
 });
 
 export const metadata: Metadata = {
-  title: "FirePrep — Oral Board Practice for Fire Candidates",
+  title: "FirstCall — Fire Interview Prep",
   description:
     "AI-graded oral board practice mapped to the same competency frameworks panels use. Built by an active firefighter for entry-level candidates.",
 };

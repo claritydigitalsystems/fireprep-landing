@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — FirePrep",
-  description: "How FirePrep handles your information when you join our waitlist.",
+  title: "Privacy Policy — FirstCall",
+  description: "How FirstCall handles your information when you join our waitlist.",
 };
 
 export default function PrivacyPage() {
@@ -17,7 +17,7 @@ export default function PrivacyPage() {
       </p>
 
       <p className="mb-4 leading-relaxed text-text-secondary">
-        This policy describes how FirePrep handles your information when you
+        This policy describes how FirstCall handles your information when you
         join our waitlist.
       </p>
 
@@ -25,13 +25,13 @@ export default function PrivacyPage() {
         Who we are
       </h2>
       <p className="mb-4 leading-relaxed text-text-secondary">
-        FirePrep is operated by Clarity Digital Systems. If you have any
+        FirstCall is operated by Clarity Digital Systems. If you have any
         questions about this policy, you can reach us at{" "}
         <a
-          href="mailto:scott@claritydigitalsystems.com"
+          href="mailto:scott@firstcallfireprep.com"
           className="text-orange underline-offset-2 hover:underline"
         >
-          scott@claritydigitalsystems.com
+          scott@firstcallfireprep.com
         </a>
         .
       </p>
@@ -40,7 +40,7 @@ export default function PrivacyPage() {
         What we collect
       </h2>
       <p className="mb-4 leading-relaxed text-text-secondary">
-        When you join the FirePrep waitlist, we collect your email address.
+        When you join the FirstCall waitlist, we collect your email address.
         That&apos;s it. We do not currently collect any other personal
         information through this site.
       </p>
@@ -57,7 +57,7 @@ export default function PrivacyPage() {
         We use your email address to:
       </p>
       <ul className="mb-4 list-disc space-y-2 pl-6 leading-relaxed text-text-secondary">
-        <li>Notify you when FirePrep is available</li>
+        <li>Notify you when FirstCall is available</li>
         <li>Send occasional updates about our progress</li>
         <li>Respond to questions you send us</li>
       </ul>
@@ -96,7 +96,7 @@ export default function PrivacyPage() {
       <ul className="mb-4 list-disc space-y-2 pl-6 leading-relaxed text-text-secondary">
         <li>You ask to be removed from the waitlist, or</li>
         <li>
-          FirePrep is launched and you choose to convert your waitlist spot into
+          FirstCall is launched and you choose to convert your waitlist spot into
           an account, or
         </li>
         <li>
@@ -120,10 +120,10 @@ export default function PrivacyPage() {
       <p className="mb-4 leading-relaxed text-text-secondary">
         To exercise any of these rights, email{" "}
         <a
-          href="mailto:scott@claritydigitalsystems.com"
+          href="mailto:scott@firstcallfireprep.com"
           className="text-orange underline-offset-2 hover:underline"
         >
-          scott@claritydigitalsystems.com
+          scott@firstcallfireprep.com
         </a>
         . We will respond within 30 days.
       </p>
@@ -132,7 +132,7 @@ export default function PrivacyPage() {
         Children
       </h2>
       <p className="mb-4 leading-relaxed text-text-secondary">
-        FirePrep is intended for adults applying for fire service positions. We
+        FirstCall is intended for adults applying for fire service positions. We
         do not knowingly collect data from anyone under 18. If you believe a
         minor has signed up, contact us and we will delete the record.
       </p>
@@ -141,7 +141,7 @@ export default function PrivacyPage() {
         Changes to this policy
       </h2>
       <p className="mb-4 leading-relaxed text-text-secondary">
-        We may update this policy as FirePrep develops. When we do, we will
+        We may update this policy as FirstCall develops. When we do, we will
         update the &ldquo;Last updated&rdquo; date at the top. Material changes
         will be communicated by email to current waitlist members.
       </p>
@@ -151,10 +151,10 @@ export default function PrivacyPage() {
       </h2>
       <p className="leading-relaxed text-text-secondary">
         <a
-          href="mailto:scott@claritydigitalsystems.com"
+          href="mailto:scott@firstcallfireprep.com"
           className="text-orange underline-offset-2 hover:underline"
         >
-          scott@claritydigitalsystems.com
+          scott@firstcallfireprep.com
         </a>
       </p>
       <p className="mt-1 leading-relaxed text-text-secondary">
