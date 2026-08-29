@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Check, Play } from "lucide-react";
+import { Check, ChevronDown, ChevronRight, Mic, Play, Target, TrendingUp } from "lucide-react";
 import { APP_URL } from "./lib/links";
 
 export default function Home() {
@@ -275,6 +275,112 @@ export default function Home() {
             </p>
 
           </div>
+        </div>
+      </section>
+
+      {/* ── Section 4: Practice, Score, Track ──
+           Carries the nav's #how-it-works anchor. Flat cards, no deepening
+           gradient across the three. Track is the #2 differentiator, so it
+           alone takes a subtle amber node accent. ── */}
+      <section id="how-it-works" className="scroll-mt-20">
+        <div className="mx-auto w-full max-w-7xl px-6 py-[80px] lg:px-12 lg:py-[120px]">
+
+          <div className="mb-12 lg:mb-16">
+            <p className="mb-3 font-display text-sm font-semibold uppercase tracking-[0.18em] text-accent">
+              How it works
+            </p>
+            <h2 className="font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
+              Every session, end to end.
+            </h2>
+          </div>
+
+          <div className="mx-auto max-w-6xl">
+            <div className="flex flex-col lg:flex-row lg:items-stretch">
+
+              {/* Node 01 — Practice */}
+              <div className="flex-1 rounded-md border border-border bg-surface p-6 lg:p-8">
+                <div className="mb-4 flex items-center justify-between">
+                  <p className="font-display text-xl tracking-widest text-text-muted">
+                    01
+                  </p>
+                  <Mic className="h-6 w-6 text-text-secondary" aria-hidden="true" />
+                </div>
+                <h3 className="mb-3 font-display text-2xl font-bold uppercase text-text-primary lg:text-3xl">
+                  Practice
+                </h3>
+                <p className="text-base leading-relaxed text-text-secondary">
+                  Answer real oral board questions out loud, on the clock.
+                  Recorded, transcribed, and ready to grade. The way
+                  you&apos;ll have to deliver it in the room.
+                </p>
+              </div>
+
+              {/* Connector */}
+              <div
+                aria-hidden="true"
+                className="flex shrink-0 items-center justify-center py-5 text-text-muted lg:px-5 lg:py-0"
+              >
+                <ChevronRight className="hidden h-10 w-10 lg:block" />
+                <ChevronDown className="h-10 w-10 lg:hidden" />
+              </div>
+
+              {/* Node 02 — Score */}
+              <div className="flex-1 rounded-md border border-border bg-surface p-6 lg:p-8">
+                <div className="mb-4 flex items-center justify-between">
+                  <p className="font-display text-xl tracking-widest text-text-muted">
+                    02
+                  </p>
+                  <Target className="h-6 w-6 text-text-secondary" aria-hidden="true" />
+                </div>
+                <h3 className="mb-3 font-display text-2xl font-bold uppercase text-text-primary lg:text-3xl">
+                  Score
+                </h3>
+                <p className="text-base leading-relaxed text-text-secondary">
+                  Every answer broken down criterion by criterion. See which
+                  parts landed, which fell short, and exactly what to fix, the
+                  moment you finish.
+                </p>
+              </div>
+
+              {/* Connector */}
+              <div
+                aria-hidden="true"
+                className="flex shrink-0 items-center justify-center py-5 text-text-muted lg:px-5 lg:py-0"
+              >
+                <ChevronRight className="hidden h-10 w-10 lg:block" />
+                <ChevronDown className="h-10 w-10 lg:hidden" />
+              </div>
+
+              {/* Node 03 — Track. Pulled up as the #2 differentiator. */}
+              <div className="flex-1 rounded-md border border-border border-t-[3px] border-t-accent bg-surface p-6 lg:p-8">
+                <div className="mb-4 flex items-center justify-between">
+                  <p className="font-display text-xl tracking-widest text-accent">
+                    03
+                  </p>
+                  <TrendingUp className="h-6 w-6 text-accent" aria-hidden="true" />
+                </div>
+                <h3 className="mb-3 font-display text-2xl font-bold uppercase text-text-primary lg:text-3xl">
+                  Track
+                </h3>
+                <p className="text-base leading-relaxed text-text-secondary">
+                  Every answer feeds eight fire-service competencies, scored
+                  and tracked across every session. You see exactly where
+                  you&apos;re strong and where you keep losing points, so you
+                  can drill the weak spots on purpose. Walk in with all eight
+                  dialed, and you&apos;ll be the most prepared candidate in the
+                  room.
+                </p>
+              </div>
+
+            </div>
+
+            <p className="mx-auto mt-10 max-w-3xl text-center text-sm leading-relaxed text-text-muted lg:mt-12">
+              3 to 8 questions per session. Criterion-level scoring on every
+              answer. Eight competencies tracked across all of them, so you
+              know exactly what to sharpen before the panel does.
+            </p>
+          </div>
+
         </div>
       </section>
 
