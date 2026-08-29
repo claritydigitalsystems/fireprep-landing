@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Check, ChevronDown, ChevronRight, ListChecks, Mic, Play, Ruler, Target, TrendingUp } from "lucide-react";
+import WaitlistForm from "./components/WaitlistForm";
 import { APP_URL } from "./lib/links";
 
 export default function Home() {
@@ -546,6 +547,60 @@ export default function Home() {
                   Free while I test it with real candidates.
                 </p>
               </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ── Section 7: Conversion slot ──
+           The swappable module. The FRAME below is fixed: eyebrow, headline,
+           subcopy, CTA, micro-copy, dormant secondary. Flipping beta -> paid
+           swaps the CONTENTS of these slots and changes no structure. ── */}
+      <section>
+        <div className="mx-auto w-full max-w-7xl px-6 py-[120px] lg:px-12 lg:py-[160px]">
+          <div className="mx-auto max-w-xl text-center">
+
+            {/* slot: eyebrow */}
+            <p className="mb-3 font-display text-sm font-semibold uppercase tracking-[0.18em] text-accent">
+              Start now
+            </p>
+
+            {/* slot: headline */}
+            <h2 className="mb-6 font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
+              It&apos;s built. It&apos;s free. Go use it.
+            </h2>
+
+            {/* slot: subcopy */}
+            <p className="mb-10 text-lg leading-relaxed text-text-secondary">
+              First Call is live and free while I test it with real
+              candidates. Real questions, real scoring, real feedback on every
+              answer. No credit card, no catch. I&apos;m looking for candidates
+              who&apos;ll actually use it and tell me what&apos;s working.
+            </p>
+
+            {/* slot: primary CTA */}
+            <a
+              href={APP_URL}
+              className="inline-block rounded-md bg-accent px-8 py-4 text-base font-semibold text-background transition-colors hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            >
+              Start practicing free
+            </a>
+
+            {/* slot: micro-copy */}
+            <p className="mt-4 text-sm text-text-muted">
+              Free while in beta. Takes about a minute to start your first
+              session.
+            </p>
+
+            {/* slot: dormant secondary. Built and wired to the retired
+                MailerLite form, deliberately hidden. Remove the `hidden`
+                attribute to bring it back; nothing else needs to change. */}
+            <div hidden className="mt-10 border-t border-border pt-8">
+              <p className="mb-4 text-sm text-text-secondary">
+                Not ready? Get notified as it grows
+              </p>
+              <WaitlistForm id="notify-form" />
             </div>
 
           </div>
