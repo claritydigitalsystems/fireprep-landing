@@ -13,7 +13,7 @@ export default function Home() {
 
             {/* Left — copy */}
             <div>
-              <p className="mb-5 font-display text-sm font-semibold uppercase tracking-[0.18em] text-orange">
+              <p className="mb-5 font-display text-sm font-semibold uppercase tracking-[0.18em] text-accent">
                 Join the Waitlist · Launching Soon
               </p>
 
@@ -27,7 +27,7 @@ export default function Home() {
                 which you&apos;re missing, and what to fix before the panel.
               </p>
 
-              <p className="mb-6 text-base text-zinc-400">
+              <p className="mb-6 text-base text-text-secondary">
                 Built by an active firefighter who&apos;s been in your seat.
               </p>
 
@@ -44,7 +44,7 @@ export default function Home() {
                     <li key={benefit} className="flex items-center gap-3">
                       <span
                         aria-hidden="true"
-                        className="h-2 w-2 shrink-0 rounded-full bg-orange"
+                        className="h-2 w-2 shrink-0 rounded-full bg-accent"
                       />
                       <span className="text-sm font-medium text-text-primary">
                         {benefit}
@@ -78,7 +78,7 @@ export default function Home() {
         <div className="mx-auto w-full max-w-7xl px-6 py-[80px] lg:px-12 lg:py-[120px]">
 
           <div className="mb-16 lg:mb-20">
-            <div aria-hidden="true" className="mb-3 h-[2px] w-10 bg-orange" />
+            <div aria-hidden="true" className="mb-3 h-[2px] w-10 bg-accent" />
             <h2 className="font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
               Why this exists.
             </h2>
@@ -89,12 +89,12 @@ export default function Home() {
             {/* Left — The prep gap: recessed surface, muted gray left border */}
             <div
               className="rounded-2xl border border-border bg-background p-10 lg:p-12"
-              style={{ borderLeft: "2px solid #444444" }}
+              style={{ borderLeft: "2px solid var(--fp-border)" }}
             >
               <h2 className="font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
                 The prep gap
               </h2>
-              <div className="h-[3px] w-12 bg-zinc-700 mt-2 mb-8" />
+              <div className="h-[3px] w-12 bg-border mt-2 mb-8" />
               <div className="space-y-8">
                 <div>
                   <p className="mb-1 font-display text-lg tracking-widest text-text-muted">01</p>
@@ -128,15 +128,15 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right — What FirstCall does: activated, thicker orange border, subtle glow */}
-            <div className="rounded-2xl border border-border border-l-[3px] border-l-orange bg-surface-raised p-10 lg:p-12 shadow-[0_0_28px_rgba(249,115,22,0.07)] bg-orange-950/30">
+            {/* Right — What FirstCall does: activated, thicker accent border, subtle glow */}
+            <div className="rounded-2xl border border-border border-l-[3px] border-l-accent bg-surface-raised p-10 lg:p-12 shadow-[0_0_28px_rgba(245,158,11,0.07)] bg-amber-950/30">
               <h2 className="font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
                 What FirstCall does
               </h2>
-              <div className="h-[3px] w-12 bg-orange-500 mt-2 mb-8" />
+              <div className="h-[3px] w-12 bg-accent mt-2 mb-8" />
               <div className="space-y-8">
                 <div>
-                  <p className="mb-1 font-display text-lg tracking-widest text-orange-400">01</p>
+                  <p className="mb-1 font-display text-lg tracking-widest text-amber-400">01</p>
                   <p className="mb-2 font-display text-lg font-bold leading-snug text-text-primary lg:text-xl">
                     Practice out loud, on the clock.
                   </p>
@@ -146,7 +146,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div>
-                  <p className="mb-1 font-display text-lg tracking-widest text-orange-400">02</p>
+                  <p className="mb-1 font-display text-lg tracking-widest text-amber-400">02</p>
                   <p className="mb-2 font-display text-lg font-bold leading-snug text-text-primary lg:text-xl">
                     Get scored on the same competencies panels use.
                   </p>
@@ -156,7 +156,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div>
-                  <p className="mb-1 font-display text-lg tracking-widest text-orange-400">03</p>
+                  <p className="mb-1 font-display text-lg tracking-widest text-amber-400">03</p>
                   <p className="mb-2 font-display text-lg font-bold leading-snug text-text-primary lg:text-xl">
                     See exactly which side you&apos;re on.
                   </p>
@@ -178,7 +178,7 @@ export default function Home() {
 
           {/* Section header */}
           <div className="mb-16 lg:mb-20">
-            <div aria-hidden="true" className="mb-3 h-[2px] w-10 bg-orange" />
+            <div aria-hidden="true" className="mb-3 h-[2px] w-10 bg-accent" />
             <h2 className="font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
               Every session, end to end.
             </h2>
@@ -189,10 +189,10 @@ export default function Home() {
             <div className="flex flex-col lg:flex-row lg:items-stretch">
 
               {/* Node 01 — Practice */}
-              <div className="flex-1 rounded-2xl border border-border bg-gradient-to-br from-zinc-900 to-orange-950/10 p-6 lg:p-8">
+              <div className="flex-1 rounded-2xl border border-border bg-gradient-to-br from-surface to-amber-950/10 p-6 lg:p-8">
                 <div className="mb-4 flex items-center justify-between">
-                  <p className="font-display text-xl tracking-widest text-orange-400">01</p>
-                  <Mic className="h-6 w-6 text-orange" aria-hidden="true" />
+                  <p className="font-display text-xl tracking-widest text-amber-400">01</p>
+                  <Mic className="h-6 w-6 text-accent" aria-hidden="true" />
                 </div>
                 <h3 className="mb-3 font-display text-2xl font-bold uppercase text-text-primary lg:text-3xl">
                   Practice
@@ -206,17 +206,17 @@ export default function Home() {
               {/* Connector */}
               <div
                 aria-hidden="true"
-                className="flex shrink-0 items-center justify-center py-5 text-orange opacity-50 lg:px-5 lg:py-0"
+                className="flex shrink-0 items-center justify-center py-5 text-accent opacity-50 lg:px-5 lg:py-0"
               >
                 <ChevronRight className="hidden h-12 w-12 lg:block" />
                 <ChevronDown className="h-12 w-12 lg:hidden" />
               </div>
 
               {/* Node 02 — Score */}
-              <div className="flex-1 rounded-2xl border border-border bg-gradient-to-br from-zinc-900 to-orange-950/20 p-6 lg:p-8">
+              <div className="flex-1 rounded-2xl border border-border bg-gradient-to-br from-surface to-amber-950/20 p-6 lg:p-8">
                 <div className="mb-4 flex items-center justify-between">
-                  <p className="font-display text-xl tracking-widest text-orange-400">02</p>
-                  <Target className="h-6 w-6 text-orange" aria-hidden="true" />
+                  <p className="font-display text-xl tracking-widest text-amber-400">02</p>
+                  <Target className="h-6 w-6 text-accent" aria-hidden="true" />
                 </div>
                 <h3 className="mb-3 font-display text-2xl font-bold uppercase text-text-primary lg:text-3xl">
                   Score
@@ -230,17 +230,17 @@ export default function Home() {
               {/* Connector */}
               <div
                 aria-hidden="true"
-                className="flex shrink-0 items-center justify-center py-5 text-orange opacity-50 lg:px-5 lg:py-0"
+                className="flex shrink-0 items-center justify-center py-5 text-accent opacity-50 lg:px-5 lg:py-0"
               >
                 <ChevronRight className="hidden h-12 w-12 lg:block" />
                 <ChevronDown className="h-12 w-12 lg:hidden" />
               </div>
 
               {/* Node 03 — Track */}
-              <div className="flex-1 rounded-2xl border border-border bg-gradient-to-br from-zinc-900 to-orange-950/40 p-6 lg:p-8">
+              <div className="flex-1 rounded-2xl border border-border bg-gradient-to-br from-surface to-amber-950/40 p-6 lg:p-8">
                 <div className="mb-4 flex items-center justify-between">
-                  <p className="font-display text-xl tracking-widest text-orange-400">03</p>
-                  <TrendingUp className="h-6 w-6 text-orange" aria-hidden="true" />
+                  <p className="font-display text-xl tracking-widest text-amber-400">03</p>
+                  <TrendingUp className="h-6 w-6 text-accent" aria-hidden="true" />
                 </div>
                 <h3 className="mb-3 font-display text-2xl font-bold uppercase text-text-primary lg:text-3xl">
                   Track
@@ -301,7 +301,7 @@ export default function Home() {
             </h2>
             <h2 className="font-display text-4xl font-bold uppercase leading-snug tracking-tight text-text-primary md:text-6xl">
               Walk in knowing exactly what panels are{" "}
-              <span className="text-orange">scoring.</span>
+              <span className="text-accent">scoring.</span>
             </h2>
           </div>
         </div>
@@ -313,7 +313,7 @@ export default function Home() {
 
           {/* Header block */}
           <div className="mb-14 lg:mb-16">
-            <div aria-hidden="true" className="mb-3 h-[2px] w-10 bg-orange" />
+            <div aria-hidden="true" className="mb-3 h-[2px] w-10 bg-accent" />
             <h2 className="mb-5 font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
               Built for entry-level and lateral candidates — first attempt or
               fifth.
@@ -324,12 +324,12 @@ export default function Home() {
             </p>
           </div>
 
-          {/* 2×2 grid — card surfaces with top orange border + top-left icon */}
+          {/* 2×2 grid — card surfaces with top accent border + top-left icon */}
           <div className="mx-auto max-w-6xl grid grid-cols-1 items-stretch gap-8 md:grid-cols-2">
 
             {/* Card 01 — Ban */}
-            <div className="rounded-2xl border border-border border-t-[3px] border-t-orange bg-surface-raised p-8 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg">
-              <Ban className="mb-6 h-9 w-9 text-orange" aria-hidden="true" />
+            <div className="rounded-2xl border border-border border-t-[3px] border-t-accent bg-surface-raised p-8 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg">
+              <Ban className="mb-6 h-9 w-9 text-accent" aria-hidden="true" />
               <p className="font-display text-lg font-semibold leading-snug text-text-primary lg:text-xl">
                 Generic interview prep doesn&apos;t translate to fire service
                 hiring. Different criteria, different rhythm, different stakes.
@@ -337,8 +337,8 @@ export default function Home() {
             </div>
 
             {/* Card 02 — Timer */}
-            <div className="rounded-2xl border border-border border-t-[3px] border-t-orange bg-surface-raised p-8 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg">
-              <Timer className="mb-6 h-9 w-9 text-orange" aria-hidden="true" />
+            <div className="rounded-2xl border border-border border-t-[3px] border-t-accent bg-surface-raised p-8 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg">
+              <Timer className="mb-6 h-9 w-9 text-accent" aria-hidden="true" />
               <p className="font-display text-lg font-semibold leading-snug text-text-primary lg:text-xl">
                 Reading questions in your head isn&apos;t practice. Out loud,
                 on the clock, while being scored — that&apos;s practice.
@@ -346,8 +346,8 @@ export default function Home() {
             </div>
 
             {/* Card 03 — Gauge */}
-            <div className="rounded-2xl border border-border border-t-[3px] border-t-orange bg-surface-raised p-8 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg">
-              <Gauge className="mb-6 h-9 w-9 text-orange" aria-hidden="true" />
+            <div className="rounded-2xl border border-border border-t-[3px] border-t-accent bg-surface-raised p-8 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg">
+              <Gauge className="mb-6 h-9 w-9 text-accent" aria-hidden="true" />
               <p className="font-display text-lg font-semibold leading-snug text-text-primary lg:text-xl">
                 A good answer in your living room isn&apos;t a good answer in
                 front of a panel. Pressure changes everything.
@@ -355,8 +355,8 @@ export default function Home() {
             </div>
 
             {/* Card 04 — Hourglass */}
-            <div className="rounded-2xl border border-border border-t-[3px] border-t-orange bg-surface-raised p-8 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg">
-              <Hourglass className="mb-6 h-9 w-9 text-orange" aria-hidden="true" />
+            <div className="rounded-2xl border border-border border-t-[3px] border-t-accent bg-surface-raised p-8 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg">
+              <Hourglass className="mb-6 h-9 w-9 text-accent" aria-hidden="true" />
               <p className="font-display text-lg font-semibold leading-snug text-text-primary lg:text-xl">
                 Most candidates don&apos;t fail because they aren&apos;t
                 qualified. They fail because they don&apos;t know what to fix.
@@ -390,7 +390,7 @@ export default function Home() {
             {/* Right — Header + body paragraphs */}
             <div>
               <div className="mb-8">
-                <div aria-hidden="true" className="mb-3 h-[2px] w-10 bg-orange" />
+                <div aria-hidden="true" className="mb-3 h-[2px] w-10 bg-accent" />
                 <h2 className="font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
                   Why I&apos;m building this.
                 </h2>
@@ -433,7 +433,7 @@ export default function Home() {
         <div className="mx-auto w-full max-w-7xl px-6 py-[80px] lg:px-12 lg:py-[120px]">
 
           <div className="mb-16 lg:mb-20">
-            <div aria-hidden="true" className="mb-3 h-[2px] w-10 bg-orange" />
+            <div aria-hidden="true" className="mb-3 h-[2px] w-10 bg-accent" />
             <h2 className="font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
               Built on real methodology.
             </h2>
@@ -444,12 +444,12 @@ export default function Home() {
             <div className="space-y-4">
 
               {/* Card 1 — Anchor-based scoring */}
-              <div className="group rounded-2xl border border-zinc-800 bg-zinc-900/50 p-8 transition-all duration-200 hover:-translate-y-1 hover:border-orange-500/40 hover:shadow-lg">
+              <div className="group rounded-2xl border border-border bg-surface/50 p-8 transition-all duration-200 hover:-translate-y-1 hover:border-accent/40 hover:shadow-lg">
                 <div className="mb-3 flex items-center justify-between">
                   <h3 className="font-display text-2xl font-bold leading-snug text-text-primary lg:text-3xl">
                     Anchor-based scoring.
                   </h3>
-                  <Target className="ml-4 h-7 w-7 shrink-0 text-orange-400" aria-hidden="true" />
+                  <Target className="ml-4 h-7 w-7 shrink-0 text-amber-400" aria-hidden="true" />
                 </div>
                 <p className="text-base leading-relaxed text-text-secondary lg:text-lg">
                   Each answer is scored across multiple criteria, with anchor
@@ -460,12 +460,12 @@ export default function Home() {
               </div>
 
               {/* Card 2 — Fire-service competencies */}
-              <div className="group rounded-2xl border border-zinc-800 bg-zinc-900/50 p-8 transition-all duration-200 hover:-translate-y-1 hover:border-orange-500/40 hover:shadow-lg">
+              <div className="group rounded-2xl border border-border bg-surface/50 p-8 transition-all duration-200 hover:-translate-y-1 hover:border-accent/40 hover:shadow-lg">
                 <div className="mb-3 flex items-center justify-between">
                   <h3 className="font-display text-2xl font-bold leading-snug text-text-primary lg:text-3xl">
                     Fire-service competencies.
                   </h3>
-                  <ListChecks className="ml-4 h-7 w-7 shrink-0 text-orange-400" aria-hidden="true" />
+                  <ListChecks className="ml-4 h-7 w-7 shrink-0 text-amber-400" aria-hidden="true" />
                 </div>
                 <p className="text-base leading-relaxed text-text-secondary lg:text-lg">
                   Composure under pressure. Decision-making. Communication.
@@ -476,12 +476,12 @@ export default function Home() {
               </div>
 
               {/* Card 3 — Criterion-level feedback */}
-              <div className="group rounded-2xl border border-zinc-800 bg-zinc-900/50 p-8 transition-all duration-200 hover:-translate-y-1 hover:border-orange-500/40 hover:shadow-lg">
+              <div className="group rounded-2xl border border-border bg-surface/50 p-8 transition-all duration-200 hover:-translate-y-1 hover:border-accent/40 hover:shadow-lg">
                 <div className="mb-3 flex items-center justify-between">
                   <h3 className="font-display text-2xl font-bold leading-snug text-text-primary lg:text-3xl">
                     Criterion-level feedback.
                   </h3>
-                  <SlidersHorizontal className="ml-4 h-7 w-7 shrink-0 text-orange-400" aria-hidden="true" />
+                  <SlidersHorizontal className="ml-4 h-7 w-7 shrink-0 text-amber-400" aria-hidden="true" />
                 </div>
                 <p className="text-base leading-relaxed text-text-secondary lg:text-lg">
                   You don&apos;t get a single &ldquo;good job&rdquo; or
@@ -494,7 +494,7 @@ export default function Home() {
             </div>
 
             {/* Closing line */}
-            <p className="mt-8 text-center text-lg font-semibold text-zinc-300">
+            <p className="mt-8 text-center text-lg font-semibold text-text-secondary">
               Built openly. Refined by real candidate feedback before launch.
             </p>
 
@@ -508,7 +508,7 @@ export default function Home() {
         <div className="mx-auto w-full max-w-7xl px-6 py-[120px] lg:px-12 lg:py-[160px]">
           <div className="mx-auto max-w-xl text-center">
 
-            <div aria-hidden="true" className="mx-auto mb-4 h-[2px] w-10 bg-orange" />
+            <div aria-hidden="true" className="mx-auto mb-4 h-[2px] w-10 bg-accent" />
             <h2 className="mb-6 font-display text-5xl font-bold leading-tight text-text-primary lg:text-6xl">
               Get on the list.
             </h2>

@@ -78,12 +78,12 @@ export default function WaitlistForm({ id = "waitlist-form" }: { id?: string }) 
             }}
             placeholder="you@email.com"
             disabled={status === "loading"}
-            className="flex-1 rounded-lg border border-border bg-surface-raised px-4 py-3 text-sm text-text-primary placeholder:text-text-muted focus:border-transparent focus:outline-none focus:ring-2 focus:ring-orange disabled:opacity-60"
+            className="flex-1 rounded-lg border border-border bg-surface-raised px-4 py-3 text-sm text-text-primary placeholder:text-text-muted focus:border-transparent focus:outline-none focus:ring-2 focus:ring-accent disabled:opacity-60"
           />
           <button
             type="submit"
             disabled={status === "loading"}
-            className="cursor-pointer whitespace-nowrap rounded-lg bg-orange px-6 py-3 text-sm font-semibold text-zinc-950 transition-colors hover:bg-orange-hover disabled:cursor-not-allowed disabled:opacity-70"
+            className="cursor-pointer whitespace-nowrap rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-background transition-colors hover:bg-accent-hover disabled:cursor-not-allowed disabled:opacity-70"
           >
             {status === "loading" ? "Joining..." : "Join the Waitlist"}
           </button>

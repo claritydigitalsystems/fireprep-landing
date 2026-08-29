@@ -25,7 +25,7 @@ export default function Navbar() {
         <button
           type="button"
           onClick={scrollToTop}
-          className="focus:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+          className="focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
         >
           <Image
             src="/firstcall-logo-dark.png"
@@ -36,7 +36,7 @@ export default function Navbar() {
             className="hidden h-9 w-auto lg:block"
           />
           <span className="font-display text-lg font-bold tracking-wider text-text-primary lg:hidden">
-            <span className="text-orange">FIRST</span>CALL
+            <span className="text-accent">FIRST</span>CALL
           </span>
         </button>
 
@@ -45,13 +45,13 @@ export default function Navbar() {
           <div className="hidden items-center gap-8 md:flex">
             <a
               href="#methodology"
-              className="text-sm text-zinc-300 transition-colors hover:text-white"
+              className="text-sm text-text-secondary transition-colors hover:text-white"
             >
               How it works
             </a>
             <a
               href="#about"
-              className="text-sm text-zinc-300 transition-colors hover:text-white"
+              className="text-sm text-text-secondary transition-colors hover:text-white"
             >
               About
             </a>
@@ -61,7 +61,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={scrollToWaitlist}
-            className="cursor-pointer rounded-lg bg-orange px-5 py-2 text-sm font-semibold text-zinc-950 transition-colors hover:bg-orange-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            className="cursor-pointer rounded-lg bg-accent px-5 py-2 text-sm font-semibold text-background transition-colors hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
             Join Waitlist
           </button>

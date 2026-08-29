@@ -29,7 +29,7 @@ export default function PrivacyPage() {
         questions about this policy, you can reach us at{" "}
         <a
           href="mailto:scott@firstcallprep.com"
-          className="text-orange underline-offset-2 hover:underline"
+          className="text-accent underline-offset-2 hover:underline"
         >
           scott@firstcallprep.com
         </a>
@@ -77,7 +77,7 @@ export default function PrivacyPage() {
           href="https://www.mailerlite.com/legal/privacy-policy"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-orange underline-offset-2 hover:underline"
+          className="text-accent underline-offset-2 hover:underline"
         >
           mailerlite.com/legal/privacy-policy
         </a>
@@ -121,7 +121,7 @@ export default function PrivacyPage() {
         To exercise any of these rights, email{" "}
         <a
           href="mailto:scott@firstcallprep.com"
-          className="text-orange underline-offset-2 hover:underline"
+          className="text-accent underline-offset-2 hover:underline"
         >
           scott@firstcallprep.com
         </a>
@@ -152,7 +152,7 @@ export default function PrivacyPage() {
       <p className="leading-relaxed text-text-secondary">
         <a
           href="mailto:scott@firstcallprep.com"
-          className="text-orange underline-offset-2 hover:underline"
+          className="text-accent underline-offset-2 hover:underline"
         >
           scott@firstcallprep.com
         </a>

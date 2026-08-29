@@ -2,23 +2,23 @@
 
 :root {
   /* Backgrounds */
-  --fp-bg: #0a0a0a;
-  --fp-surface: #111111;
-  --fp-surface-raised: #191919;
+  --fp-bg: #0a0e1a;
+  --fp-surface: #111827;
+  --fp-surface-raised: #1a2235;
 
   /* Borders */
-  --fp-border: #252525;
+  --fp-border: #1e2d45;
   --fp-border-subtle: rgba(255, 255, 255, 0.06);
 
-  /* Orange accent */
-  --fp-orange: #f97316;
-  --fp-orange-hover: #ea6c14;
-  --fp-orange-muted: rgba(249, 115, 22, 0.1);
+  /* Amber accent */
+  --fp-accent: #f59e0b;
+  --fp-accent-hover: #fbbf24;
+  --fp-accent-muted: rgba(245, 158, 11, 0.1);
 
   /* Text */
-  --fp-text-primary: #f5f5f5;
-  --fp-text-secondary: #9ca3af;
-  --fp-text-muted: #6b7280;
+  --fp-text-primary: #f0f4f8;
+  --fp-text-secondary: #7d92ad;
+  --fp-text-muted: #7d92ad;
 }
 
 @theme inline {
@@ -28,9 +28,9 @@
   --color-surface-raised: var(--fp-surface-raised);
   --color-border: var(--fp-border);
   --color-border-subtle: var(--fp-border-subtle);
-  --color-orange: var(--fp-orange);
-  --color-orange-hover: var(--fp-orange-hover);
-  --color-orange-muted: var(--fp-orange-muted);
+  --color-accent: var(--fp-accent);
+  --color-accent-hover: var(--fp-accent-hover);
+  --color-accent-muted: var(--fp-accent-muted);
   --color-text-primary: var(--fp-text-primary);
   --color-text-secondary: var(--fp-text-secondary);
   --color-text-muted: var(--fp-text-muted);
@@ -38,8 +38,8 @@
   /* Fonts */
   --font-sans: var(--font-geist-sans);
   --font-mono: ui-monospace, "SF Mono", "Cascadia Mono", "Roboto Mono", Consolas, "Courier New", monospace;
-  --font-display: var(--font-oswald);
-  --font-body: var(--font-inter-tight);
+  --font-display: var(--font-barlow-condensed);
+  --font-body: var(--font-barlow);
 
   /* Section vertical spacing scale (direction doc: 80/120/160px) */
   --spacing-section-sm: 80px;
@@ -48,9 +48,9 @@
 }
 
 body {
-  background: linear-gradient(to bottom, #0d0d0d 0%, var(--fp-bg) 35%, #060606 100%);
+  background: linear-gradient(to bottom, #0e1425 0%, var(--fp-bg) 35%, #060a12 100%);
   color: var(--fp-text-primary);
-  font-family: var(--font-inter-tight), Arial, Helvetica, sans-serif;
+  font-family: var(--font-barlow), Arial, Helvetica, sans-serif;
 }
 
 @media (prefers-reduced-motion: reduce) {

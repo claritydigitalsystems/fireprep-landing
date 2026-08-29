@@ -150,7 +150,7 @@ export default function TermsPage() {
       <p className="leading-relaxed text-text-secondary">
         <a
           href="mailto:scott@firstcallprep.com"
-          className="text-orange underline-offset-2 hover:underline"
+          className="text-accent underline-offset-2 hover:underline"
         >
           scott@firstcallprep.com
         </a>
