@@ -212,6 +212,72 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Section 3: Why First Call (the wedge) ──
+           Names two approaches, never companies. First Call reads as the
+           resolution of the tradeoff, not as a third option in the list. ── */}
+      <section>
+        <div className="mx-auto w-full max-w-7xl px-6 py-[80px] lg:px-12 lg:py-[120px]">
+
+          <div className="mb-12 lg:mb-16">
+            <p className="mb-3 font-display text-sm font-semibold uppercase tracking-[0.18em] text-accent">
+              Why First Call
+            </p>
+            <h2 className="mb-4 font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
+              Real feedback used to mean waiting for a person. Not anymore.
+            </h2>
+            <p className="max-w-3xl text-lg leading-relaxed text-text-secondary">
+              Every way to prep the oral board makes you pick one.
+            </p>
+          </div>
+
+          <div className="mx-auto max-w-5xl">
+
+            {/* The two poles */}
+            <div className="grid grid-cols-1 items-stretch gap-6 lg:grid-cols-2">
+              <div className="rounded-md border border-border bg-surface p-6 lg:p-8">
+                <h3 className="mb-3 font-display text-2xl font-bold leading-snug text-text-primary">
+                  Fast, but hollow
+                </h3>
+                <p className="text-base leading-relaxed text-text-secondary">
+                  Instant tools score you in seconds, but most just mirror your
+                  confidence back. Hit the keywords, get a green light, walk in
+                  exactly as unprepared as you started.
+                </p>
+              </div>
+
+              <div className="rounded-md border border-border bg-surface p-6 lg:p-8">
+                <h3 className="mb-3 font-display text-2xl font-bold leading-snug text-text-primary">
+                  Real, but rationed
+                </h3>
+                <p className="text-base leading-relaxed text-text-secondary">
+                  A real coach gives real feedback, but they cost a lot, book
+                  out, and cap you at a couple sessions a month. A handful of
+                  honest reps when you need a hundred.
+                </p>
+              </div>
+            </div>
+
+            {/* The resolution */}
+            <div className="mt-6 rounded-md border border-border border-l-[3px] border-l-accent bg-surface-raised p-6 lg:p-8">
+              <h3 className="mb-3 font-display text-2xl font-bold leading-snug text-accent">
+                First Call
+              </h3>
+              <p className="text-base leading-relaxed text-text-primary lg:text-lg">
+                Every answer graded against a research-backed rubric, built on
+                published fire-service competency frameworks. Criterion by
+                criterion, the moment you finish, as many reps as you want.
+                Rigorous scoring at software speed.
+              </p>
+            </div>
+
+            <p className="mt-10 text-center font-display text-xl font-bold leading-snug text-text-primary lg:text-2xl">
+              Practice like it&apos;s real. As often as it takes.
+            </p>
+
+          </div>
+        </div>
+      </section>
+
     </main>
   );
 }
