@@ -11,7 +11,7 @@ export default function Footer() {
           <div>
             <Image
               src="/firstcall-logo-dark.png"
-              alt="FirstCall — Fire Interview Prep"
+              alt="First Call, fire interview prep"
               width={1393}
               height={382}
               className="h-11 w-auto"
@@ -25,9 +25,9 @@ export default function Footer() {
               {" · "}
               <Link href="/terms" className="transition-colors hover:text-text-secondary">Terms</Link>
               {" · "}
-              <a href="mailto:scott@firstcallprep.com" className="transition-colors hover:text-text-secondary">Contact</a>
+              <a href="mailto:support@firstcallprep.com" className="transition-colors hover:text-text-secondary">Contact</a>
             </p>
-            <p className="text-xs text-text-muted">© 2026 FirstCall</p>
+            <p className="text-xs text-text-muted">© 2026 First Call</p>
           </div>
 
         </div>
