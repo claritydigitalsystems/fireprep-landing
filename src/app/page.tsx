@@ -508,80 +508,102 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mx-auto max-w-4xl space-y-4">
+          <div className="mx-auto max-w-5xl">
 
-            {/* Card 1: carries the anchor-scale graphic */}
-            <div className="rounded-md border border-border bg-surface p-6 lg:p-8">
-              <div className="mb-3 flex items-start justify-between gap-4">
-                <h3 className="font-display text-2xl font-bold leading-snug text-text-primary lg:text-3xl">
-                  A defined bar, and where you landed.
-                </h3>
-                <Ruler className="mt-1 h-6 w-6 shrink-0 text-text-secondary" aria-hidden="true" />
-              </div>
-              <p className="text-base leading-relaxed text-text-secondary lg:text-lg">
-                Every answer is scored 0 to 3 on each criterion, against
-                written anchors that define exactly what a 0, 1, 2, and 3 look
-                like. The same rating structure used in formal interview
-                research, built for the fire-service oral board. No mystery
-                number. A defined bar, and where you landed against it.
-              </p>
+            {/* Cards 1 and 2 side by side; card 3 spans full width beneath. */}
+            <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
 
-              {/* The one graphic. The paragraph above already states the
-                  scale, so this is decorative for screen readers. */}
-              <div className="mt-6 flex items-center gap-3" aria-hidden="true">
-                <span className="flex h-8 w-8 items-center justify-center rounded border border-border font-display text-sm font-semibold text-text-muted">
-                  0
-                </span>
-                <span className="h-px w-4 bg-border" />
-                <span className="flex h-8 w-8 items-center justify-center rounded border border-border font-display text-sm font-semibold text-text-muted">
-                  1
-                </span>
-                <span className="h-px w-4 bg-border" />
-                <span className="flex h-8 w-8 items-center justify-center rounded border border-border font-display text-sm font-semibold text-text-muted">
-                  2
-                </span>
-                <span className="h-px w-4 bg-border" />
-                <span className="flex h-8 w-8 items-center justify-center rounded border border-accent font-display text-sm font-semibold text-accent">
-                  3
-                </span>
+              {/* Card 1: the anchor scale */}
+              <div className="rounded-md border border-border bg-surface p-6 lg:p-8">
+                <div className="mb-3 flex items-center gap-3">
+                  <Ruler className="h-5 w-5 shrink-0 text-accent" aria-hidden="true" />
+                  <h3 className="font-display text-2xl font-bold leading-snug text-text-primary">
+                    A defined bar, and where you landed
+                  </h3>
+                </div>
+                <p className="text-base leading-relaxed text-text-secondary">
+                  Every answer is scored 0 to 3 on each criterion, against
+                  written anchors that define exactly what each score looks
+                  like. No mystery number.
+                </p>
+
+                {/* Four connected segments; only the 3 is lit. The paragraph
+                    above states the scale, so this is decorative. */}
+                <div className="mt-6 flex items-center gap-2" aria-hidden="true">
+                  <span className="flex h-9 flex-1 items-center justify-center rounded border border-border bg-background font-display text-sm font-semibold text-text-muted">
+                    0
+                  </span>
+                  <span className="h-px w-3 bg-border" />
+                  <span className="flex h-9 flex-1 items-center justify-center rounded border border-border bg-background font-display text-sm font-semibold text-text-muted">
+                    1
+                  </span>
+                  <span className="h-px w-3 bg-border" />
+                  <span className="flex h-9 flex-1 items-center justify-center rounded border border-border bg-background font-display text-sm font-semibold text-text-muted">
+                    2
+                  </span>
+                  <span className="h-px w-3 bg-border" />
+                  <span className="flex h-9 flex-1 items-center justify-center rounded border border-accent bg-accent-muted font-display text-sm font-semibold text-accent">
+                    3
+                  </span>
+                </div>
               </div>
+
+              {/* Card 2: competency chips */}
+              <div className="rounded-md border border-border bg-surface p-6 lg:p-8">
+                <div className="mb-3 flex items-center gap-3">
+                  <ListChecks className="h-5 w-5 shrink-0 text-accent" aria-hidden="true" />
+                  <h3 className="font-display text-2xl font-bold leading-snug text-text-primary">
+                    Eight real competencies
+                  </h3>
+                </div>
+                <p className="text-base leading-relaxed text-text-secondary">
+                  Drawn from real fire-service hiring criteria, not a generic
+                  interview template. The areas boards actually weigh, scored
+                  the way they weigh them.
+                </p>
+
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {["Composure", "Decision-making", "Communication", "Integrity", "Teamwork"].map(
+                    (name) => (
+                      <span
+                        key={name}
+                        className="rounded border border-border bg-surface-raised px-2.5 py-1 text-[11px] text-[#c5d0de]"
+                      >
+                        {name}
+                      </span>
+                    ),
+                  )}
+                  <span className="rounded border border-border px-2.5 py-1 text-[11px] text-text-muted">
+                    +3 more
+                  </span>
+                </div>
+              </div>
+
             </div>
 
-            {/* Card 2: text only */}
-            <div className="rounded-md border border-border bg-surface p-6 lg:p-8">
+            {/* Card 3: full width, the point most tools miss */}
+            <div className="mt-4 rounded-md border border-border border-l-2 border-l-accent bg-[#141b2e] p-6 lg:p-8">
               <div className="mb-3 flex items-start justify-between gap-4">
-                <h3 className="font-display text-2xl font-bold leading-snug text-text-primary lg:text-3xl">
-                  Eight real competencies, not a template.
-                </h3>
-                <ListChecks className="mt-1 h-6 w-6 shrink-0 text-text-secondary" aria-hidden="true" />
+                <div className="flex items-center gap-3">
+                  <Target className="h-5 w-5 shrink-0 text-accent" aria-hidden="true" />
+                  <h3 className="font-display text-2xl font-bold leading-snug text-text-primary">
+                    Graded on what the question actually asked
+                  </h3>
+                </div>
+                <span className="shrink-0 rounded bg-accent-muted px-2 py-1 font-display text-[10px] font-semibold uppercase tracking-[0.14em] text-accent">
+                  Most tools skip this
+                </span>
               </div>
-              <p className="text-base leading-relaxed text-text-secondary lg:text-lg">
-                Composure under pressure. Decision-making. Communication.
-                Integrity. Teamwork. Eight competencies drawn from real
-                fire-service hiring criteria, not a generic interview template.
-                The areas boards actually weigh, scored the way they weigh
-                them.
+              <p className="text-base leading-relaxed text-[#c5d0de]">
+                A teamwork question is graded on teamwork. A decision-making
+                question is graded on decision-making. Every question carries
+                its own rubric, so you&apos;re never dinged for missing
+                something the question never asked. You get scored on what was
+                actually being tested.
               </p>
             </div>
 
-            {/* Card 3: text only */}
-            <div className="rounded-md border border-border bg-surface p-6 lg:p-8">
-              <div className="mb-3 flex items-start justify-between gap-4">
-                <h3 className="font-display text-2xl font-bold leading-snug text-text-primary lg:text-3xl">
-                  Graded on what the question actually asked.
-                </h3>
-                <Target className="mt-1 h-6 w-6 shrink-0 text-text-secondary" aria-hidden="true" />
-              </div>
-              <p className="text-base leading-relaxed text-text-secondary lg:text-lg">
-                This is the part most tools skip. A teamwork question is graded
-                on teamwork. A decision-making question is graded on
-                decision-making. Every question carries its own rubric, so
-                you&apos;re never dinged for missing something the question
-                never asked. You get scored on what was actually being tested.
-              </p>
-            </div>
-
-            <p className="mx-auto max-w-3xl pt-6 text-center text-sm leading-relaxed text-text-muted">
+            <p className="mx-auto max-w-3xl pt-8 text-center text-[13px] leading-relaxed text-[#6b7688]">
               Sourced from published fire-service frameworks and the interview
               research behind them. Not generic tips dressed up with a score.
             </p>
