@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Check, ChevronDown, ChevronRight, Mic, Play, Target, TrendingUp } from "lucide-react";
+import { Check, ChevronDown, ChevronRight, ListChecks, Mic, Play, Ruler, Target, TrendingUp } from "lucide-react";
 import { APP_URL } from "./lib/links";
 
 export default function Home() {
@@ -381,6 +381,108 @@ export default function Home() {
             </p>
           </div>
 
+        </div>
+      </section>
+
+      {/* ── Section 5: The rubric ──
+           Full proof of the #1 differentiator. Each card leads with a bold
+           one-line verdict. Exactly one graphic on the page lives here: the
+           0/1/2/3 anchor scale on card 1. Cards 2 and 3 stay text-only. ── */}
+      <section id="rubric" className="scroll-mt-20">
+        <div className="mx-auto w-full max-w-7xl px-6 py-[80px] lg:px-12 lg:py-[120px]">
+
+          <div className="mb-12 lg:mb-16">
+            <p className="mb-3 font-display text-sm font-semibold uppercase tracking-[0.18em] text-accent">
+              The rubric
+            </p>
+            <h2 className="mb-4 font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
+              Not a vibe. A rubric.
+            </h2>
+            <p className="max-w-3xl text-lg leading-relaxed text-text-secondary">
+              Most tools give you a number and a pat on the back. Here&apos;s
+              what&apos;s actually behind your score.
+            </p>
+          </div>
+
+          <div className="mx-auto max-w-4xl space-y-4">
+
+            {/* Card 1 — carries the anchor-scale graphic */}
+            <div className="rounded-md border border-border bg-surface p-6 lg:p-8">
+              <div className="mb-3 flex items-start justify-between gap-4">
+                <h3 className="font-display text-2xl font-bold leading-snug text-text-primary lg:text-3xl">
+                  A defined bar, and where you landed.
+                </h3>
+                <Ruler className="mt-1 h-6 w-6 shrink-0 text-text-secondary" aria-hidden="true" />
+              </div>
+              <p className="text-base leading-relaxed text-text-secondary lg:text-lg">
+                Every answer is scored 0 to 3 on each criterion, against
+                written anchors that define exactly what a 0, 1, 2, and 3 look
+                like. The same rating structure used in formal interview
+                research, built for the fire-service oral board. No mystery
+                number. A defined bar, and where you landed against it.
+              </p>
+
+              {/* The one graphic. The paragraph above already states the
+                  scale, so this is decorative for screen readers. */}
+              <div className="mt-6 flex items-center gap-3" aria-hidden="true">
+                <span className="flex h-8 w-8 items-center justify-center rounded border border-border font-display text-sm font-semibold text-text-muted">
+                  0
+                </span>
+                <span className="h-px w-4 bg-border" />
+                <span className="flex h-8 w-8 items-center justify-center rounded border border-border font-display text-sm font-semibold text-text-muted">
+                  1
+                </span>
+                <span className="h-px w-4 bg-border" />
+                <span className="flex h-8 w-8 items-center justify-center rounded border border-border font-display text-sm font-semibold text-text-muted">
+                  2
+                </span>
+                <span className="h-px w-4 bg-border" />
+                <span className="flex h-8 w-8 items-center justify-center rounded border border-accent font-display text-sm font-semibold text-accent">
+                  3
+                </span>
+              </div>
+            </div>
+
+            {/* Card 2 — text only */}
+            <div className="rounded-md border border-border bg-surface p-6 lg:p-8">
+              <div className="mb-3 flex items-start justify-between gap-4">
+                <h3 className="font-display text-2xl font-bold leading-snug text-text-primary lg:text-3xl">
+                  Eight real competencies, not a template.
+                </h3>
+                <ListChecks className="mt-1 h-6 w-6 shrink-0 text-text-secondary" aria-hidden="true" />
+              </div>
+              <p className="text-base leading-relaxed text-text-secondary lg:text-lg">
+                Composure under pressure. Decision-making. Communication.
+                Integrity. Teamwork. Eight competencies drawn from real
+                fire-service hiring criteria, not a generic interview template.
+                The areas boards actually weigh, scored the way they weigh
+                them.
+              </p>
+            </div>
+
+            {/* Card 3 — text only */}
+            <div className="rounded-md border border-border bg-surface p-6 lg:p-8">
+              <div className="mb-3 flex items-start justify-between gap-4">
+                <h3 className="font-display text-2xl font-bold leading-snug text-text-primary lg:text-3xl">
+                  Graded on what the question actually asked.
+                </h3>
+                <Target className="mt-1 h-6 w-6 shrink-0 text-text-secondary" aria-hidden="true" />
+              </div>
+              <p className="text-base leading-relaxed text-text-secondary lg:text-lg">
+                This is the part most tools skip. A teamwork question is graded
+                on teamwork. A decision-making question is graded on
+                decision-making. Every question carries its own rubric, so
+                you&apos;re never dinged for missing something the question
+                never asked. You get scored on what was actually being tested.
+              </p>
+            </div>
+
+            <p className="mx-auto max-w-3xl pt-6 text-center text-sm leading-relaxed text-text-muted">
+              Sourced from published fire-service frameworks and the interview
+              research behind them. Not generic tips dressed up with a score.
+            </p>
+
+          </div>
         </div>
       </section>
 
