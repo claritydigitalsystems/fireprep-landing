@@ -1,17 +1,11 @@
 "use client";
 
 import Image from "next/image";
+import { APP_URL } from "../lib/links";
 
 export default function Navbar() {
   function scrollToTop() {
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }
-
-  function scrollToWaitlist() {
-    document.getElementById("waitlist-form")?.scrollIntoView({
-      behavior: "smooth",
-      block: "center",
-    });
   }
 
   return (
@@ -25,11 +19,11 @@ export default function Navbar() {
         <button
           type="button"
           onClick={scrollToTop}
-          className="focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+          className="cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
         >
           <Image
             src="/firstcall-logo-dark.png"
-            alt="FirstCall — Fire Interview Prep"
+            alt="First Call — Fire Interview Prep"
             width={1393}
             height={382}
             priority
@@ -40,31 +34,36 @@ export default function Navbar() {
           </span>
         </button>
 
-        {/* Right-side group: nav links + CTA */}
-        <div className="flex items-center gap-8">
-          <div className="hidden items-center gap-8 md:flex">
+        {/* Right-side group: section links, sign in, primary CTA */}
+        <div className="flex items-center gap-6 lg:gap-8">
+          <div className="hidden items-center gap-6 md:flex lg:gap-8">
             <a
-              href="#methodology"
-              className="text-sm text-text-secondary transition-colors hover:text-white"
+              href="#how-it-works"
+              className="text-sm text-text-secondary transition-colors hover:text-text-primary"
             >
               How it works
             </a>
             <a
-              href="#about"
-              className="text-sm text-text-secondary transition-colors hover:text-white"
+              href="#rubric"
+              className="text-sm text-text-secondary transition-colors hover:text-text-primary"
             >
-              About
+              The rubric
             </a>
           </div>
 
-          {/* Join Waitlist — scrolls to hero form */}
-          <button
-            type="button"
-            onClick={scrollToWaitlist}
-            className="cursor-pointer rounded-lg bg-accent px-5 py-2 text-sm font-semibold text-background transition-colors hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+          <a
+            href={APP_URL}
+            className="hidden text-sm text-text-secondary transition-colors hover:text-text-primary sm:block"
           >
-            Join Waitlist
-          </button>
+            Sign in
+          </a>
+
+          <a
+            href={APP_URL}
+            className="rounded-md bg-accent px-5 py-2 text-sm font-semibold text-background transition-colors hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+          >
+            Start free
+          </a>
         </div>
 
       </div>
