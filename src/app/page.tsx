@@ -486,6 +486,72 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Section 6: About (founder) ──
+           Founder trust as support for the rigor claim, not as the lead. ── */}
+      <section id="about" className="scroll-mt-20">
+        <div className="mx-auto w-full max-w-7xl px-6 py-[80px] lg:px-12 lg:py-[120px]">
+          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
+
+            {/* Photo slot. TODO: founder.jpg is the training-burn shot, not a
+                portrait. Scott to supply a real portrait; drop it in here and
+                update the alt text. Frame and sizing stay as-is. */}
+            <div
+              className="relative w-full overflow-hidden rounded-md border border-border lg:order-last"
+              style={{ aspectRatio: "1035/691", maxHeight: "560px" }}
+            >
+              <Image
+                src="/founder.jpg"
+                alt="Scott Shimala, active firefighter and founder of First Call"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover"
+              />
+            </div>
+
+            {/* Copy */}
+            <div>
+              <p className="mb-3 font-display text-sm font-semibold uppercase tracking-[0.18em] text-accent">
+                About
+              </p>
+              <h2 className="mb-8 font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
+                Why I&apos;m building this.
+              </h2>
+
+              <div className="space-y-6 text-lg leading-relaxed text-text-secondary">
+                <p>
+                  I&apos;m Scott, an active firefighter. Before I got hired, I
+                  went through hiring process after hiring process, different
+                  departments, different formats, the same panel asking
+                  variations of the same questions.
+                </p>
+                <p>
+                  I learned the prep gap firsthand. The advice online is
+                  generic. The good coaching is expensive and books out. And
+                  the scoring criteria panels actually use have been public for
+                  decades, rooted in real fire-service competency frameworks,
+                  but no tool ever used them to grade your practice.
+                </p>
+                <p>
+                  So I built the one that does. First Call grades against those
+                  frameworks the way a board would, so you get real signal on
+                  every rep instead of a pat on the back.
+                </p>
+              </div>
+
+              <div className="mt-8 border-t border-border pt-6">
+                <p className="font-display text-base font-semibold text-text-primary">
+                  Scott Shimala · Active firefighter, building First Call.
+                </p>
+                <p className="mt-1 text-sm text-text-muted">
+                  Free while I test it with real candidates.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
     </main>
   );
 }
