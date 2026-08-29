@@ -423,12 +423,9 @@ export default function Home() {
                   Track
                 </h3>
                 <p className="text-base leading-relaxed text-text-secondary">
-                  Every answer feeds eight fire-service competencies, scored
-                  and tracked across every session. You see exactly where
-                  you&apos;re strong and where you keep losing points, so you
-                  can drill the weak spots on purpose. Walk in with all eight
-                  dialed, and you&apos;ll be the most prepared candidate in the
-                  room.
+                  Every answer feeds eight fire-service competencies, tracked
+                  across every session. See where you keep losing points, drill
+                  those, and walk in with all eight dialed.
                 </p>
               </div>
 
