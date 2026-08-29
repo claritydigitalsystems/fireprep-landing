@@ -9,29 +9,32 @@ export default function Home() {
 
       {/* ── Section 1: Hero ── */}
       <section className="relative">
-        <div className="mx-auto w-full max-w-7xl px-6 py-[80px] lg:px-12 lg:py-[120px]">
-          <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="mx-auto w-full max-w-7xl px-6 py-[56px] lg:px-12 lg:py-[80px]">
+          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-14">
 
             {/* Left: copy */}
             <div>
-              <p className="mb-5 font-display text-sm font-semibold uppercase tracking-[0.18em] text-accent">
+              <p className="mb-4 font-display text-sm font-semibold uppercase tracking-[0.18em] text-accent">
                 Free while in beta · Real candidates, real feedback
               </p>
 
-              <h1 className="mb-6 font-display text-5xl font-bold leading-[1.05] tracking-tight text-text-primary md:text-6xl lg:text-7xl">
+              <h1 className="mb-5 font-display text-5xl font-bold leading-[1.05] tracking-tight text-text-primary md:text-6xl lg:text-7xl">
                 Practice the oral board the way it&apos;s actually scored.
               </h1>
 
-              <p className="mb-6 text-lg leading-relaxed text-text-secondary lg:text-xl">
+              <p className="mb-5 text-lg leading-relaxed text-text-secondary lg:text-xl">
                 The oral board is the most subjective-feeling part of fire
                 hiring, and the part most candidates prepare for blind. First
-                Call scores your spoken answers against the same competencies
-                panels use, criterion by criterion, the moment you finish. You
+                Call scores your spoken answers against{" "}
+                <strong className="font-semibold text-text-primary">
+                  the same competencies panels use
+                </strong>
+                , criterion by criterion, the moment you finish. You
                 see what landed, what didn&apos;t, and what to fix before it
                 counts.
               </p>
 
-              <p className="mb-8 text-base leading-relaxed text-text-secondary">
+              <p className="mb-7 text-base leading-relaxed text-text-secondary">
                 Built by an active firefighter, on a rubric sourced from real
                 fire-service hiring criteria, not generic interview tips.
               </p>
@@ -39,13 +42,15 @@ export default function Home() {
               <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-6">
                 <a
                   href={APP_URL}
-                  className="rounded-md bg-accent px-6 py-3 text-sm font-semibold text-background transition-colors hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                  className="rounded-md bg-accent px-8 py-4 text-base font-semibold text-background transition-colors hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                 >
                   Start free
                 </a>
+                {/* Transparent outlined counterpart, so the pair reads as one
+                    primary and one secondary rather than a button and a link. */}
                 <a
                   href="#watch"
-                  className="inline-flex items-center gap-2 text-sm font-medium text-text-secondary transition-colors hover:text-text-primary"
+                  className="inline-flex items-center gap-2 rounded-md border border-border bg-transparent px-6 py-4 text-base font-medium text-text-secondary transition-colors hover:border-text-secondary hover:text-text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                 >
                   <Play className="h-4 w-4" aria-hidden="true" />
                   Watch how it works (60 sec)
@@ -59,7 +64,7 @@ export default function Home() {
             </div>
 
             {/* Right: hero image */}
-            <div className="relative min-h-[320px] overflow-hidden rounded-md ring-1 ring-border lg:min-h-[500px]">
+            <div className="relative h-[280px] overflow-hidden rounded-md ring-1 ring-border lg:h-[400px]">
               <Image
                 src="/firefighters.jpg"
                 alt="Two firefighters silhouetted against a live training burn"
