@@ -59,6 +59,45 @@ body {
   }
 }
 
+/* ── Differentiators rail ──────────────────────────────────────────────────
+   Vertical connector under item 01, fading toward 02. A gradient is used here
+   as a STRUCTURAL device (it must fade out), not as decoration. */
+.fp-rail-connector {
+  background-image: linear-gradient(to bottom, #1e2d45, transparent);
+}
+
+/* Callout under differentiator 01: amber left edge, square corners on purpose
+   so it reads as a margin note rather than another card. */
+.fp-callout {
+  background-color: #111827;
+  border-left: 2px solid var(--fp-accent);
+  border-radius: 0;
+}
+
+/* ── Rising-bar sparkline (differentiator 02) ──────────────────────────────
+   Six bars climbing left to right. The first four are muted; the last two are
+   amber, with the final bar at full height and opacity. Content-carrying: the
+   shape IS the claim (a competency climbing over reps). */
+.fp-spark {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  height: 44px;
+}
+
+.fp-spark span {
+  width: 10px;
+  border-radius: 1px;
+  background-color: #1e2d45;
+}
+
+.fp-spark span:nth-child(1) { height: 30%; }
+.fp-spark span:nth-child(2) { height: 42%; }
+.fp-spark span:nth-child(3) { height: 55%; background-color: #2a3a56; }
+.fp-spark span:nth-child(4) { height: 68%; background-color: #2a3a56; }
+.fp-spark span:nth-child(5) { height: 84%; background-color: var(--fp-accent); opacity: 0.55; }
+.fp-spark span:nth-child(6) { height: 100%; background-color: var(--fp-accent); }
+
 body::after {
   content: '';
   position: fixed;
