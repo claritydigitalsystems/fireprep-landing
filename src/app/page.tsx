@@ -441,6 +441,53 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Fire video banner ── full-bleed break between how-it-works and
+           the rubric. The poster Image sits UNDER the video rather than on the
+           <video poster> attribute: globals.css hides video[autoplay] under
+           prefers-reduced-motion, and a hidden video shows no poster, so the
+           still has to be its own layer to survive that rule. ── */}
+      <section aria-label="No more guessing" className="relative overflow-hidden">
+        <div className="relative h-[40vh] w-full lg:h-[58vh]">
+
+          <Image
+            src="/firefighters.jpg"
+            alt=""
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
+
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="none"
+            aria-hidden="true"
+            className="absolute inset-0 h-full w-full object-cover"
+          >
+            <source src="/fire-loop.mp4" type="video/mp4" />
+          </video>
+
+          {/* Legibility wash. Structural, not decorative. */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 bg-black/60"
+          />
+
+          <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
+            <p className="font-display text-4xl font-bold leading-tight text-text-primary lg:text-6xl">
+              No more guessing.
+            </p>
+            <p className="mt-3 max-w-2xl font-display text-2xl font-bold leading-snug text-text-primary lg:text-4xl">
+              Walk in knowing exactly what panels are{" "}
+              <span className="text-accent">scoring.</span>
+            </p>
+          </div>
+
+        </div>
+      </section>
+
       {/* ── Section 5: The rubric ──
            Full proof of the #1 differentiator. Each card leads with a bold
            one-line verdict. Exactly one graphic on the page lives here: the
