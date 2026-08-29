@@ -15,7 +15,7 @@ export default function Navbar() {
     >
       <div className="mx-auto flex h-14 w-full max-w-7xl items-center justify-between px-6 lg:h-16 lg:px-12">
 
-        {/* Wordmark — scrolls to top */}
+        {/* Wordmark, scrolls to top */}
         <button
           type="button"
           onClick={scrollToTop}
@@ -23,7 +23,7 @@ export default function Navbar() {
         >
           <Image
             src="/firstcall-logo-dark.png"
-            alt="First Call — Fire Interview Prep"
+            alt="First Call, fire interview prep"
             width={1393}
             height={382}
             priority

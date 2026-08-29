@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="mx-auto w-full max-w-7xl px-6 py-8 lg:px-12 lg:py-10">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
 
-          {/* Left — logo */}
+          {/* Left: logo */}
           <div>
             <Image
               src="/firstcall-logo-dark.png"
@@ -18,7 +18,7 @@ export default function Footer() {
             />
           </div>
 
-          {/* Right — links + copyright */}
+          {/* Right: links + copyright */}
           <div className="flex flex-col gap-2 sm:items-end">
             <p className="text-xs text-text-muted">
               <Link href="/privacy" className="transition-colors hover:text-text-secondary">Privacy</Link>

@@ -12,7 +12,7 @@ export default function Home() {
         <div className="mx-auto w-full max-w-7xl px-6 py-[80px] lg:px-12 lg:py-[120px]">
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
 
-            {/* Left — copy */}
+            {/* Left: copy */}
             <div>
               <p className="mb-5 font-display text-sm font-semibold uppercase tracking-[0.18em] text-accent">
                 Free while in beta · Real candidates, real feedback
@@ -58,7 +58,7 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Right — hero image */}
+            {/* Right: hero image */}
             <div className="relative min-h-[320px] overflow-hidden rounded-md ring-1 ring-border lg:min-h-[500px]">
               <Image
                 src="/firefighters.jpg"
@@ -139,7 +139,7 @@ export default function Home() {
             {/* The two graders */}
             <div className="mt-6 grid grid-cols-1 items-stretch gap-6 lg:grid-cols-2">
 
-              {/* Left — most tools. Hollow praise, so the score reads dull
+              {/* Left: most tools. Hollow praise, so the score reads dull
                   olive rather than a healthy success green. */}
               <div className="rounded-md border border-border bg-surface p-6 lg:p-8">
                 <p className="mb-6 font-display text-lg font-bold uppercase tracking-[0.12em] text-text-secondary">
@@ -164,7 +164,7 @@ export default function Home() {
                 </p>
               </div>
 
-              {/* Right — First Call. The one saturated element on the page. */}
+              {/* Right: First Call. The one saturated element on the page. */}
               <div className="rounded-md border border-accent bg-surface p-6 lg:p-8">
                 <p className="mb-6 font-display text-lg font-bold uppercase tracking-[0.12em] text-text-primary">
                   First Call
@@ -298,7 +298,7 @@ export default function Home() {
           <div className="mx-auto max-w-6xl">
             <div className="flex flex-col lg:flex-row lg:items-stretch">
 
-              {/* Node 01 — Practice */}
+              {/* Node 01: Practice */}
               <div className="flex-1 rounded-md border border-border bg-surface p-6 lg:p-8">
                 <div className="mb-4 flex items-center justify-between">
                   <p className="font-display text-xl tracking-widest text-text-muted">
@@ -325,7 +325,7 @@ export default function Home() {
                 <ChevronDown className="h-10 w-10 lg:hidden" />
               </div>
 
-              {/* Node 02 — Score */}
+              {/* Node 02: Score */}
               <div className="flex-1 rounded-md border border-border bg-surface p-6 lg:p-8">
                 <div className="mb-4 flex items-center justify-between">
                   <p className="font-display text-xl tracking-widest text-text-muted">
@@ -352,7 +352,7 @@ export default function Home() {
                 <ChevronDown className="h-10 w-10 lg:hidden" />
               </div>
 
-              {/* Node 03 — Track. Pulled up as the #2 differentiator. */}
+              {/* Node 03: Track. Pulled up as the #2 differentiator. */}
               <div className="flex-1 rounded-md border border-border border-t-[3px] border-t-accent bg-surface p-6 lg:p-8">
                 <div className="mb-4 flex items-center justify-between">
                   <p className="font-display text-xl tracking-widest text-accent">
@@ -407,7 +407,7 @@ export default function Home() {
 
           <div className="mx-auto max-w-4xl space-y-4">
 
-            {/* Card 1 — carries the anchor-scale graphic */}
+            {/* Card 1: carries the anchor-scale graphic */}
             <div className="rounded-md border border-border bg-surface p-6 lg:p-8">
               <div className="mb-3 flex items-start justify-between gap-4">
                 <h3 className="font-display text-2xl font-bold leading-snug text-text-primary lg:text-3xl">
@@ -444,7 +444,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Card 2 — text only */}
+            {/* Card 2: text only */}
             <div className="rounded-md border border-border bg-surface p-6 lg:p-8">
               <div className="mb-3 flex items-start justify-between gap-4">
                 <h3 className="font-display text-2xl font-bold leading-snug text-text-primary lg:text-3xl">
@@ -461,7 +461,7 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Card 3 — text only */}
+            {/* Card 3: text only */}
             <div className="rounded-md border border-border bg-surface p-6 lg:p-8">
               <div className="mb-3 flex items-start justify-between gap-4">
                 <h3 className="font-display text-2xl font-bold leading-snug text-text-primary lg:text-3xl">
