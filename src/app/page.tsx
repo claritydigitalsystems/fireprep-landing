@@ -703,9 +703,13 @@ export default function Home() {
             {/* slot: subcopy */}
             <p className="mb-10 text-lg leading-relaxed text-text-secondary">
               First Call is live and free while I test it with real
-              candidates. Real questions, real scoring, real feedback on every
-              answer. No credit card, no catch. I&apos;m looking for candidates
-              who&apos;ll actually use it and tell me what&apos;s working.
+              candidates.{" "}
+              <strong className="font-semibold text-text-primary">
+                Real questions, real scoring, real feedback on every answer. No
+                credit card, no catch.
+              </strong>{" "}
+              I&apos;m looking for candidates who&apos;ll actually use it and
+              tell me what&apos;s working.
             </p>
 
             {/* slot: primary CTA */}

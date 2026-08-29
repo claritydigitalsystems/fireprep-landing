@@ -38,6 +38,12 @@ export default function Navbar() {
         <div className="flex items-center gap-6 lg:gap-8">
           <div className="hidden items-center gap-6 md:flex lg:gap-8">
             <a
+              href="#why"
+              className="text-sm text-text-secondary transition-colors hover:text-text-primary"
+            >
+              Why First Call
+            </a>
+            <a
               href="#how-it-works"
               className="text-sm text-text-secondary transition-colors hover:text-text-primary"
             >
