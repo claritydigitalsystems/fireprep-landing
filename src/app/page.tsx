@@ -115,8 +115,9 @@ export default function Home() {
               </div>
 
               <p className="mt-8 text-base leading-relaxed text-text-secondary">
-                Built by an active firefighter, on a rubric sourced from real
-                fire-service hiring criteria, not generic interview tips.
+                Built by an active firefighter, on a research-backed rubric
+                sourced from published fire-service hiring frameworks. Not
+                generic interview tips.
               </p>
             </div>
 

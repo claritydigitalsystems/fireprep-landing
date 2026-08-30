@@ -42,7 +42,7 @@ export default function Navbar() {
           />
           {/* Mobile fallback wordmark. FIRST is the canonical logo orange, so
               it matches the artwork used at lg+ and in the footer. */}
-          <span className="font-display text-2xl font-bold tracking-wider text-text-primary lg:hidden">
+          <span className="font-display text-3xl font-bold tracking-wider text-text-primary lg:hidden">
             <span className="text-logo">FIRST</span>CALL
           </span>
         </button>
@@ -61,16 +61,18 @@ export default function Navbar() {
             ))}
           </div>
 
+          {/* Persistent at every width: signing in is a top-level action, and
+              burying it in the menu hid it from returning users on mobile. */}
           <a
             href={APP_URL}
-            className="hidden text-sm text-text-secondary transition-colors hover:text-text-primary lg:block"
+            className="flex min-h-[44px] items-center text-sm text-text-secondary transition-colors hover:text-text-primary"
           >
             Sign in
           </a>
 
           <a
             href={APP_URL}
-            className="rounded-md bg-accent px-4 py-2 text-base font-semibold text-background transition-colors hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background lg:px-5 lg:text-sm"
+            className="rounded-md bg-accent px-3 py-2 text-sm font-semibold text-background transition-colors hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background lg:px-5"
           >
             Start free
           </a>
@@ -112,14 +114,6 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-
-          <a
-            href={APP_URL}
-            onClick={() => setMenuOpen(false)}
-            className="flex min-h-[44px] items-center border-b border-border text-base text-text-secondary transition-colors hover:text-text-primary"
-          >
-            Sign in
-          </a>
 
           <a
             href={APP_URL}

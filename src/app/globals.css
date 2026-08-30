@@ -19,9 +19,10 @@
   --fp-device-edge: #3a4d6e;
   --fp-device-screen: #070b14;
 
-  /* Canonical brand logo orange. Deliberately NOT --fp-accent: the wordmark
-     matches the logo artwork in firstcall-logo-dark.png, which is orange.
-     Do not "correct" this to amber. */
+  /* Canonical brand logo orange, used by the mobile wordmark in Navbar.tsx
+     (the FIRST in FIRSTCALL). Deliberately NOT --fp-accent: it matches the
+     logo artwork in firstcall-logo-dark.png, which is orange. Do not
+     "correct" this to amber. */
   --fp-logo: #f97316;
 
   /* Amber accent */
