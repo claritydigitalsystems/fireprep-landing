@@ -18,11 +18,11 @@ export default function Home() {
                 Free while in beta · Real candidates, real feedback
               </p>
 
-              <h1 className="mb-5 font-display text-5xl font-bold leading-[1.05] tracking-tight text-text-primary md:text-6xl lg:text-7xl">
+              <h1 className="mb-4 font-display text-4xl font-bold leading-[1.03] tracking-tight text-text-primary md:text-5xl lg:text-6xl">
                 Practice the oral board the way it&apos;s actually scored.
               </h1>
 
-              <p className="mb-5 text-lg leading-relaxed text-text-secondary lg:text-xl">
+              <p className="mb-7 text-base leading-relaxed text-text-secondary lg:text-lg">
                 The oral board is the most subjective-feeling part of fire
                 hiring, and the part most candidates prepare for blind. First
                 Call scores your spoken answers against{" "}
@@ -32,11 +32,6 @@ export default function Home() {
                 , criterion by criterion, the moment you finish. You
                 see what landed, what didn&apos;t, and what to fix before it
                 counts.
-              </p>
-
-              <p className="mb-7 text-base leading-relaxed text-text-secondary">
-                Built by an active firefighter, on a rubric sourced from real
-                fire-service hiring criteria, not generic interview tips.
               </p>
 
               <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-6">
@@ -63,16 +58,61 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Right: hero image */}
-            <div className="relative h-[280px] overflow-hidden rounded-md ring-1 ring-border lg:h-[400px]">
-              <Image
-                src="/firefighters.jpg"
-                alt="Two firefighters silhouetted against a live training burn"
-                fill
-                priority
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
-              />
+            {/* Right: device mockup, then the attribution line beneath it.
+                Frames are deliberately FLAT and front-facing. No perspective
+                or 3D rotation: angled CSS mockups read as cheap.
+
+                TODO: replace placeholder panels with real app screenshots.
+                Dashboard/feedback on the laptop, a mobile session/feedback
+                screen on the phone (launch-gated asset). Each screen area
+                below is a positioned box, so one
+                <img className="absolute inset-0 h-full w-full object-cover" />
+                dropped inside will fill it cleanly with no other changes. */}
+            <div>
+              <div className="relative mx-auto w-full max-w-[540px] pb-10">
+
+                {/* Laptop */}
+                <div className="rounded-t-lg border border-b-0 border-border bg-surface-raised">
+                  {/* Browser-style chrome */}
+                  <div aria-hidden="true" className="flex items-center gap-1.5 px-3 py-2.5">
+                    <span className="h-2 w-2 rounded-full bg-border-strong" />
+                    <span className="h-2 w-2 rounded-full bg-border-strong" />
+                    <span className="h-2 w-2 rounded-full bg-border-strong" />
+                  </div>
+                  {/* Laptop screen area */}
+                  <div className="relative aspect-[16/10] w-full overflow-hidden border-t border-border bg-background">
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <span className="font-display text-xs font-semibold uppercase tracking-[0.18em] text-text-muted">
+                        App preview
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                {/* Laptop base, slightly wider than the lid */}
+                <div
+                  aria-hidden="true"
+                  className="relative left-1/2 h-2.5 w-[106%] -translate-x-1/2 rounded-b-md border border-border bg-surface"
+                />
+
+                {/* Phone, overlapping the laptop's lower-right corner */}
+                <div className="absolute bottom-0 right-4 w-[24%] min-w-[92px] rounded-[1.1rem] border border-border bg-surface-raised p-1.5 ring-4 ring-background">
+                  <div aria-hidden="true" className="mx-auto mb-1.5 h-[3px] w-7 rounded-full bg-border-strong" />
+                  {/* Phone screen area */}
+                  <div className="relative aspect-[9/18] w-full overflow-hidden rounded-[0.7rem] bg-background">
+                    <div className="absolute inset-0 flex items-center justify-center px-1 text-center">
+                      <span className="font-display text-[9px] font-semibold uppercase tracking-[0.12em] text-text-muted">
+                        App preview
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <p className="mt-8 text-base leading-relaxed text-text-secondary">
+                Built by an active firefighter, on a rubric sourced from real
+                fire-service hiring criteria, not generic interview tips.
+              </p>
             </div>
 
           </div>

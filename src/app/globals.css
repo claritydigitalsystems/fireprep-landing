@@ -9,6 +9,9 @@
   /* Borders */
   --fp-border: #1e2d45;
   --fp-border-subtle: rgba(255, 255, 255, 0.06);
+  /* One step up from --fp-border, for edges that need to read as an object
+     rather than a hairline: device-frame details, card tops. */
+  --fp-border-strong: #2a3a56;
 
   /* Amber accent */
   --fp-accent: #f59e0b;
@@ -28,6 +31,7 @@
   --color-surface-raised: var(--fp-surface-raised);
   --color-border: var(--fp-border);
   --color-border-subtle: var(--fp-border-subtle);
+  --color-border-strong: var(--fp-border-strong);
   --color-accent: var(--fp-accent);
   --color-accent-hover: var(--fp-accent-hover);
   --color-accent-muted: var(--fp-accent-muted);
