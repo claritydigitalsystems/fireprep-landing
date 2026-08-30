@@ -9,8 +9,8 @@ export default function Home() {
 
       {/* ── Section 1: Hero ── */}
       <section className="relative">
-        <div className="mx-auto w-full max-w-7xl px-6 py-[56px] lg:px-12 lg:py-[80px]">
-          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-14">
+        <div className="mx-auto w-full max-w-7xl px-6 pt-[80px] pb-[56px] lg:px-12 lg:pt-[80px] lg:pb-[80px]">
+          <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2 lg:gap-14">
 
             {/* Left: copy */}
             <div>
@@ -116,7 +116,7 @@ export default function Home() {
 
               </div>
 
-              <p className="mt-8 text-base leading-relaxed text-text-secondary">
+              <p className="mt-6 text-base leading-relaxed text-text-secondary lg:mt-8">
                 Built by an active firefighter, on a research-backed rubric
                 sourced from published fire-service hiring frameworks. Not
                 generic interview tips.
