@@ -19,6 +19,11 @@
   --fp-device-edge: #3a4d6e;
   --fp-device-screen: #070b14;
 
+  /* Canonical brand logo orange. Deliberately NOT --fp-accent: the wordmark
+     matches the logo artwork in firstcall-logo-dark.png, which is orange.
+     Do not "correct" this to amber. */
+  --fp-logo: #f97316;
+
   /* Amber accent */
   --fp-accent: #f59e0b;
   --fp-accent-hover: #fbbf24;
@@ -45,6 +50,7 @@
   --color-border-strong: var(--fp-border-strong);
   --color-device-edge: var(--fp-device-edge);
   --color-device-screen: var(--fp-device-screen);
+  --color-logo: var(--fp-logo);
   --color-accent: var(--fp-accent);
   --color-accent-hover: var(--fp-accent-hover);
   --color-accent-muted: var(--fp-accent-muted);
