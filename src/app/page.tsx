@@ -129,7 +129,7 @@ export default function Home() {
            launch, replace the placeholder frame below with a <video> element
            (poster + <source>), same as the old fire-loop band did. ── */}
       <section id="watch" className="scroll-mt-20">
-        <div className="mx-auto w-full max-w-7xl px-6 pb-[80px] lg:px-12 lg:pb-[120px]">
+        <div className="mx-auto w-full max-w-7xl px-6 pt-[48px] pb-[80px] lg:px-12 lg:pt-[72px] lg:pb-[120px]">
           <div className="mx-auto max-w-4xl">
             <div className="flex aspect-video w-full flex-col items-center justify-center rounded-md border border-border bg-surface">
               <Play className="mb-4 h-10 w-10 text-text-muted" aria-hidden="true" />
