@@ -274,10 +274,8 @@ export default function Home() {
             <p className="mb-3 font-display text-sm font-semibold uppercase tracking-[0.18em] text-accent">
               Why First Call
             </p>
-            <h2 className="mb-4 font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
-              Built to grade like a board.
-              <br />
-              Not like a chatbot.
+            <h2 className="mb-4 font-display text-4xl font-bold leading-tight text-text-primary lg:whitespace-nowrap lg:text-[2.5rem] xl:text-5xl">
+              Built to grade like a board. Not like a chatbot.
             </h2>
             <p className="max-w-3xl text-lg leading-relaxed text-text-secondary">
               Two things separate First Call from every other way to prep. Both
@@ -764,7 +762,7 @@ export default function Home() {
             {/* slot: primary CTA */}
             <a
               href={APP_URL}
-              className="inline-block rounded-md bg-accent px-8 py-4 text-base font-semibold text-background transition-colors hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              className="inline-block rounded-md bg-accent px-10 py-5 text-lg font-semibold text-background transition-colors hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
               Start practicing free
             </a>
