@@ -398,9 +398,9 @@ export default function Home() {
             <div className="flex flex-col lg:flex-row lg:items-stretch">
 
               {/* Node 01: Practice */}
-              <div className="flex-1 rounded-md border border-border bg-surface p-6 lg:p-8">
+              <div className="flex-1 rounded-md border border-border-strong border-t-2 border-t-border-strong bg-surface p-6 lg:p-8">
                 <div className="mb-4 flex items-center justify-between">
-                  <p className="font-display text-xl tracking-widest text-text-muted">
+                  <p className="font-display text-3xl font-bold tracking-widest text-text-secondary">
                     01
                   </p>
                   <Mic className="h-6 w-6 text-text-secondary" aria-hidden="true" />
@@ -418,16 +418,18 @@ export default function Home() {
               {/* Connector */}
               <div
                 aria-hidden="true"
-                className="flex shrink-0 items-center justify-center py-5 text-text-muted lg:px-5 lg:py-0"
+                className="flex shrink-0 flex-col items-center justify-center gap-1.5 py-4 lg:flex-row lg:gap-2 lg:px-4 lg:py-0"
               >
-                <ChevronRight className="hidden h-10 w-10 lg:block" />
-                <ChevronDown className="h-10 w-10 lg:hidden" />
+                <span className="h-5 w-px bg-border-strong lg:h-px lg:w-5" />
+                <ChevronRight className="hidden h-7 w-7 text-accent lg:block" />
+                <ChevronDown className="h-7 w-7 text-accent lg:hidden" />
+                <span className="h-5 w-px bg-border-strong lg:h-px lg:w-5" />
               </div>
 
               {/* Node 02: Score */}
-              <div className="flex-1 rounded-md border border-border bg-surface p-6 lg:p-8">
+              <div className="flex-1 rounded-md border border-border-strong border-t-2 border-t-border-strong bg-surface p-6 lg:p-8">
                 <div className="mb-4 flex items-center justify-between">
-                  <p className="font-display text-xl tracking-widest text-text-muted">
+                  <p className="font-display text-3xl font-bold tracking-widest text-text-secondary">
                     02
                   </p>
                   <Target className="h-6 w-6 text-text-secondary" aria-hidden="true" />
@@ -445,16 +447,18 @@ export default function Home() {
               {/* Connector */}
               <div
                 aria-hidden="true"
-                className="flex shrink-0 items-center justify-center py-5 text-text-muted lg:px-5 lg:py-0"
+                className="flex shrink-0 flex-col items-center justify-center gap-1.5 py-4 lg:flex-row lg:gap-2 lg:px-4 lg:py-0"
               >
-                <ChevronRight className="hidden h-10 w-10 lg:block" />
-                <ChevronDown className="h-10 w-10 lg:hidden" />
+                <span className="h-5 w-px bg-border-strong lg:h-px lg:w-5" />
+                <ChevronRight className="hidden h-7 w-7 text-accent lg:block" />
+                <ChevronDown className="h-7 w-7 text-accent lg:hidden" />
+                <span className="h-5 w-px bg-border-strong lg:h-px lg:w-5" />
               </div>
 
               {/* Node 03: Track. Pulled up as the #2 differentiator. */}
-              <div className="flex-1 rounded-md border border-border border-t-[3px] border-t-accent bg-surface p-6 lg:p-8">
+              <div className="flex-1 rounded-md border border-border-strong border-t-[3px] border-t-accent bg-surface p-6 lg:p-8">
                 <div className="mb-4 flex items-center justify-between">
-                  <p className="font-display text-xl tracking-widest text-accent">
+                  <p className="font-display text-3xl font-bold tracking-widest text-accent">
                     03
                   </p>
                   <TrendingUp className="h-6 w-6 text-accent" aria-hidden="true" />
