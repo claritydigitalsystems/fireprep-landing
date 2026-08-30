@@ -64,12 +64,10 @@ export default function Home() {
                 small radii, no glow or drop-shadow halo. This should read as
                 equipment sitting in the page, not a floating SaaS graphic.
 
-                TODO: replace placeholder panels with real app screenshots.
-                Dashboard/feedback on the laptop, a mobile session/feedback
-                screen on the phone (launch-gated asset). Each screen area
-                below is a positioned box, so one
-                <img className="absolute inset-0 h-full w-full object-cover" />
-                dropped inside will fill it cleanly with no other changes. */}
+                Both screens carry real app screenshots. Each screen area is a
+                positioned box and the images fill it, so swapping in a newer
+                capture needs only a new file at the same aspect ratio:
+                16:10 for the laptop, 9:18 for the phone. */}
             <div>
               <div className="relative mx-auto w-full max-w-[420px] pb-8">
 
@@ -83,11 +81,13 @@ export default function Home() {
                   </div>
                   {/* Laptop screen area, recessed below the frame */}
                   <div className="relative aspect-[16/10] w-full overflow-hidden border-t border-border-strong bg-device-screen">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="font-display text-xs font-semibold uppercase tracking-[0.22em] text-text-secondary">
-                        App preview
-                      </span>
-                    </div>
+                    <Image
+                      src="/screenshot-feedback.jpg"
+                      alt="First Call session feedback with scores and competency breakdown"
+                      fill
+                      sizes="(max-width: 640px) 100vw, 420px"
+                      className="object-cover"
+                    />
                   </div>
                 </div>
                 {/* Laptop base, slightly wider than the lid. Its top edge is
@@ -104,11 +104,13 @@ export default function Home() {
                   <div aria-hidden="true" className="mx-auto mb-1 h-[2px] w-6 rounded-full bg-border-strong" />
                   {/* Phone screen area, recessed below the frame */}
                   <div className="relative aspect-[9/18] w-full overflow-hidden rounded-[0.4rem] bg-device-screen">
-                    <div className="absolute inset-0 hidden items-center justify-center px-1 text-center sm:flex">
-                      <span className="font-display text-[9px] font-semibold uppercase tracking-[0.16em] text-text-secondary">
-                        App preview
-                      </span>
-                    </div>
+                    <Image
+                      src="/screenshot-progress.jpg"
+                      alt="First Call progress tracking across sessions"
+                      fill
+                      sizes="(max-width: 640px) 25vw, 105px"
+                      className="object-cover"
+                    />
                   </div>
                 </div>
 
