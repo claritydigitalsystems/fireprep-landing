@@ -12,6 +12,12 @@
   /* One step up from --fp-border, for edges that need to read as an object
      rather than a hairline: device-frame details, card tops. */
   --fp-border-strong: #2a3a56;
+  /* Hero device frames. A step brighter again than --fp-border-strong: at
+     #1e2d45 the frames read as faint smudges on the navy rather than as
+     hard-edged objects. Paired with a screen panel set BELOW --fp-bg so the
+     screen reads as recessed inside a crisp outline. */
+  --fp-device-edge: #3a4d6e;
+  --fp-device-screen: #070b14;
 
   /* Amber accent */
   --fp-accent: #f59e0b;
@@ -32,6 +38,8 @@
   --color-border: var(--fp-border);
   --color-border-subtle: var(--fp-border-subtle);
   --color-border-strong: var(--fp-border-strong);
+  --color-device-edge: var(--fp-device-edge);
+  --color-device-screen: var(--fp-device-screen);
   --color-accent: var(--fp-accent);
   --color-accent-hover: var(--fp-accent-hover);
   --color-accent-muted: var(--fp-accent-muted);

@@ -60,7 +60,9 @@ export default function Home() {
 
             {/* Right: device mockup, then the attribution line beneath it.
                 Frames are deliberately FLAT and front-facing. No perspective
-                or 3D rotation: angled CSS mockups read as cheap.
+                or 3D rotation: angled CSS mockups read as cheap. Hard edges,
+                small radii, no glow or drop-shadow halo. This should read as
+                equipment sitting in the page, not a floating SaaS graphic.
 
                 TODO: replace placeholder panels with real app screenshots.
                 Dashboard/feedback on the laptop, a mobile session/feedback
@@ -69,38 +71,41 @@ export default function Home() {
                 <img className="absolute inset-0 h-full w-full object-cover" />
                 dropped inside will fill it cleanly with no other changes. */}
             <div>
-              <div className="relative mx-auto w-full max-w-[540px] pb-10">
+              <div className="relative mx-auto w-full max-w-[420px] pb-8">
 
                 {/* Laptop */}
-                <div className="rounded-t-lg border border-b-0 border-border bg-surface-raised">
+                <div className="rounded-t-[6px] border-[1.5px] border-b-0 border-device-edge bg-surface-raised">
                   {/* Browser-style chrome */}
-                  <div aria-hidden="true" className="flex items-center gap-1.5 px-3 py-2.5">
-                    <span className="h-2 w-2 rounded-full bg-border-strong" />
-                    <span className="h-2 w-2 rounded-full bg-border-strong" />
-                    <span className="h-2 w-2 rounded-full bg-border-strong" />
+                  <div aria-hidden="true" className="flex items-center gap-1.5 px-2.5 py-2">
+                    <span className="h-1.5 w-1.5 rounded-full bg-border-strong" />
+                    <span className="h-1.5 w-1.5 rounded-full bg-border-strong" />
+                    <span className="h-1.5 w-1.5 rounded-full bg-border-strong" />
                   </div>
-                  {/* Laptop screen area */}
-                  <div className="relative aspect-[16/10] w-full overflow-hidden border-t border-border bg-background">
+                  {/* Laptop screen area, recessed below the frame */}
+                  <div className="relative aspect-[16/10] w-full overflow-hidden border-t border-border-strong bg-device-screen">
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="font-display text-xs font-semibold uppercase tracking-[0.18em] text-text-muted">
+                      <span className="font-display text-xs font-semibold uppercase tracking-[0.22em] text-text-secondary">
                         App preview
                       </span>
                     </div>
                   </div>
                 </div>
-                {/* Laptop base, slightly wider than the lid */}
+                {/* Laptop base, slightly wider than the lid. Its top edge is
+                    the hinge line, since the lid carries border-b-0. */}
                 <div
                   aria-hidden="true"
-                  className="relative left-1/2 h-2.5 w-[106%] -translate-x-1/2 rounded-b-md border border-border bg-surface"
+                  className="relative left-1/2 h-2 w-[106%] -translate-x-1/2 rounded-b-[4px] border-[1.5px] border-device-edge bg-surface"
                 />
 
-                {/* Phone, overlapping the laptop's lower-right corner */}
-                <div className="absolute bottom-0 right-4 w-[24%] min-w-[92px] rounded-[1.1rem] border border-border bg-surface-raised p-1.5 ring-4 ring-background">
-                  <div aria-hidden="true" className="mx-auto mb-1.5 h-[3px] w-7 rounded-full bg-border-strong" />
-                  {/* Phone screen area */}
-                  <div className="relative aspect-[9/18] w-full overflow-hidden rounded-[0.7rem] bg-background">
+                {/* Phone, overlapping the laptop's lower-right corner. The ring
+                    is a knockout in the page colour, not a glow: it keeps the
+                    phone edge legible where it crosses the laptop. */}
+                <div className="absolute bottom-0 right-3 w-[25%] min-w-[80px] rounded-[0.75rem] border-[1.5px] border-device-edge bg-surface-raised p-1 ring-[3px] ring-background">
+                  <div aria-hidden="true" className="mx-auto mb-1 h-[2px] w-6 rounded-full bg-border-strong" />
+                  {/* Phone screen area, recessed below the frame */}
+                  <div className="relative aspect-[9/18] w-full overflow-hidden rounded-[0.4rem] bg-device-screen">
                     <div className="absolute inset-0 flex items-center justify-center px-1 text-center">
-                      <span className="font-display text-[9px] font-semibold uppercase tracking-[0.12em] text-text-muted">
+                      <span className="font-display text-[9px] font-semibold uppercase tracking-[0.16em] text-text-secondary">
                         App preview
                       </span>
                     </div>
