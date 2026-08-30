@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-border">
       <div className="mx-auto w-full max-w-7xl px-6 py-8 lg:px-12 lg:py-10">
-        <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-col items-center gap-5 text-center sm:flex-row sm:items-center sm:justify-between sm:gap-6 sm:text-left">
 
           {/* Left: logo */}
           <div>
@@ -19,14 +19,14 @@ export default function Footer() {
           </div>
 
           {/* Right: links + copyright */}
-          <div className="flex flex-col gap-2 sm:items-end">
-            <p className="text-xs text-text-muted">
-              <Link href="/privacy" className="transition-colors hover:text-text-secondary">Privacy</Link>
-              {" · "}
-              <Link href="/terms" className="transition-colors hover:text-text-secondary">Terms</Link>
-              {" · "}
-              <a href="mailto:support@firstcallprep.com" className="transition-colors hover:text-text-secondary">Contact</a>
-            </p>
+          <div className="flex flex-col items-center gap-2 sm:items-end">
+            <div className="flex flex-wrap items-center justify-center gap-x-2 text-xs text-text-muted sm:justify-end">
+              <Link href="/privacy" className="px-1 py-1 transition-colors hover:text-text-secondary">Privacy</Link>
+              <span aria-hidden="true">·</span>
+              <Link href="/terms" className="px-1 py-1 transition-colors hover:text-text-secondary">Terms</Link>
+              <span aria-hidden="true">·</span>
+              <a href="mailto:support@firstcallprep.com" className="px-1 py-1 transition-colors hover:text-text-secondary">Contact</a>
+            </div>
             <p className="text-xs text-text-muted">© 2026 First Call</p>
           </div>
 
