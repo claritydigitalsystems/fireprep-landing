@@ -52,7 +52,7 @@ export default function Home() {
                 </a>
               </div>
 
-              <p className="mt-4 text-sm text-text-muted">
+              <p className="mt-4 text-base text-text-muted">
                 Free while I run live beta testing with real candidates. No
                 credit card.
               </p>
@@ -104,7 +104,7 @@ export default function Home() {
                   <div aria-hidden="true" className="mx-auto mb-1 h-[2px] w-6 rounded-full bg-border-strong" />
                   {/* Phone screen area, recessed below the frame */}
                   <div className="relative aspect-[9/18] w-full overflow-hidden rounded-[0.4rem] bg-device-screen">
-                    <div className="absolute inset-0 flex items-center justify-center px-1 text-center">
+                    <div className="absolute inset-0 hidden items-center justify-center px-1 text-center sm:flex">
                       <span className="font-display text-[9px] font-semibold uppercase tracking-[0.16em] text-text-secondary">
                         App preview
                       </span>
@@ -136,7 +136,7 @@ export default function Home() {
               <p className="font-display text-lg font-semibold text-text-secondary">
                 Demo video coming soon
               </p>
-              <p className="mt-1 text-sm text-text-muted">
+              <p className="mt-1 text-base text-text-muted">
                 A 60-second walkthrough of a full session.
               </p>
             </div>
@@ -208,7 +208,7 @@ export default function Home() {
                   &ldquo;Great job. Strong teamwork and professionalism.
                   You&apos;re interview-ready.&rdquo;
                 </p>
-                <p className="text-sm leading-relaxed text-text-muted">
+                <p className="text-base leading-relaxed text-text-muted">
                   Right keywords, confident tone. Never notices the answer
                   describes no actual conflict.
                 </p>
@@ -248,7 +248,7 @@ export default function Home() {
                 The second one gets you hired.
               </span>
             </p>
-            <p className="mt-3 text-center text-sm text-text-muted">
+            <p className="mt-3 text-center text-base text-text-muted">
               Illustrative example.{" "}
               <a
                 href={APP_URL}
@@ -358,7 +358,7 @@ export default function Home() {
                   <span />
                 </div>
 
-                <p className="mt-3 text-sm leading-relaxed text-text-muted">
+                <p className="mt-3 text-base leading-relaxed text-text-muted">
                   Practice becomes a plan: drill the weak competency, watch it
                   move, walk in with all eight dialed.
                 </p>
@@ -478,7 +478,7 @@ export default function Home() {
 
             </div>
 
-            <p className="mx-auto mt-10 max-w-3xl text-center text-sm leading-relaxed text-text-muted lg:mt-12">
+            <p className="mx-auto mt-10 max-w-3xl text-center text-base leading-relaxed text-text-muted lg:mt-12">
               3 to 8 questions per session. Criterion-level scoring on every
               answer. Eight competencies tracked across all of them, so you
               know exactly what to sharpen before the panel does.
@@ -577,19 +577,19 @@ export default function Home() {
                 {/* Four connected segments; only the 3 is lit. The paragraph
                     above states the scale, so this is decorative. */}
                 <div className="mt-6 flex items-center gap-2" aria-hidden="true">
-                  <span className="flex h-9 flex-1 items-center justify-center rounded border border-border bg-background font-display text-sm font-semibold text-text-muted">
+                  <span className="flex h-9 flex-1 items-center justify-center rounded border border-border bg-background font-display text-base font-semibold text-text-muted">
                     0
                   </span>
                   <span className="h-px w-3 bg-border" />
-                  <span className="flex h-9 flex-1 items-center justify-center rounded border border-border bg-background font-display text-sm font-semibold text-text-muted">
+                  <span className="flex h-9 flex-1 items-center justify-center rounded border border-border bg-background font-display text-base font-semibold text-text-muted">
                     1
                   </span>
                   <span className="h-px w-3 bg-border" />
-                  <span className="flex h-9 flex-1 items-center justify-center rounded border border-border bg-background font-display text-sm font-semibold text-text-muted">
+                  <span className="flex h-9 flex-1 items-center justify-center rounded border border-border bg-background font-display text-base font-semibold text-text-muted">
                     2
                   </span>
                   <span className="h-px w-3 bg-border" />
-                  <span className="flex h-9 flex-1 items-center justify-center rounded border border-accent bg-accent-muted font-display text-sm font-semibold text-accent">
+                  <span className="flex h-9 flex-1 items-center justify-center rounded border border-accent bg-accent-muted font-display text-base font-semibold text-accent">
                     3
                   </span>
                 </div>
@@ -614,13 +614,13 @@ export default function Home() {
                     (name) => (
                       <span
                         key={name}
-                        className="rounded border border-border bg-surface-raised px-2.5 py-1 text-[11px] text-[#c5d0de]"
+                        className="rounded border border-border bg-surface-raised px-2.5 py-1 text-sm text-[#c5d0de]"
                       >
                         {name}
                       </span>
                     ),
                   )}
-                  <span className="rounded border border-border px-2.5 py-1 text-[11px] text-text-muted">
+                  <span className="rounded border border-border px-2.5 py-1 text-sm text-text-muted">
                     +3 more
                   </span>
                 </div>
@@ -650,7 +650,7 @@ export default function Home() {
               </p>
             </div>
 
-            <p className="mx-auto max-w-3xl pt-8 text-center text-[15px] leading-relaxed text-text-muted lg:text-base">
+            <p className="mx-auto max-w-3xl pt-8 text-center text-base leading-relaxed text-text-muted">
               Sourced from published fire-service frameworks and the interview
               research behind them. Not generic tips dressed up with a score.
             </p>
@@ -719,7 +719,7 @@ export default function Home() {
                 <p className="font-display text-base font-semibold text-text-primary">
                   Scott Shimala &middot; Active firefighter, building First Call.
                 </p>
-                <p className="mt-1 text-sm text-text-muted">
+                <p className="mt-1 text-base text-text-muted">
                   Free while I test it with real candidates.
                 </p>
               </div>
@@ -769,7 +769,7 @@ export default function Home() {
             </a>
 
             {/* slot: micro-copy */}
-            <p className="mt-4 text-sm text-text-muted">
+            <p className="mt-4 text-base text-text-muted">
               Free while in beta. Takes about a minute to start your first
               session.
             </p>
@@ -778,7 +778,7 @@ export default function Home() {
                 MailerLite form, deliberately hidden. Remove the `hidden`
                 attribute to bring it back; nothing else needs to change. */}
             <div hidden className="mt-10 border-t border-border pt-8">
-              <p className="mb-4 text-sm text-text-secondary">
+              <p className="mb-4 text-base text-text-secondary">
                 Not ready? Get notified as it grows
               </p>
               <WaitlistForm id="notify-form" />

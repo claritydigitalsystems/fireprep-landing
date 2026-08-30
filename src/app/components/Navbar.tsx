@@ -70,7 +70,7 @@ export default function Navbar() {
 
           <a
             href={APP_URL}
-            className="rounded-md bg-accent px-4 py-2 text-sm font-semibold text-background transition-colors hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background lg:px-5"
+            className="rounded-md bg-accent px-4 py-2 text-base font-semibold text-background transition-colors hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background lg:px-5 lg:text-sm"
           >
             Start free
           </a>

@@ -20,14 +20,14 @@ export default function Footer() {
 
           {/* Right: links + copyright */}
           <div className="flex flex-col items-center gap-2 sm:items-end">
-            <div className="flex flex-wrap items-center justify-center gap-x-2 text-xs text-text-muted sm:justify-end">
+            <div className="flex flex-wrap items-center justify-center gap-x-2 text-base text-text-muted sm:justify-end">
               <Link href="/privacy" className="px-1 py-1 transition-colors hover:text-text-secondary">Privacy</Link>
               <span aria-hidden="true">·</span>
               <Link href="/terms" className="px-1 py-1 transition-colors hover:text-text-secondary">Terms</Link>
               <span aria-hidden="true">·</span>
               <a href="mailto:support@firstcallprep.com" className="px-1 py-1 transition-colors hover:text-text-secondary">Contact</a>
             </div>
-            <p className="text-xs text-text-muted">© 2026 First Call</p>
+            <p className="text-base text-text-muted">© 2026 First Call</p>
           </div>
 
         </div>
