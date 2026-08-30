@@ -29,7 +29,7 @@ const barlow = Barlow({
 });
 
 export const metadata: Metadata = {
-  title: "FirstCall — Fire Interview Prep",
+  title: "First Call · Fire Interview Prep",
   description:
     "AI-graded oral board practice mapped to the same competency frameworks panels use. Built by an active firefighter for entry-level candidates.",
 };

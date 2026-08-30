@@ -23,7 +23,7 @@ export default function WaitlistForm({ id = "waitlist-form" }: { id?: string }) 
     }
 
     if (!isValidEmail(email)) {
-      setErrorMessage("That doesn't look like a valid email — try again.");
+      setErrorMessage("That doesn't look like a valid email. Try again.");
       setStatus("error");
       return;
     }

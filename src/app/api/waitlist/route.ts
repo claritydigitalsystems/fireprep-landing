@@ -28,7 +28,7 @@ export async function POST(request: Request) {
       return Response.json(
         {
           success: false,
-          error: "That doesn't look like a valid email — try again.",
+          error: "That doesn't look like a valid email. Try again.",
         },
         { status: 400 }
       );
@@ -62,7 +62,7 @@ export async function POST(request: Request) {
       }),
     });
 
-    // 200/201 = subscribed, 422 = already exists — both are success for the user
+    // 200/201 = subscribed, 422 = already exists; both are success for the user
     if (mlRes.ok || mlRes.status === 422) {
       return Response.json({ success: true });
     }
