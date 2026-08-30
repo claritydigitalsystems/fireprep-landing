@@ -560,8 +560,8 @@ export default function Home() {
               {/* Card 1: the anchor scale */}
               <div className="rounded-md border border-border bg-surface p-6 lg:p-8">
                 <div className="mb-3 flex items-center gap-3">
-                  <Ruler className="h-5 w-5 shrink-0 text-accent" aria-hidden="true" />
-                  <h3 className="font-display text-2xl font-bold leading-snug text-text-primary">
+                  <Ruler className="h-6 w-6 shrink-0 text-accent lg:h-7 lg:w-7" aria-hidden="true" />
+                  <h3 className="font-display text-2xl font-bold leading-snug text-text-primary lg:text-3xl">
                     A defined bar, and where you landed
                   </h3>
                 </div>
@@ -595,8 +595,8 @@ export default function Home() {
               {/* Card 2: competency chips */}
               <div className="rounded-md border border-border bg-surface p-6 lg:p-8">
                 <div className="mb-3 flex items-center gap-3">
-                  <ListChecks className="h-5 w-5 shrink-0 text-accent" aria-hidden="true" />
-                  <h3 className="font-display text-2xl font-bold leading-snug text-text-primary">
+                  <ListChecks className="h-6 w-6 shrink-0 text-accent lg:h-7 lg:w-7" aria-hidden="true" />
+                  <h3 className="font-display text-2xl font-bold leading-snug text-text-primary lg:text-3xl">
                     Eight real competencies
                   </h3>
                 </div>
@@ -629,12 +629,12 @@ export default function Home() {
             <div className="mt-4 rounded-md border border-border border-l-2 border-l-accent bg-[#141b2e] p-6 lg:p-8">
               <div className="mb-3 flex items-start justify-between gap-4">
                 <div className="flex items-center gap-3">
-                  <Target className="h-5 w-5 shrink-0 text-accent" aria-hidden="true" />
-                  <h3 className="font-display text-2xl font-bold leading-snug text-text-primary">
+                  <Target className="h-6 w-6 shrink-0 text-accent lg:h-7 lg:w-7" aria-hidden="true" />
+                  <h3 className="font-display text-2xl font-bold leading-snug text-text-primary lg:text-3xl">
                     Graded on what the question actually asked
                   </h3>
                 </div>
-                <span className="shrink-0 rounded bg-accent-muted px-2 py-1 font-display text-[10px] font-semibold uppercase tracking-[0.14em] text-accent">
+                <span className="shrink-0 rounded bg-accent-muted px-3 py-1.5 font-display text-xs font-semibold uppercase tracking-[0.14em] text-accent">
                   Most tools skip this
                 </span>
               </div>
@@ -647,7 +647,7 @@ export default function Home() {
               </p>
             </div>
 
-            <p className="mx-auto max-w-3xl pt-8 text-center text-[13px] leading-relaxed text-[#6b7688]">
+            <p className="mx-auto max-w-3xl pt-8 text-center text-[15px] leading-relaxed text-text-muted lg:text-base">
               Sourced from published fire-service frameworks and the interview
               research behind them. Not generic tips dressed up with a score.
             </p>
