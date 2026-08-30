@@ -24,10 +24,15 @@
   --fp-accent-hover: #fbbf24;
   --fp-accent-muted: rgba(245, 158, 11, 0.1);
 
-  /* Text */
-  --fp-text-primary: #f0f4f8;
-  --fp-text-secondary: #7d92ad;
-  --fp-text-muted: #5f7391;
+  /* Text. Ratios are WCAG contrast against --fp-surface (#111827), the
+     lightest background any of these actually sits on.
+     NOTE: --fp-text-muted clears 4.5:1 on --fp-bg, --fp-surface and the
+     #141b2e rubric card, but lands at 4.21 on --fp-surface-raised. No muted
+     text sits on a raised surface today. If that changes, lift it to
+     --fp-text-secondary there rather than dimming it. */
+  --fp-text-primary: #f0f4f8;   /* 16.05:1 */
+  --fp-text-secondary: #7d92ad; /*  5.56:1 */
+  --fp-text-muted: #7185a2;     /*  4.71:1, was #5f7391 at 3.67:1 (failed AA) */
 }
 
 @theme inline {
