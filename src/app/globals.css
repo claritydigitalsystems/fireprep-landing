@@ -12,11 +12,18 @@
   /* One step up from --fp-border, for edges that need to read as an object
      rather than a hairline: device-frame details, card tops. */
   --fp-border-strong: #2a3a56;
-  /* Hero device frames. A step brighter again than --fp-border-strong: at
-     #1e2d45 the frames read as faint smudges on the navy rather than as
-     hard-edged objects. Paired with a screen panel set BELOW --fp-bg so the
-     screen reads as recessed inside a crisp outline. */
-  --fp-device-edge: #3a4d6e;
+  /* Hero device frames. These are the ONLY neutral greys in the palette, and
+     that is the point: every other surface is navy, so a navy-tinted frame
+     dissolves into the page. Held near 0% saturation so the devices read as
+     bare metal and plastic, never as a coloured or glowing frame.
+       edge   the outline, bright enough to be an obvious hard edge
+       body   chassis and phone shell, a step LIGHTER than --fp-bg so each
+              device is a solid object sitting on the page, not an outline
+       detail chrome dots, speaker slot, hinge line
+       screen recessed panel behind the screenshots */
+  --fp-device-edge: #7c7d82;
+  --fp-device-body: #24252a;
+  --fp-device-detail: #4e4f55;
   --fp-device-screen: #070b14;
 
   /* Canonical brand logo orange, used by the mobile wordmark in Navbar.tsx
@@ -50,6 +57,8 @@
   --color-border-subtle: var(--fp-border-subtle);
   --color-border-strong: var(--fp-border-strong);
   --color-device-edge: var(--fp-device-edge);
+  --color-device-body: var(--fp-device-body);
+  --color-device-detail: var(--fp-device-detail);
   --color-device-screen: var(--fp-device-screen);
   --color-logo: var(--fp-logo);
   --color-accent: var(--fp-accent);
