@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
-import { APP_URL } from "../lib/links";
+import { APP_LOGIN_URL, APP_SIGNUP_URL } from "../lib/links";
 
 const SECTION_LINKS = [
   { href: "#why", label: "Why First Call" },
@@ -64,14 +64,14 @@ export default function Navbar() {
           {/* Persistent at every width: signing in is a top-level action, and
               burying it in the menu hid it from returning users on mobile. */}
           <a
-            href={APP_URL}
+            href={APP_LOGIN_URL}
             className="flex min-h-[44px] items-center text-sm text-text-secondary transition-colors hover:text-text-primary"
           >
             Sign in
           </a>
 
           <a
-            href={APP_URL}
+            href={APP_SIGNUP_URL}
             className="rounded-md bg-accent px-3 py-2 text-sm font-semibold text-background transition-colors hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background lg:px-5"
           >
             Start free
@@ -116,7 +116,7 @@ export default function Navbar() {
           ))}
 
           <a
-            href={APP_URL}
+            href={APP_SIGNUP_URL}
             onClick={() => setMenuOpen(false)}
             className="mt-4 mb-2 flex min-h-[44px] items-center justify-center rounded-md bg-accent px-5 text-base font-semibold text-background transition-colors hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
           >

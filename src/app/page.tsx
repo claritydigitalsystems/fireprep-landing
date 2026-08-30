@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Check, ChevronDown, ChevronRight, ListChecks, Mic, Play, Ruler, Target, TrendingUp } from "lucide-react";
 import WaitlistForm from "./components/WaitlistForm";
-import { APP_URL } from "./lib/links";
+import { APP_SIGNUP_URL } from "./lib/links";
 
 export default function Home() {
   return (
@@ -36,7 +36,7 @@ export default function Home() {
 
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
                 <a
-                  href={APP_URL}
+                  href={APP_SIGNUP_URL}
                   className="w-full rounded-md bg-accent px-8 py-4 text-center text-base font-semibold text-background transition-colors sm:w-auto hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                 >
                   Start free
@@ -254,7 +254,7 @@ export default function Home() {
             <p className="mt-3 text-center text-base text-text-muted">
               Illustrative example.{" "}
               <a
-                href={APP_URL}
+                href={APP_SIGNUP_URL}
                 className="text-text-secondary underline underline-offset-2 transition-colors hover:text-text-primary"
               >
                 Try it free
@@ -765,7 +765,7 @@ export default function Home() {
 
             {/* slot: primary CTA */}
             <a
-              href={APP_URL}
+              href={APP_SIGNUP_URL}
               className="inline-block rounded-md bg-accent px-10 py-5 text-lg font-semibold text-background transition-colors hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
               Start practicing free
