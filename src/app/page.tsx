@@ -263,9 +263,9 @@ export default function Home() {
            margin callout, 02 a rising-bar sparkline. Amber marks only the
            First Call side of each claim. ── */}
       <section id="why" className="scroll-mt-20">
-        <div className="mx-auto w-full max-w-7xl px-6 py-[80px] lg:px-12 lg:py-[120px]">
+        <div className="mx-auto w-full max-w-7xl px-6 py-[56px] lg:px-12 lg:py-[80px]">
 
-          <div className="mb-12 lg:mb-16">
+          <div className="mb-8 lg:mb-10">
             <p className="mb-3 font-display text-sm font-semibold uppercase tracking-[0.18em] text-accent">
               Why First Call
             </p>
@@ -294,7 +294,7 @@ export default function Home() {
                 />
               </div>
 
-              <div className="pb-12 lg:pb-16">
+              <div className="pb-8 lg:pb-10">
                 <div className="mb-3 flex items-center gap-3">
                   <Ruler className="h-5 w-5 shrink-0 text-accent" aria-hidden="true" />
                   <h3 className="font-display text-2xl font-bold leading-snug text-text-primary lg:text-3xl">
@@ -302,7 +302,7 @@ export default function Home() {
                   </h3>
                 </div>
 
-                <p className="text-base leading-relaxed text-text-secondary lg:text-lg">
+                <p className="text-base leading-[1.55] text-text-secondary lg:text-lg">
                   Every answer is graded on{" "}
                   <span className="font-medium text-text-primary">
                     behaviorally anchored rating scales
@@ -312,7 +312,7 @@ export default function Home() {
                   frameworks.
                 </p>
 
-                <div className="fp-callout mt-5 p-4 lg:p-5">
+                <div className="fp-callout mt-4 p-4">
                   <p className="text-base leading-relaxed text-text-secondary">
                     Each question carries its own rubric. You&apos;re scored on
                     what it actually tests, never dinged for what it never
@@ -338,7 +338,7 @@ export default function Home() {
                   </h3>
                 </div>
 
-                <p className="text-base leading-relaxed text-text-secondary lg:text-lg">
+                <p className="text-base leading-[1.55] text-text-secondary lg:text-lg">
                   Every answer feeds eight fire-service competencies, tracked
                   across every session. You watch each one climb over time, and
                   see exactly which keep costing you points.
@@ -346,7 +346,7 @@ export default function Home() {
 
                 {/* The shape is the claim: one competency climbing over reps.
                     Decorative for screen readers; the caption states it. */}
-                <div className="fp-spark mt-6" aria-hidden="true">
+                <div className="fp-spark mt-5" aria-hidden="true">
                   <span />
                   <span />
                   <span />
@@ -363,8 +363,8 @@ export default function Home() {
             </div>
 
             {/* Closer */}
-            <div className="mt-12 border-t border-border pt-8 lg:mt-16">
-              <p className="text-base leading-relaxed text-text-primary lg:text-lg">
+            <div className="mt-8 border-t border-border pt-6 lg:mt-10">
+              <p className="text-base leading-[1.55] text-text-primary lg:text-lg">
                 Instant tools score fast but grade shallow. Human coaches grade
                 deep but can&apos;t be there at 11pm for your hundredth rep.{" "}
                 <strong className="font-semibold text-accent">
