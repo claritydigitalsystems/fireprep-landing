@@ -169,14 +169,14 @@ export default function Home() {
 
             {/* Shared question + answer */}
             <div className="rounded-md border border-border bg-surface p-5 lg:p-6">
-              <p className="mb-2 font-display text-xs font-semibold uppercase tracking-[0.18em] text-text-muted">
+              <p className="mb-2 font-display text-sm font-semibold uppercase tracking-[0.18em] text-text-muted">
                 Question
               </p>
               <p className="mb-4 text-base leading-relaxed text-text-primary lg:text-lg">
                 Tell us about a time you worked through a conflict with a
                 coworker.
               </p>
-              <p className="mb-2 font-display text-xs font-semibold uppercase tracking-[0.18em] text-text-muted">
+              <p className="mb-2 font-display text-sm font-semibold uppercase tracking-[0.18em] text-text-muted">
                 Answer
               </p>
               <p className="text-base italic leading-relaxed text-text-secondary lg:text-lg">
@@ -286,7 +286,7 @@ export default function Home() {
           <div className="mx-auto max-w-4xl">
 
             {/* 01 */}
-            <div className="grid grid-cols-[48px_1fr] gap-x-5">
+            <div className="grid grid-cols-[28px_1fr] gap-x-4 lg:grid-cols-[48px_1fr] lg:gap-x-5">
               <div className="flex flex-col items-center">
                 <span className="font-display text-2xl font-bold leading-none text-accent">
                   01
@@ -326,7 +326,7 @@ export default function Home() {
             </div>
 
             {/* 02 */}
-            <div className="grid grid-cols-[48px_1fr] gap-x-5">
+            <div className="grid grid-cols-[28px_1fr] gap-x-4 lg:grid-cols-[48px_1fr] lg:gap-x-5">
               <div className="flex flex-col items-center">
                 <span className="font-display text-2xl font-bold leading-none text-accent">
                   02
@@ -630,7 +630,7 @@ export default function Home() {
 
             {/* Card 3: full width, the point most tools miss */}
             <div className="mt-4 rounded-md border border-border border-l-2 border-l-accent bg-[#141b2e] p-6 lg:p-8">
-              <div className="mb-3 flex items-start justify-between gap-4">
+              <div className="mb-3 flex flex-col-reverse items-start gap-3 lg:flex-row lg:justify-between lg:gap-4">
                 <div className="flex items-center gap-3">
                   <Target className="h-6 w-6 shrink-0 text-accent lg:h-7 lg:w-7" aria-hidden="true" />
                   <h3 className="font-display text-2xl font-bold leading-snug text-text-primary lg:text-3xl">
@@ -665,35 +665,6 @@ export default function Home() {
         <div className="mx-auto w-full max-w-7xl px-6 py-[56px] lg:px-12 lg:py-[80px]">
           <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-2 lg:gap-14">
 
-            {/* Photo slot. TODO: founder.jpg is the training-burn shot, not a
-                portrait. Scott to supply a real portrait; drop it in here and
-                update the alt text. Frame and sizing stay as-is. */}
-            <div className="lg:order-last">
-              <div
-                className="relative w-full overflow-hidden rounded-md border border-border"
-                style={{ aspectRatio: "1035/691", maxHeight: "440px" }}
-              >
-                <Image
-                  src="/founder.jpg"
-                  alt="Scott Shimala, active firefighter and founder of First Call"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover"
-                />
-              </div>
-
-              {/* Signature sits under the photo, so it reads as attribution on
-                  the portrait rather than a footer to the copy column. */}
-              <div className="mt-5 border-t border-border pt-5">
-                <p className="font-display text-base font-semibold text-text-primary">
-                  Scott Shimala &middot; Active firefighter, building First Call.
-                </p>
-                <p className="mt-1 text-sm text-text-muted">
-                  Free while I test it with real candidates.
-                </p>
-              </div>
-            </div>
-
             {/* Copy */}
             <div>
               <p className="mb-3 font-display text-sm font-semibold uppercase tracking-[0.18em] text-accent">
@@ -724,6 +695,36 @@ export default function Home() {
                 </p>
               </div>
             </div>
+
+            {/* Photo slot. TODO: founder.jpg is the training-burn shot, not a
+                portrait. Scott to supply a real portrait; drop it in here and
+                update the alt text. Frame and sizing stay as-is. */}
+            <div>
+              <div
+                className="relative w-full overflow-hidden rounded-md border border-border"
+                style={{ aspectRatio: "1035/691", maxHeight: "440px" }}
+              >
+                <Image
+                  src="/founder.jpg"
+                  alt="Scott Shimala, active firefighter and founder of First Call"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+
+              {/* Signature sits under the photo, so it reads as attribution on
+                  the portrait rather than a footer to the copy column. */}
+              <div className="mt-5 border-t border-border pt-5">
+                <p className="font-display text-base font-semibold text-text-primary">
+                  Scott Shimala &middot; Active firefighter, building First Call.
+                </p>
+                <p className="mt-1 text-sm text-text-muted">
+                  Free while I test it with real candidates.
+                </p>
+              </div>
+            </div>
+
 
           </div>
         </div>
