@@ -34,10 +34,10 @@ export default function Home() {
                 counts.
               </p>
 
-              <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-6">
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
                 <a
                   href={APP_URL}
-                  className="rounded-md bg-accent px-8 py-4 text-base font-semibold text-background transition-colors hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                  className="w-full rounded-md bg-accent px-8 py-4 text-center text-base font-semibold text-background transition-colors sm:w-auto hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                 >
                   Start free
                 </a>
@@ -45,7 +45,7 @@ export default function Home() {
                     primary and one secondary rather than a button and a link. */}
                 <a
                   href="#watch"
-                  className="inline-flex items-center gap-2 rounded-md border border-border bg-transparent px-6 py-4 text-base font-medium text-text-secondary transition-colors hover:border-text-secondary hover:text-text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-md border border-border bg-transparent px-6 py-4 text-base font-medium text-text-secondary transition-colors sm:w-auto hover:border-text-secondary hover:text-text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                 >
                   <Play className="h-4 w-4" aria-hidden="true" />
                   Watch how it works (60 sec)
