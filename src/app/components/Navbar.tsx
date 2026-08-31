@@ -74,7 +74,7 @@ export default function Navbar() {
             href={APP_SIGNUP_URL}
             className="rounded-md bg-accent px-3 py-2 text-sm font-semibold text-background transition-colors hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background lg:px-5"
           >
-            Start free
+            Try It Free
           </a>
 
           {/* Mobile menu toggle. 44px tap target. */}
@@ -120,7 +120,7 @@ export default function Navbar() {
             onClick={() => setMenuOpen(false)}
             className="mt-4 mb-2 flex min-h-[44px] items-center justify-center rounded-md bg-accent px-5 text-base font-semibold text-background transition-colors hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
           >
-            Start free
+            Try It Free
           </a>
         </div>
       </div>

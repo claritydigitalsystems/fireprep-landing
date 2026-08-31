@@ -39,7 +39,7 @@ export default function Home() {
                   href={APP_SIGNUP_URL}
                   className="w-full rounded-md bg-accent px-8 py-4 text-center text-base font-semibold text-background transition-colors sm:w-auto hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                 >
-                  Start free
+                  Try It Free
                 </a>
                 {/* Transparent outlined counterpart, so the pair reads as one
                     primary and one secondary rather than a button and a link. */}
@@ -142,6 +142,14 @@ export default function Home() {
               <p className="mt-1 text-base text-text-muted">
                 A 60-second walkthrough of a full session.
               </p>
+            </div>
+            <div className="mt-8 flex justify-center lg:mt-10">
+              <a
+                href={APP_SIGNUP_URL}
+                className="w-full rounded-md bg-accent px-8 py-4 text-center text-base font-semibold text-background transition-colors sm:w-auto hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              >
+                Try It Free
+              </a>
             </div>
           </div>
         </div>
