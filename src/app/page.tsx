@@ -127,22 +127,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Video slot ── target of the hero's secondary CTA.
-           TODO: the 60-second demo video asset does not exist yet. Before
-           launch, replace the placeholder frame below with a <video> element
-           (poster + <source>), same as the old fire-loop band did. ── */}
+      {/* ── Video slot ── target of the hero's secondary CTA. ── */}
       <section id="watch" className="scroll-mt-20">
         <div className="mx-auto w-full max-w-7xl px-6 pt-[48px] pb-[80px] lg:px-12 lg:pt-[72px] lg:pb-[120px]">
           <div className="mx-auto max-w-4xl">
-            <div className="flex aspect-video w-full flex-col items-center justify-center rounded-md border border-border bg-surface">
-              <Play className="mb-4 h-10 w-10 text-text-muted" aria-hidden="true" />
-              <p className="font-display text-lg font-semibold text-text-secondary">
-                Demo video coming soon
-              </p>
-              <p className="mt-1 text-base text-text-muted">
-                A 60-second walkthrough of a full session.
-              </p>
-            </div>
+            <video
+              controls
+              preload="metadata"
+              className="aspect-video w-full rounded-md border border-border bg-surface"
+            >
+              <source src="/firstcall-demo-1080.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
             <div className="mt-8 flex justify-center lg:mt-10">
               <a
                 href={APP_SIGNUP_URL}
