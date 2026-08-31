@@ -134,6 +134,7 @@ export default function Home() {
             <video
               controls
               preload="metadata"
+              poster="/firstcall-demo-poster.jpg"
               className="aspect-video w-full rounded-md border border-border bg-surface"
             >
               <source src="/firstcall-demo-1080.mp4" type="video/mp4" />
