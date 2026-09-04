@@ -22,16 +22,17 @@ export default function Home() {
                 Practice the oral board the way it&apos;s actually scored.
               </h1>
 
+              <p className="mb-3 text-base font-semibold leading-relaxed text-text-primary lg:text-lg">
+                It&apos;s the part most candidates walk into blind, and the part
+                that most often costs them the job.
+              </p>
+
               <p className="mb-7 text-base leading-relaxed text-text-secondary lg:text-lg">
                 The oral board is the most subjective-feeling part of fire
-                hiring, and the part most candidates prepare for blind. First
-                Call scores your spoken answers against{" "}
-                <strong className="font-semibold text-text-primary">
-                  the same competencies panels use
-                </strong>
-                , criterion by criterion, the moment you finish. You
-                see what landed, what didn&apos;t, and what to fix before it
-                counts.
+                hiring. First Call scores your spoken answers against the same
+                competencies panels use, criterion by criterion, the moment you
+                finish. You see what landed, what didn&apos;t, and what to fix
+                before it counts.
               </p>
 
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
