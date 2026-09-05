@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react";
 import { APP_LOGIN_URL, APP_SIGNUP_URL } from "../lib/links";
 
 const SECTION_LINKS = [
+  { href: "#try", label: "Try a question" },
   { href: "#why", label: "Why First Call" },
   { href: "#how-it-works", label: "How it works" },
   { href: "#rubric", label: "The rubric" },

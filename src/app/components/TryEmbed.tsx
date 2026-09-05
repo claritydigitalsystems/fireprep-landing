@@ -1,0 +1,79 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+import { APP_URL } from "../lib/links";
+
+// Floor for a height message, so a bad or zero-height report can never
+// collapse the section to nothing.
+const MIN_HEIGHT = 480;
+// Roughly the consent card the widget opens on, so the first height message
+// nudges the section rather than jumping it.
+const DEFAULT_HEIGHT = 760;
+
+/** The app's free-taste grader, embedded. The iframe carries its own heading
+    ("A short version of the real thing"), so this section deliberately has
+    none: two stacked headings would read as two sections. */
+export default function TryEmbed() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const frameRef = useRef<HTMLIFrameElement>(null);
+  const [height, setHeight] = useState(DEFAULT_HEIGHT);
+
+  useEffect(() => {
+    function onMessage(event: MessageEvent) {
+      // Any page on the internet can postMessage at this window. The exact
+      // origin match is what makes everything below trustworthy.
+      if (event.origin !== APP_URL) return;
+      // Same origin is necessary but not sufficient: it must be our frame.
+      if (frameRef.current && event.source !== frameRef.current.contentWindow) {
+        return;
+      }
+
+      const data = event.data as {
+        type?: unknown;
+        event?: unknown;
+        height?: unknown;
+      } | null;
+      if (!data || typeof data !== "object" || data.type !== "fc-taste") return;
+
+      if (data.event === "height") {
+        const reported = data.height;
+        if (typeof reported !== "number" || !Number.isFinite(reported)) return;
+        setHeight(Math.max(MIN_HEIGHT, Math.round(reported)));
+        return;
+      }
+
+      if (data.event === "result") {
+        const reduced = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
+        sectionRef.current?.scrollIntoView({
+          behavior: reduced ? "auto" : "smooth",
+          block: "start",
+        });
+      }
+    }
+
+    window.addEventListener("message", onMessage);
+    return () => window.removeEventListener("message", onMessage);
+  }, []);
+
+  return (
+    <section id="try" ref={sectionRef} className="scroll-mt-20">
+      <div className="mx-auto w-full max-w-7xl px-6 py-[56px] lg:px-12 lg:py-[80px]">
+        {/* The widget is 900px wide; max-w-5xl frames it without letting it
+            stretch on a wide desktop. */}
+        <div className="mx-auto max-w-5xl">
+          <iframe
+            ref={frameRef}
+            src={`${APP_URL}/try`}
+            title="Try one real oral board question"
+            allow="microphone"
+            loading="lazy"
+            className="block w-full border-0"
+            style={{ height }}
+          />
+        </div>
+      </div>
+    </section>
+  );
+}

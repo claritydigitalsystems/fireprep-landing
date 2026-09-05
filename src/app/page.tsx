@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Check, ChevronDown, ChevronRight, ListChecks, Mic, Play, Ruler, Target, TrendingUp } from "lucide-react";
 import WaitlistForm from "./components/WaitlistForm";
+import TryEmbed from "./components/TryEmbed";
 import { APP_SIGNUP_URL } from "./lib/links";
 
 export default function Home() {
@@ -172,6 +173,14 @@ export default function Home() {
               The same answer, two kinds of feedback. One tells you
               you&apos;re great. One tells you the truth.
             </p>
+            <p className="mt-4">
+              <a
+                href="#try"
+                className="text-base text-text-muted underline underline-offset-2 transition-colors hover:text-text-primary"
+              >
+                Try it yourself, no account &darr;
+              </a>
+            </p>
           </div>
 
           <div className="mx-auto max-w-5xl">
@@ -271,6 +280,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ── The free taste ── the app's grader, embedded. Sits right after
+           the two-grader comparison so the claim and the proof are adjacent. ── */}
+      <TryEmbed />
 
       {/* ── Section 3: Differentiators (replaces the old comparison) ──
            Two claims on a numbered rail. Each gets exactly one device: 01 a
