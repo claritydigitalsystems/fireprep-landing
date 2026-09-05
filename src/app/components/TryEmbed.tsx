@@ -74,13 +74,19 @@ export default function TryEmbed() {
               scrolling="no" is the deprecated presentational attribute, and
               it is deliberate: CSS overflow on the element does not govern a
               cross-origin frame's own viewport, so the attribute is the part
-              that actually does the work here. */}
+              that actually does the work here.
+
+              Loads eagerly on purpose. Do not add loading="lazy" back: a lazy
+              frame starts fetching only as it nears the viewport, so the
+              taster visibly popped in underneath the reader mid-scroll. The
+              cost of loading it for visitors who never reach the section is
+              accepted, since loading the widget spends nothing. Only
+              recording does. */}
           <iframe
             ref={frameRef}
             src={`${APP_URL}/try`}
             title="Try one real oral board question"
             allow="microphone"
-            loading="lazy"
             scrolling="no"
             className="block w-full border-0"
             style={{ height, overflow: "hidden" }}
