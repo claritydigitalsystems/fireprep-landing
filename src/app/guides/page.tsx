@@ -1,7 +1,14 @@
 import Link from "next/link";
 import { ArrowRight, BookOpen } from "lucide-react";
 import JsonLd from "../components/JsonLd";
-import { CtaBlock, PageHeader, SECONDARY_BUTTON, TEXT_LINK } from "../components/PageParts";
+import {
+  CtaBlock,
+  PageHeader,
+  PRIMARY_BUTTON,
+  SECONDARY_BUTTON,
+  TEXT_LINK,
+} from "../components/PageParts";
+import { APP_PLAYBOOK_SIGNUP_URL } from "../lib/links";
 import { pageMetadata } from "../lib/site";
 import { breadcrumbLd } from "../lib/schema";
 import { offPathGuides, readingPath, type PathStep } from "./_content";
@@ -87,7 +94,9 @@ function FeaturedGuide({ step }: { step: PathStep }) {
 }
 
 /** The Playbook, set apart from the guides: amber rail, square corners
-    (.fp-callout), one CTA to its page. */
+    (.fp-callout). Same two buttons as the homepage PlaybookPromo: the
+    amber one straight to signup (src=playbook), the outlined one to the
+    teaser page. */
 function PlaybookCard() {
   return (
     <div className="fp-callout p-6 md:p-8 lg:p-10">
@@ -105,9 +114,14 @@ function PlaybookCard() {
             the night before to the thank-you note.
           </p>
         </div>
-        <Link href="/playbook" className={`${SECONDARY_BUTTON} shrink-0`}>
-          See what&apos;s inside
-        </Link>
+        <div className="flex shrink-0 flex-col gap-3 sm:flex-row md:flex-col xl:flex-row">
+          <a href={APP_PLAYBOOK_SIGNUP_URL} className={PRIMARY_BUTTON}>
+            Get the Playbook
+          </a>
+          <Link href="/playbook" className={SECONDARY_BUTTON}>
+            See what&apos;s inside
+          </Link>
+        </div>
       </div>
     </div>
   );

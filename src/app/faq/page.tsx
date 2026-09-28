@@ -305,7 +305,7 @@ export default function FaqPage() {
                       className="group scroll-mt-20 border-b border-border"
                     >
                       <summary className="flex min-h-[44px] cursor-pointer list-none items-center justify-between gap-4 py-5 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background [&::-webkit-details-marker]:hidden">
-                        <h3 className="font-body text-lg font-medium leading-snug tracking-normal text-text-primary">
+                        <h3 className="font-body text-lg font-normal leading-snug tracking-normal text-text-primary">
                           {faq.q}
                         </h3>
                         <ChevronDown
