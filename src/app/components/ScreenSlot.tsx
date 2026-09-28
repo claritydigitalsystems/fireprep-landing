@@ -37,10 +37,12 @@ function Placeholder({
   label,
   alt,
   files,
+  kind = "Screenshot",
 }: {
   label: string;
   alt: string;
   files: string[];
+  kind?: string;
 }) {
   return (
     <div
@@ -51,7 +53,7 @@ function Placeholder({
       <div className="flex h-full w-full flex-col items-center justify-center gap-2 rounded-[4px] border border-dashed border-border-strong px-3 text-center">
         <ImageIcon className="h-5 w-5 shrink-0 text-text-muted" aria-hidden="true" />
         <p className="hidden font-display text-xs font-semibold uppercase tracking-[0.18em] text-text-muted @[200px]:block">
-          Screenshot
+          {kind}
         </p>
         <p className="hidden max-w-[36ch] font-display text-base font-semibold leading-snug text-text-secondary @[200px]:block @[420px]:text-lg">
           {label}
@@ -125,6 +127,7 @@ export default function ScreenSlot({
   mobileSizes = "(max-width: 767px) 80vw, 1px",
   eager = false,
   className = "",
+  placeholderKind,
 }: {
   id: string;
   label: string;
@@ -139,6 +142,9 @@ export default function ScreenSlot({
   mobileSizes?: string;
   eager?: boolean;
   className?: string;
+  /** Small label above the placeholder title. Defaults to "Screenshot";
+      photo slots pass "Photo". */
+  placeholderKind?: string;
 }) {
   const paths = slotPaths(id, dir);
   const desktop = desktopSrc ?? paths.desktop;
@@ -185,7 +191,7 @@ export default function ScreenSlot({
           />
         </div>
         <div className="absolute inset-0 hidden md:block">
-          <Placeholder label={label} alt={alt} files={[desktop.split("/").pop()!]} />
+          <Placeholder label={label} alt={alt} files={[desktop.split("/").pop()!]} kind={placeholderKind} />
         </div>
       </>
     );
@@ -203,7 +209,7 @@ export default function ScreenSlot({
     );
   } else {
     const files = [desktop, ...(mobile ? [mobile] : [])].map((f) => f.split("/").pop()!);
-    screen = <Placeholder label={label} alt={alt} files={files} />;
+    screen = <Placeholder label={label} alt={alt} files={files} kind={placeholderKind} />;
   }
 
   // Aspect ratios ride on CSS variables so any "w/h" string works without
