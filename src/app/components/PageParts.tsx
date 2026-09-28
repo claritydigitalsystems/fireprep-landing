@@ -18,22 +18,28 @@ export const TEXT_LINK =
 
 /** Section eyebrow: the small amber label, with a short amber bar under it
     (32px by 2px, drawn as ::after so it's one element and screen readers
-    only get the text). `center` centres the bar with centred text. */
+    only get the text). `center` centres the bar with centred text. `as`
+    makes it a heading when the label is the only title a block has. */
 export function Eyebrow({
   children,
   center = false,
+  as: Tag = "p",
+  id,
 }: {
   children: React.ReactNode;
   center?: boolean;
+  as?: "p" | "h2";
+  id?: string;
 }) {
   return (
-    <p
+    <Tag
+      id={id}
       className={`mb-3 font-display text-sm font-semibold uppercase tracking-[0.18em] text-accent after:mt-2 after:block after:h-0.5 after:w-8 after:bg-accent after:content-[''] ${
         center ? "after:mx-auto" : ""
       }`}
     >
       {children}
-    </p>
+    </Tag>
   );
 }
 
@@ -159,12 +165,25 @@ export function CtaBlock({
 
 /** The Board Day Playbook pitch. Same margin-note treatment as the
     homepage's .fp-callout (amber left edge, square corners) so it reads as
-    an aside, not a competing hero. */
-export function PlaybookPromo({ headingLevel = "h2" }: { headingLevel?: "h2" | "h3" }) {
+    an aside, not a competing hero. `narrow` holds the stacked layout until
+    1080px, for columns that are narrower than the page at lg (guides). */
+export function PlaybookPromo({
+  headingLevel = "h2",
+  narrow = false,
+}: {
+  headingLevel?: "h2" | "h3";
+  narrow?: boolean;
+}) {
   const Heading = headingLevel;
   return (
     <div className="fp-callout p-6 lg:p-8">
-      <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between lg:gap-10">
+      <div
+        className={
+          narrow
+            ? "flex flex-col gap-6 min-[1080px]:flex-row min-[1080px]:items-center min-[1080px]:justify-between min-[1080px]:gap-10"
+            : "flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between lg:gap-10"
+        }
+      >
         <div className="max-w-2xl">
           <p className="mb-2 flex items-center gap-2 font-display text-sm font-semibold uppercase tracking-[0.18em] text-accent">
             <BookOpen className="h-4 w-4" aria-hidden="true" />
@@ -179,7 +198,13 @@ export function PlaybookPromo({ headingLevel = "h2" }: { headingLevel?: "h2" | "
             sign up.
           </p>
         </div>
-        <div className="flex shrink-0 flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
+        <div
+          className={
+            narrow
+              ? "flex shrink-0 flex-col gap-3 sm:flex-row min-[1080px]:flex-col xl:flex-row"
+              : "flex shrink-0 flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row"
+          }
+        >
           <a href={APP_PLAYBOOK_SIGNUP_URL} className={PRIMARY_BUTTON}>
             Get the Playbook
           </a>

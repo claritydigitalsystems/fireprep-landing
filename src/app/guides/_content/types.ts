@@ -32,5 +32,14 @@ export type GuideSection = { id: string; title: string };
 
 export type Guide = {
   meta: GuideMeta;
+  /** Every H2, in order. Builds the "In this guide" table of contents, so
+      render the H2s from these same objects (see SECTIONS in each file). */
+  sections: GuideSection[];
+  /** "Key takeaways" box, 4 to 5 one-line points. Written only from what
+      the guide itself says; no new claims. */
+  takeaways: string[];
+  /** The opening paragraph(s), before the takeaways box. */
+  Intro: () => React.ReactNode;
+  /** Everything from the first H2 on. */
   Body: () => React.ReactNode;
 };

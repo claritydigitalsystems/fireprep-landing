@@ -41,21 +41,34 @@ export const guide: Guide = {
     ],
     endCta: "practice",
   },
+  sections: Object.values(SECTIONS),
+  takeaways: [
+    "The board is where candidates who all passed the written and physical tests get separated from each other.",
+    "Panels score each answer against defined criteria, not on whether they liked you.",
+    "Build a story inventory of real experiences instead of writing answers to guessed questions.",
+    "Practice out loud, record yourself, and listen back.",
+    "Practice with a timer so you learn what a complete answer feels like in the time you'll get.",
+  ],
+  Intro,
   Body,
 };
+
+function Intro() {
+  return (
+    <P>
+      You can ace the written test, crush the physical agility, and still
+      lose the job in a twenty-minute conversation. The oral board is where
+      a lot of hiring processes get decided, and it&apos;s the part most
+      candidates prepare for the least. This guide covers what the board is,
+      how you&apos;re scored, and how to prepare in a way that holds up when
+      you&apos;re actually sitting in the chair.
+    </P>
+  );
+}
 
 function Body() {
   return (
     <>
-      <P>
-        You can ace the written test, crush the physical agility, and still
-        lose the job in a twenty-minute conversation. The oral board is where
-        a lot of hiring processes get decided, and it&apos;s the part most
-        candidates prepare for the least. This guide covers what the board is,
-        how you&apos;re scored, and how to prepare in a way that holds up when
-        you&apos;re actually sitting in the chair.
-      </P>
-
       <H2 id={SECTIONS.whatItIs.id}>{SECTIONS.whatItIs.title}</H2>
       <P>
         The oral board is a structured interview. You sit in front of a panel,

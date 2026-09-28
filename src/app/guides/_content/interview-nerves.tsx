@@ -1,5 +1,15 @@
-import type { Guide } from "./types";
+import type { Guide, GuideSection } from "./types";
 import { A, H2, H3, LI, Note, P, Strong, UL } from "./prose";
+
+/** Every H2 in this guide, in order. The headings below and the table of
+    contents both render from here. */
+const SECTIONS = {
+  normal: { id: "normal", title: "Nerves are normal, and they mean you care" },
+  delivery: { id: "delivery", title: "Why nerves hit your delivery, not your content" },
+  reps: { id: "reps", title: "The fix: reps, out loud, under pressure" },
+  inTheRoom: { id: "in-the-room", title: "In the room" },
+  nightBefore: { id: "night-before", title: "The night before and the morning of" },
+} satisfies Record<string, GuideSection>;
 
 export const guide: Guide = {
   meta: {
@@ -14,20 +24,33 @@ export const guide: Guide = {
     related: ["how-to-prepare-for-a-firefighter-oral-board", "what-oral-boards-look-for"],
     endCta: "playbook",
   },
+  sections: Object.values(SECTIONS),
+  takeaways: [
+    "Almost everyone is nervous at an oral board, and panels expect it.",
+    "Nerves mostly hit your delivery, because the room and the format are new.",
+    "The fix is reps: answer out loud, on a timer, with pressure added on purpose.",
+    "In the room, take one slow breath before you answer, and stop when you've made your point.",
+    "One weak answer doesn't sink the board unless you carry it into the next one.",
+  ],
+  Intro,
   Body,
 };
+
+function Intro() {
+  return (
+    <P>
+      Almost everyone is nervous at an oral board. People who run into
+      burning buildings for a living will tell you their board was one of
+      the most nerve-racking things they&apos;ve done. So if your heart is
+      pounding just thinking about it, you&apos;re in good company.
+    </P>
+  );
+}
 
 function Body() {
   return (
     <>
-      <P>
-        Almost everyone is nervous at an oral board. People who run into
-        burning buildings for a living will tell you their board was one of
-        the most nerve-racking things they&apos;ve done. So if your heart is
-        pounding just thinking about it, you&apos;re in good company.
-      </P>
-
-      <H2 id="normal">Nerves are normal, and they mean you care</H2>
+      <H2 id={SECTIONS.normal.id}>{SECTIONS.normal.title}</H2>
       <P>
         Nerves are your body treating something as important. That&apos;s
         accurate. The goal isn&apos;t to feel nothing. It&apos;s to keep the
@@ -38,7 +61,7 @@ function Body() {
       {/* TODO-VERIFY: "a little of it showing won't cost you" is general
           advice. Confirm Scott is comfortable stating it. */}
 
-      <H2 id="delivery">Why nerves hit your delivery, not your content</H2>
+      <H2 id={SECTIONS.delivery.id}>{SECTIONS.delivery.title}</H2>
       <P>
         Most nervous candidates know what they want to say. What falls apart
         is saying it: the answer comes out rushed, out of order, or trails off
@@ -52,7 +75,7 @@ function Body() {
         for the answer.
       </P>
 
-      <H2 id="reps">The fix: reps, out loud, under pressure</H2>
+      <H2 id={SECTIONS.reps.id}>{SECTIONS.reps.title}</H2>
       <P>
         You can&apos;t think your way out of nerves the night before. What
         works is making the format familiar. Answer out loud, on a timer,
@@ -75,7 +98,7 @@ function Body() {
         </LI>
       </UL>
 
-      <H2 id="in-the-room">In the room</H2>
+      <H2 id={SECTIONS.inTheRoom.id}>{SECTIONS.inTheRoom.title}</H2>
 
       <H3>Breathe before you answer</H3>
       <P>
@@ -122,7 +145,7 @@ function Body() {
         just done it enough times that the format stopped being the hard part.
       </Note>
 
-      <H2 id="night-before">The night before and the morning of</H2>
+      <H2 id={SECTIONS.nightBefore.id}>{SECTIONS.nightBefore.title}</H2>
       <UL>
         <LI>
           <Strong>Stop cramming.</Strong> A light review of your stories is
