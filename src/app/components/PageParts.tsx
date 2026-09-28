@@ -16,9 +16,22 @@ export const SECONDARY_BUTTON =
 export const TEXT_LINK =
   "text-text-primary underline decoration-border-strong underline-offset-4 transition-colors hover:decoration-accent";
 
-export function Eyebrow({ children }: { children: React.ReactNode }) {
+/** Section eyebrow: the small amber label, with a short amber bar under it
+    (32px by 2px, drawn as ::after so it's one element and screen readers
+    only get the text). `center` centres the bar with centred text. */
+export function Eyebrow({
+  children,
+  center = false,
+}: {
+  children: React.ReactNode;
+  center?: boolean;
+}) {
   return (
-    <p className="mb-3 font-display text-sm font-semibold uppercase tracking-[0.18em] text-accent">
+    <p
+      className={`mb-3 font-display text-sm font-semibold uppercase tracking-[0.18em] text-accent after:mt-2 after:block after:h-0.5 after:w-8 after:bg-accent after:content-[''] ${
+        center ? "after:mx-auto" : ""
+      }`}
+    >
       {children}
     </p>
   );

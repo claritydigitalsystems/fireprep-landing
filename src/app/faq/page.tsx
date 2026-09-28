@@ -50,6 +50,11 @@ const FAQS: Faq[] = [
     answer:
       "No. Your answer is converted to a transcript and the content is what gets scored: what you said, how you structured it, and whether it answered the question. Accent and speaking style aren't part of the score.",
   },
+  {
+    q: "Why don't I see my words while I talk?",
+    answer:
+      "Real oral boards don't give you a teleprompter, so First Call doesn't either. Practicing without seeing your words builds the habit of answering from what you know, the way you'll have to in the room.",
+  },
   /* Kept general on purpose and checked against the app Privacy page
      (last updated September 5, 2026): transcript-only feedback, scheduled
      recording deletion, deletion on request. No retention numbers here, so
