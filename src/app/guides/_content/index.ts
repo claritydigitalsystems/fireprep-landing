@@ -7,6 +7,31 @@ import { guide as nerves } from "./interview-nerves";
     in this folder + one entry here. */
 export const GUIDES: Guide[] = [prepare, lookFor, nerves];
 
+/** The /guides reading path, in order. The first entry is the featured
+    "Start here" guide. To add a guide to the path, add its slug and a short
+    step label; guides left off the path still publish and are listed after
+    it on the index. */
+export const READING_PATH: { slug: string; label: string }[] = [
+  { slug: "how-to-prepare-for-a-firefighter-oral-board", label: "Start here" },
+  { slug: "what-oral-boards-look-for", label: "What boards look for" },
+  { slug: "interview-nerves", label: "Handling nerves" },
+];
+
+export type PathStep = { meta: GuideMeta; step: number; label: string };
+
+export function readingPath(): PathStep[] {
+  return READING_PATH.flatMap((entry, i) => {
+    const meta = getGuide(entry.slug)?.meta;
+    return meta ? [{ meta, step: i + 1, label: entry.label }] : [];
+  });
+}
+
+/** Published guides that aren't on the reading path. */
+export function offPathGuides(): GuideMeta[] {
+  const onPath = new Set(READING_PATH.map((e) => e.slug));
+  return GUIDES.map((g) => g.meta).filter((m) => !onPath.has(m.slug));
+}
+
 export function getGuide(slug: string): Guide | undefined {
   return GUIDES.find((g) => g.meta.slug === slug);
 }

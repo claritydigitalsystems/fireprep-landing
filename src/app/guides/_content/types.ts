@@ -18,10 +18,17 @@ export type GuideMeta = {
   readMinutes: number;
   /** Slugs shown under "Keep reading". Falls back to the other guides. */
   related?: string[];
+  /** Sections to preview where the guide is featured ("Inside this
+      guide"). Take them from the guide's own SECTIONS so the preview and
+      the H2s can't drift apart. */
+  highlights?: GuideSection[];
   /** Which end-of-article CTA this guide carries. Alternate them across
       guides so the Playbook offer rotates through the set. */
   endCta: "practice" | "playbook";
 };
+
+/** One H2 section: its anchor id and heading text. */
+export type GuideSection = { id: string; title: string };
 
 export type Guide = {
   meta: GuideMeta;

@@ -117,14 +117,22 @@ export function SectionHeading({
 export function CtaBlock({
   title = "Hear how you actually sound before the board does.",
   children,
+  band = false,
 }: {
   title?: string;
   children?: React.ReactNode;
+  /** Full-bleed raised band with hairlines, the /how-it-works closing
+      treatment. Default is the hairline-topped block. */
+  band?: boolean;
 }) {
   return (
-    <section>
+    <section className={band ? "border-y border-border bg-surface" : undefined}>
       <div className="mx-auto w-full max-w-7xl px-6 py-[72px] lg:px-12 lg:py-[112px]">
-        <div className="mx-auto max-w-2xl border-t border-border pt-[56px] text-center lg:pt-[72px]">
+        <div
+          className={`mx-auto max-w-2xl text-center ${
+            band ? "" : "border-t border-border pt-[56px] lg:pt-[72px]"
+          }`}
+        >
           <h2 className="mb-5 font-display text-3xl font-bold leading-tight text-text-primary lg:text-5xl">
             {title}
           </h2>

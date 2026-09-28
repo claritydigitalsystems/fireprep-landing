@@ -7,9 +7,12 @@ import type { GuideMeta } from "./types";
 export function GuideCard({
   meta,
   headingLevel = "h2",
+  step,
 }: {
   meta: GuideMeta;
   headingLevel?: "h2" | "h3";
+  /** Reading-path position, shown as "02 · label" above the title. */
+  step?: { n: number; label: string };
 }) {
   const Heading = headingLevel;
   return (
@@ -17,9 +20,23 @@ export function GuideCard({
       href={`/guides/${meta.slug}`}
       className="group flex h-full flex-col rounded-md border border-border bg-surface p-6 transition-colors hover:border-border-strong focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background lg:p-7"
     >
-      <p className="mb-3 font-display text-sm font-semibold uppercase tracking-[0.18em] text-text-muted">
-        {meta.readMinutes} min read
-      </p>
+      {step ? (
+        <p className="mb-3 flex items-baseline justify-between gap-4">
+          <span className="flex items-baseline gap-3">
+            <span className="font-display text-3xl font-bold leading-none text-text-secondary">
+              {String(step.n).padStart(2, "0")}
+            </span>
+            <span className="font-display text-sm font-semibold uppercase tracking-[0.18em] text-text-muted">
+              {step.label}
+            </span>
+          </span>
+          <span className="shrink-0 text-base text-text-muted">{meta.readMinutes} min read</span>
+        </p>
+      ) : (
+        <p className="mb-3 font-display text-sm font-semibold uppercase tracking-[0.18em] text-text-muted">
+          {meta.readMinutes} min read
+        </p>
+      )}
       <Heading className="mb-3 font-display text-2xl font-bold leading-snug text-text-primary">
         {meta.title}
       </Heading>

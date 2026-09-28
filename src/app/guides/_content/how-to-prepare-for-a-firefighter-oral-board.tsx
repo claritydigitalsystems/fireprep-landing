@@ -1,9 +1,25 @@
-import type { Guide } from "./types";
+import type { Guide, GuideSection } from "./types";
 import { A, H2, H3, LI, Note, P, Strong, UL } from "./prose";
 
 /* Rule for every guide: cover everything AROUND answering. No sample
    questions with model answers, no scripted answers. That's the app's job,
    and scripts are the failure these guides teach against. */
+
+/** Every H2 in this guide. The headings below render from here, and
+    meta.highlights picks from here, so the /guides preview always matches
+    the article. */
+const SECTIONS = {
+  whatItIs: { id: "what-it-is", title: "What the oral board is, and why it matters so much" },
+  howYoureScored: { id: "how-youre-scored", title: "How panels evaluate you" },
+  questionTypes: { id: "question-types", title: "The main question types" },
+  storyInventory: { id: "story-inventory", title: "Build a story inventory, not a script" },
+  practiceOutLoud: { id: "practice-out-loud", title: "Practice out loud, and record yourself" },
+  practiceOnAClock: { id: "practice-on-a-clock", title: "Practice under a clock" },
+  research: { id: "research", title: "Research the department" },
+  mistakes: { id: "mistakes", title: "Common mistakes" },
+  timeline: { id: "timeline", title: "A simple prep timeline" },
+  whereFirstCallFits: { id: "where-first-call-fits", title: "Where First Call fits" },
+} satisfies Record<string, GuideSection>;
 
 export const guide: Guide = {
   meta: {
@@ -16,6 +32,13 @@ export const guide: Guide = {
     published: "2026-09-28",
     readMinutes: 9,
     related: ["what-oral-boards-look-for", "interview-nerves"],
+    highlights: [
+      SECTIONS.howYoureScored,
+      SECTIONS.questionTypes,
+      SECTIONS.storyInventory,
+      SECTIONS.practiceOutLoud,
+      SECTIONS.timeline,
+    ],
     endCta: "practice",
   },
   Body,
@@ -33,7 +56,7 @@ function Body() {
         you&apos;re actually sitting in the chair.
       </P>
 
-      <H2 id="what-it-is">What the oral board is, and why it matters so much</H2>
+      <H2 id={SECTIONS.whatItIs.id}>{SECTIONS.whatItIs.title}</H2>
       <P>
         The oral board is a structured interview. You sit in front of a panel,
         usually a few people from the department and sometimes from outside
@@ -51,7 +74,7 @@ function Body() {
         of your prep time than it usually gets.
       </P>
 
-      <H2 id="how-youre-scored">How panels evaluate you</H2>
+      <H2 id={SECTIONS.howYoureScored.id}>{SECTIONS.howYoureScored.title}</H2>
       <P>
         The board can feel subjective from the candidate&apos;s side of the
         table. It&apos;s less subjective than it feels. Most oral boards are
@@ -79,7 +102,7 @@ function Body() {
         <A href="/guides/what-oral-boards-look-for">what oral boards look for</A>.
       </P>
 
-      <H2 id="question-types">The main question types</H2>
+      <H2 id={SECTIONS.questionTypes.id}>{SECTIONS.questionTypes.title}</H2>
       <P>
         Questions vary by department, but most fall into a few families.
         Knowing which kind you&apos;re being asked tells you what kind of
@@ -121,7 +144,7 @@ function Body() {
         whatever they ask.
       </Note>
 
-      <H2 id="story-inventory">Build a story inventory, not a script</H2>
+      <H2 id={SECTIONS.storyInventory.id}>{SECTIONS.storyInventory.title}</H2>
       <P>
         Instead of writing answers to guessed questions, build a list of real
         experiences from your own life that you can pull from when a question
@@ -143,7 +166,7 @@ function Body() {
         of reciting something that only half fits.
       </P>
 
-      <H2 id="practice-out-loud">Practice out loud, and record yourself</H2>
+      <H2 id={SECTIONS.practiceOutLoud.id}>{SECTIONS.practiceOutLoud.title}</H2>
       <P>
         Thinking through an answer and saying it are two different skills.
         Plenty of candidates know exactly what they want to say and then hear
@@ -157,7 +180,7 @@ function Body() {
         ending lands or trails off. Then do it again.
       </P>
 
-      <H2 id="practice-on-a-clock">Practice under a clock</H2>
+      <H2 id={SECTIONS.practiceOnAClock.id}>{SECTIONS.practiceOnAClock.title}</H2>
       {/* TODO-VERIFY: time limits vary. Confirm "a couple of minutes" is a
           fair general range for a single answer. */}
       <P>
@@ -169,7 +192,7 @@ function Body() {
         pressure.
       </P>
 
-      <H2 id="research">Research the department</H2>
+      <H2 id={SECTIONS.research.id}>{SECTIONS.research.title}</H2>
       <P>
         Know the department you&apos;re sitting in front of: the size of the
         community, the number of stations, the kinds of calls they run, their
@@ -184,7 +207,7 @@ function Body() {
         something you could say anywhere.
       </P>
 
-      <H2 id="mistakes">Common mistakes</H2>
+      <H2 id={SECTIONS.mistakes.id}>{SECTIONS.mistakes.title}</H2>
       <UL>
         <LI>
           <Strong>Memorized scripts.</Strong> They sound rehearsed, and they
@@ -206,7 +229,7 @@ function Body() {
         </LI>
       </UL>
 
-      <H2 id="timeline">A simple prep timeline</H2>
+      <H2 id={SECTIONS.timeline.id}>{SECTIONS.timeline.title}</H2>
       <H3>Weeks out</H3>
       <UL>
         <LI>Build your story inventory.</LI>
@@ -233,7 +256,7 @@ function Body() {
         <A href="/guides/interview-nerves">how to handle oral board nerves</A>.
       </P>
 
-      <H2 id="where-first-call-fits">Where First Call fits</H2>
+      <H2 id={SECTIONS.whereFirstCallFits.id}>{SECTIONS.whereFirstCallFits.title}</H2>
       <P>
         First Call exists for the hardest part of this plan: practicing out
         loud and getting honest, structured feedback on how you did. You
