@@ -5,7 +5,7 @@ import WaitlistForm from "./components/WaitlistForm";
 import TryEmbed from "./components/TryEmbed";
 import DeviceMockup from "./components/DeviceMockup";
 import JsonLd from "./components/JsonLd";
-import { PlaybookPromo } from "./components/PageParts";
+import { Eyebrow, PlaybookPromo } from "./components/PageParts";
 import { APP_SIGNUP_URL } from "./lib/links";
 import { softwareAppLd } from "./lib/schema";
 
@@ -27,9 +27,9 @@ export default function Home() {
 
             {/* Left: copy */}
             <div>
-              <p className="mb-4 font-display text-sm font-semibold uppercase tracking-[0.18em] text-accent">
+              <Eyebrow>
                 Free while in beta · Real candidates, real feedback
-              </p>
+              </Eyebrow>
 
               <h1 className="mb-4 font-display text-4xl font-bold leading-[1.03] tracking-tight text-text-primary md:text-5xl lg:text-6xl">
                 Practice the oral board the way it&apos;s actually scored.
@@ -144,9 +144,9 @@ export default function Home() {
         <div className="mx-auto w-full max-w-7xl px-6 py-[56px] lg:px-12 lg:py-[80px]">
 
           <div className="mb-8 lg:mb-10">
-            <p className="mb-3 font-display text-sm font-semibold uppercase tracking-[0.18em] text-accent">
+            <Eyebrow>
               The difference
-            </p>
+            </Eyebrow>
             <h2 className="mb-4 font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
               Anyone can hand you a score. We show you why.
             </h2>
@@ -274,9 +274,9 @@ export default function Home() {
         <div className="mx-auto w-full max-w-7xl px-6 py-[56px] lg:px-12 lg:py-[80px]">
 
           <div className="mb-8 lg:mb-10">
-            <p className="mb-3 font-display text-sm font-semibold uppercase tracking-[0.18em] text-accent">
+            <Eyebrow>
               Why First Call
-            </p>
+            </Eyebrow>
             <h2 className="mb-4 font-display text-4xl font-bold leading-tight text-text-primary lg:whitespace-nowrap lg:text-[2.5rem] xl:text-5xl">
               Built to grade like a board. Not like a chatbot.
             </h2>
@@ -392,9 +392,9 @@ export default function Home() {
         <div className="mx-auto w-full max-w-7xl px-6 py-[80px] lg:px-12 lg:py-[120px]">
 
           <div className="mb-12 lg:mb-16">
-            <p className="mb-3 font-display text-sm font-semibold uppercase tracking-[0.18em] text-accent">
+            <Eyebrow>
               How it works
-            </p>
+            </Eyebrow>
             <h2 className="font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
               Every session, end to end.
             </h2>
@@ -546,9 +546,9 @@ export default function Home() {
         <div className="mx-auto w-full max-w-7xl px-6 py-[80px] lg:px-12 lg:py-[120px]">
 
           <div className="mb-12 lg:mb-16">
-            <p className="mb-3 font-display text-sm font-semibold uppercase tracking-[0.18em] text-accent">
+            <Eyebrow>
               The rubric
-            </p>
+            </Eyebrow>
             <h2 className="mb-4 font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
               Not a vibe. A rubric.
             </h2>
@@ -670,9 +670,9 @@ export default function Home() {
 
             {/* Copy */}
             <div>
-              <p className="mb-3 font-display text-sm font-semibold uppercase tracking-[0.18em] text-accent">
+              <Eyebrow>
                 About
-              </p>
+              </Eyebrow>
               <h2 className="mb-6 font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
                 Why I&apos;m building this.
               </h2>
@@ -753,9 +753,9 @@ export default function Home() {
           <div className="mx-auto max-w-xl text-center">
 
             {/* slot: eyebrow */}
-            <p className="mb-3 font-display text-sm font-semibold uppercase tracking-[0.18em] text-accent">
+            <Eyebrow center>
               Start now
-            </p>
+            </Eyebrow>
 
             {/* slot: headline */}
             <h2 className="mb-6 font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
