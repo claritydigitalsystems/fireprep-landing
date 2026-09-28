@@ -1,5 +1,14 @@
 import Image from "next/image";
+import Link from "next/link";
 import { APP_URL } from "../lib/links";
+
+const SITE_LINKS = [
+  { href: "/how-it-works", label: "How It Works" },
+  { href: "/guides", label: "Guides" },
+  { href: "/playbook", label: "Playbook" },
+  { href: "/about", label: "About" },
+  { href: "/faq", label: "FAQ" },
+];
 
 export default function Footer() {
   return (
@@ -18,8 +27,15 @@ export default function Footer() {
             />
           </div>
 
-          {/* Right: links + copyright */}
+          {/* Right: site pages, legal + contact, copyright */}
           <div className="flex flex-col items-center gap-2 sm:items-end">
+            <nav aria-label="Site" className="flex flex-wrap items-center justify-center gap-x-4 text-base text-text-secondary sm:justify-end">
+              {SITE_LINKS.map((link) => (
+                <Link key={link.href} href={link.href} className="px-1 py-1 transition-colors hover:text-text-primary">
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
             <div className="flex flex-wrap items-center justify-center gap-x-2 text-base text-text-muted sm:justify-end">
               <a href={`${APP_URL}/privacy`} className="px-1 py-1 transition-colors hover:text-text-secondary">Privacy</a>
               <span aria-hidden="true">·</span>

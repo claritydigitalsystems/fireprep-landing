@@ -2,21 +2,33 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { APP_LOGIN_URL, APP_SIGNUP_URL } from "../lib/links";
 
-const SECTION_LINKS = [
-  { href: "#try", label: "Try a question" },
-  { href: "#why", label: "Why First Call" },
-  { href: "#how-it-works", label: "How it works" },
-  { href: "#rubric", label: "The rubric" },
+// Site pages, not homepage anchors: the nav has to work from every route.
+const PAGE_LINKS = [
+  { href: "/how-it-works", label: "How It Works" },
+  { href: "/guides", label: "Guides" },
+  { href: "/about", label: "About" },
+  { href: "/faq", label: "FAQ" },
 ];
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
-  function scrollToTop() {
+  function isCurrent(href: string) {
+    return pathname === href || pathname.startsWith(`${href}/`);
+  }
+
+  // On the home page the wordmark keeps its old job (smooth scroll to top);
+  // everywhere else it is a normal link home.
+  function onWordmarkClick(event: React.MouseEvent<HTMLAnchorElement>) {
     setMenuOpen(false);
+    if (pathname !== "/") return;
+    event.preventDefault();
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
@@ -27,10 +39,11 @@ export default function Navbar() {
     >
       <div className="mx-auto flex h-14 w-full max-w-7xl items-center justify-between px-6 lg:h-16 lg:px-12">
 
-        {/* Wordmark, scrolls to top */}
-        <button
-          type="button"
-          onClick={scrollToTop}
+        {/* Wordmark: home, or scroll to top when already there */}
+        <Link
+          href="/"
+          onClick={onWordmarkClick}
+          aria-label="First Call home"
           className="cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
         >
           <Image
@@ -46,19 +59,20 @@ export default function Navbar() {
           <span className="font-display text-3xl font-bold tracking-wider text-text-primary lg:hidden">
             <span className="text-logo">FIRST</span>CALL
           </span>
-        </button>
+        </Link>
 
         {/* Desktop: inline links, sign in, primary CTA */}
         <div className="flex items-center gap-3 lg:gap-8">
           <div className="hidden items-center gap-8 lg:flex">
-            {SECTION_LINKS.map((link) => (
-              <a
+            {PAGE_LINKS.map((link) => (
+              <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm text-text-secondary transition-colors hover:text-text-primary"
+                aria-current={isCurrent(link.href) ? "page" : undefined}
+                className="text-sm text-text-secondary transition-colors hover:text-text-primary aria-[current=page]:text-text-primary"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -105,15 +119,16 @@ export default function Navbar() {
         className="border-t border-border bg-background lg:hidden"
       >
         <div className="mx-auto w-full max-w-7xl px-6 py-3">
-          {SECTION_LINKS.map((link) => (
-            <a
+          {PAGE_LINKS.map((link) => (
+            <Link
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="flex min-h-[44px] items-center border-b border-border text-base text-text-secondary transition-colors hover:text-text-primary"
+              aria-current={isCurrent(link.href) ? "page" : undefined}
+              className="flex min-h-[44px] items-center border-b border-border text-base text-text-secondary transition-colors hover:text-text-primary aria-[current=page]:text-text-primary"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
 
           <a

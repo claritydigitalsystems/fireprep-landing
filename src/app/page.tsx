@@ -1,12 +1,23 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { Check, ChevronDown, ChevronRight, ListChecks, Mic, Play, Ruler, Target, TrendingUp } from "lucide-react";
 import WaitlistForm from "./components/WaitlistForm";
 import TryEmbed from "./components/TryEmbed";
+import JsonLd from "./components/JsonLd";
+import { PlaybookPromo } from "./components/PageParts";
 import { APP_SIGNUP_URL } from "./lib/links";
+import { softwareAppLd } from "./lib/schema";
+
+// Title, description, OG and Twitter come from the root layout defaults;
+// the home page only adds its canonical.
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default function Home() {
   return (
     <main className="flex flex-col bg-background">
+      <JsonLd data={softwareAppLd} />
 
       {/* ── Section 1: Hero ── */}
       <section className="relative">
@@ -748,6 +759,17 @@ export default function Home() {
             </div>
 
 
+          </div>
+        </div>
+      </section>
+
+      {/* ── Board Day Playbook promo ── an addition, not a section change.
+           Sits after the founder story and before the conversion slot, so
+           the page's last word is still the main CTA. ── */}
+      <section aria-label="The Board Day Playbook">
+        <div className="mx-auto w-full max-w-7xl px-6 pt-[24px] lg:px-12 lg:pt-[40px]">
+          <div className="mx-auto max-w-5xl">
+            <PlaybookPromo />
           </div>
         </div>
       </section>

@@ -44,17 +44,20 @@ function writeAttr(attr: Attr) {
 
 /** Rewrites every app signup/login CTA to carry the stored attribution.
     Idempotent by construction: each href is rebuilt from its bare route, so
-    running this a hundred times can never stack or duplicate params. */
+    running this a hundred times can never stack or duplicate params. The one
+    param carried over from the authored href is a non-taste `src` (e.g. the
+    Playbook CTAs' src=playbook): it names the CTA itself, so it wins over the
+    visitor-level taste flag on that link. Decoration only ever writes taste,
+    so a surviving non-taste src can only have come from the markup. */
 function decorate(attr: Attr) {
-  const params = new URLSearchParams();
   // src=taste is what tells the app a signup came from the embedded grader
   // rather than a cold CTA, so it is set only by a real result message.
-  if (attr.tasted === true) params.set("src", "taste");
+  const tasteSrc = attr.tasted === true ? "taste" : null;
+  const utm = new URLSearchParams();
   for (const key of UTM_KEYS) {
     const value = attr[key];
-    if (value) params.set(key, value);
+    if (value) utm.set(key, value);
   }
-  const query = params.toString();
 
   const links = document.querySelectorAll<HTMLAnchorElement>(
     `a[href^="${APP_URL}/signup"], a[href^="${APP_URL}/login"]`,
@@ -63,10 +66,18 @@ function decorate(attr: Attr) {
   links.forEach((link) => {
     const href = link.getAttribute("href");
     if (!href) return;
-    const base = href.split("?")[0].split("#")[0];
+    const [base, rest = ""] = href.split("#")[0].split("?");
     // The selector already guarantees this, but attribution params must never
     // land on a third-party host, so assert it at the point of writing.
     if (!base.startsWith(`${APP_URL}/`)) return;
+
+    const authoredSrc = new URLSearchParams(rest).get("src");
+    const src =
+      authoredSrc && authoredSrc !== "taste" ? authoredSrc : tasteSrc;
+    const params = new URLSearchParams();
+    if (src) params.set("src", src);
+    utm.forEach((value, key) => params.set(key, value));
+    const query = params.toString();
 
     const next = query ? `${base}?${query}` : base;
     // An unchanged write still emits a mutation record. Skipping it keeps the
