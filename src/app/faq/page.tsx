@@ -103,8 +103,6 @@ const FAQ_GROUPS: FaqGroup[] = [
     id: "the-practice",
     title: "The practice",
     faqs: [
-      /* TODO-VERIFY: "A short session fits in a lunch break." Check against real
-         3-question session times (timer plus reading feedback). */
       {
         id: "how-long-does-a-session-take",
         q: "How long does a session take?",
@@ -145,7 +143,6 @@ const FAQ_GROUPS: FaqGroup[] = [
         q: "How much does it cost?",
         answer: "First Call is free while in beta. No credit card needed to sign up.",
       },
-      /* TODO-VERIFY: "A real person reads every message." Keep only if true. */
       {
         id: "how-do-i-get-help",
         q: "How do I get help?",

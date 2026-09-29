@@ -55,11 +55,9 @@ function Body() {
         Nerves are your body treating something as important. That&apos;s
         accurate. The goal isn&apos;t to feel nothing. It&apos;s to keep the
         nerves from getting between you and a clear answer. Panels expect
-        candidates to be nervous, and a little of it showing won&apos;t cost
-        you.
+        candidates to be nervous. A little of it showing is normal. What
+        matters is whether your answer still comes through.
       </P>
-      {/* TODO-VERIFY: "a little of it showing won't cost you" is general
-          advice. Confirm Scott is comfortable stating it. */}
 
       <H2 id={SECTIONS.delivery.id}>{SECTIONS.delivery.title}</H2>
       <P>
@@ -108,8 +106,6 @@ function Body() {
       </P>
 
       <H3>It&apos;s fine to say you&apos;re taking a moment</H3>
-      {/* TODO-VERIFY: confirm that asking for a moment, or for the question
-          to be repeated, is generally acceptable in the boards Scott knows. */}
       <P>
         &ldquo;Let me think about that for a second&rdquo; is a complete
         sentence, and it&apos;s better than starting before you know where

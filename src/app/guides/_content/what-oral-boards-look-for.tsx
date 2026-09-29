@@ -88,8 +88,6 @@ function Body() {
   return (
     <>
       <H2 id={SECTIONS.criteria.id}>{SECTIONS.criteria.title}</H2>
-      {/* TODO-VERIFY: structured scoring is the norm in Scott's experience;
-          confirm the general description of rating sheets. */}
       <P>
         Most fire oral boards are structured. Each question is tied to one or
         more things the department wants to measure, and each panel member has

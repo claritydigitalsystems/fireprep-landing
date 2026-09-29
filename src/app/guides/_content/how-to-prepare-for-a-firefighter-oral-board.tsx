@@ -76,13 +76,12 @@ function Body() {
         it, and answer a set of questions. Every candidate gets the same
         questions, and every panel member scores your answers.
       </P>
-      {/* TODO-VERIFY: weighting varies by department. Confirm this general
-          framing matches what Scott has seen across departments. */}
       <P>
         In many departments, that score carries a lot of weight in where you
         land on the hiring list, and sometimes whether you make the list at
-        all. Written tests and physical agility often work like gates: pass
-        and you move on. The board is where candidates who all passed the
+        all. Physical agility is usually pass/fail, and in many departments
+        the written test works as a gate too. The board is where candidates
+        who all passed the
         gates get separated from each other. That&apos;s why it deserves more
         of your prep time than it usually gets.
       </P>
@@ -105,11 +104,9 @@ function Body() {
           like.
         </LI>
       </UL>
-      {/* TODO-VERIFY: "most" boards use structured scoring. Keep "most" or
-          soften to "many" based on Scott's experience. */}
       <P>
-        That means you&apos;re not being judged on whether the panel liked
-        you. You&apos;re being judged on whether your answer hit the things
+        On a structured board, you&apos;re not being judged on whether the
+        panel liked you. You&apos;re being judged on whether your answer hit the things
         they were told to listen for. Once you understand that, preparation
         gets a lot more concrete. For a closer look at the criteria, read{" "}
         <A href="/guides/what-oral-boards-look-for">what oral boards look for</A>.
@@ -194,10 +191,8 @@ function Body() {
       </P>
 
       <H2 id={SECTIONS.practiceOnAClock.id}>{SECTIONS.practiceOnAClock.title}</H2>
-      {/* TODO-VERIFY: time limits vary. Confirm "a couple of minutes" is a
-          fair general range for a single answer. */}
       <P>
-        Many boards give you a set amount of time, often a couple of minutes
+        Many boards give you a set amount of time, often a few minutes
         per answer, and some will cut you off. Even when there&apos;s no hard
         limit, the panel has a lot of candidates to get through. Practice with
         a timer running so you learn what a complete answer feels like inside
