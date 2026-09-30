@@ -4,6 +4,11 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Attribution from "./components/Attribution";
+import { GoogleAnalytics } from "@next/third-parties/google";
+
+// Set in Vercel for Production ONLY. Unset in local dev and preview deploys,
+// so GA4 never loads there and our own testing stays out of the data.
+const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -51,6 +56,7 @@ export default function RootLayout({
         {children}
         <Footer />
       </body>
+      {GA_ID ? <GoogleAnalytics gaId={GA_ID} /> : null}
     </html>
   );
 }
