@@ -30,7 +30,7 @@ export const guide: Guide = {
     "Nerves mostly hit your delivery, because the room and the format are new.",
     "The fix is reps: answer out loud, on a timer, with pressure added on purpose.",
     "In the room, take one slow breath before you answer, and stop when you've made your point.",
-    "One weak answer doesn't sink the board unless you carry it into the next one.",
+    "One weak answer is recoverable. Carrying it into the next one is what does the damage.",
   ],
   Intro,
   Body,

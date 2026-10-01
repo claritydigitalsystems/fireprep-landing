@@ -43,8 +43,8 @@ export const guide: Guide = {
   },
   sections: Object.values(SECTIONS),
   takeaways: [
-    "The board is where candidates who all passed the written and physical tests get separated from each other.",
-    "Panels score each answer against defined criteria, not on whether they liked you.",
+    "In many departments, the board is where candidates who passed the written and physical tests get separated from each other.",
+    "Structured boards score each answer against defined criteria, not on whether they liked you.",
     "Build a story inventory of real experiences instead of writing answers to guessed questions.",
     "Practice out loud, record yourself, and listen back.",
     "Practice with a timer so you learn what a complete answer feels like in the time you'll get.",

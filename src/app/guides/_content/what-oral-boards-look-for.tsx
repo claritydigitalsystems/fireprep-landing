@@ -27,7 +27,7 @@ export const guide: Guide = {
   },
   sections: Object.values(SECTIONS),
   takeaways: [
-    "Each panel member scores your answer against a rating sheet, not on how friendly the room feels.",
+    "On most boards, each panel member scores your answer against a rating sheet, not on how friendly the room feels.",
     "Most questions are aimed at one or two core competencies, so ask yourself which one is being tested.",
     "Back up every claim about yourself with something you actually did.",
     "Listen to the whole question and answer that one, not the one you prepared.",
