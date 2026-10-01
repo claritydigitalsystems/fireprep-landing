@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Attribution from "./components/Attribution";
+import SignupClickTracker from "./components/SignupClickTracker";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
 // Set in Vercel for Production ONLY. Unset in local dev and preview deploys,
@@ -55,6 +56,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <SignupClickTracker />
       </body>
       {GA_ID ? <GoogleAnalytics gaId={GA_ID} /> : null}
     </html>
