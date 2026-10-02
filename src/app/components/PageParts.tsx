@@ -169,16 +169,20 @@ export function CtaBlock({
     its own block, not page background. From 1080px it adds the in-app
     preview screenshot beside the copy; below that it is copy and buttons
     only. `narrow` keeps the buttons stacked until xl, for columns narrower
-    than the page (guides). The screenshot frame copies ScreenSlot's browser
+    than the page (guides). `body` swaps the one paragraph of copy for a
+    context that needs its own wording (the /guides index); everything else,
+    buttons included, is fixed. The screenshot frame copies ScreenSlot's browser
     frame classes; ScreenSlot itself can't be used here because this module
     is also imported by client components and ScreenSlot reads the
     filesystem. */
 export function PlaybookPromo({
   headingLevel = "h2",
   narrow = false,
+  body,
 }: {
   headingLevel?: "h2" | "h3";
   narrow?: boolean;
+  body?: React.ReactNode;
 }) {
   const Heading = headingLevel;
   return (
@@ -193,9 +197,13 @@ export function PlaybookPromo({
             The Board Day Playbook
           </Heading>
           <p className="max-w-2xl text-base leading-relaxed text-text-secondary lg:text-lg">
-            Everything for the day of your oral board, from the night before
-            to the thank-you note. It&apos;s waiting on your dashboard when you
-            sign up.
+            {body ?? (
+              <>
+                Everything for the day of your oral board, from the night
+                before to the thank-you note. It&apos;s waiting on your
+                dashboard when you sign up.
+              </>
+            )}
           </p>
           <div
             className={`mt-8 flex flex-col gap-3 ${

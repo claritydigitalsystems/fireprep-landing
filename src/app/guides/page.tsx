@@ -1,14 +1,12 @@
 import Link from "next/link";
-import { ArrowRight, BookOpen } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import JsonLd from "../components/JsonLd";
 import {
   CtaBlock,
   PageHeader,
-  PRIMARY_BUTTON,
-  SECONDARY_BUTTON,
+  PlaybookPromo,
   TEXT_LINK,
 } from "../components/PageParts";
-import { APP_PLAYBOOK_SIGNUP_URL } from "../lib/links";
 import { pageMetadata } from "../lib/site";
 import { breadcrumbLd } from "../lib/schema";
 import { offPathGuides, readingPath, type PathStep } from "./_content";
@@ -93,37 +91,20 @@ function FeaturedGuide({ step }: { step: PathStep }) {
   );
 }
 
-/** The Playbook, set apart from the guides: amber rail, square corners
-    (.fp-callout). Same two buttons as the homepage PlaybookPromo: the
-    amber one straight to signup (src=playbook), the outlined one to the
-    teaser page. */
+/** The Playbook, set apart from the guides: the shared PlaybookPromo (same
+    design and buttons as every other page, src=playbook straight to
+    signup, outlined one to the teaser page), with this page's own line of
+    copy. */
 function PlaybookCard() {
   return (
-    <div className="fp-callout p-6 md:p-8 lg:p-10">
-      <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between md:gap-10">
-        <div className="max-w-2xl">
-          <p className="mb-2 flex items-center gap-2 font-display text-sm font-semibold uppercase tracking-[0.18em] text-accent">
-            <BookOpen className="h-4 w-4" aria-hidden="true" />
-            Free with an account
-          </p>
-          <h2 className="mb-2 font-display text-2xl font-bold leading-snug text-text-primary lg:text-3xl">
-            The Board Day Playbook
-          </h2>
-          <p className="text-base leading-relaxed text-text-secondary md:text-lg">
-            The guides get you ready. The Playbook covers the day itself, from
-            the night before to the thank-you note.
-          </p>
-        </div>
-        <div className="flex shrink-0 flex-col gap-3 sm:flex-row md:flex-col xl:flex-row">
-          <a href={APP_PLAYBOOK_SIGNUP_URL} data-cta="playbook" className={PRIMARY_BUTTON}>
-            Get the Playbook
-          </a>
-          <Link href="/playbook" className={SECONDARY_BUTTON}>
-            See what&apos;s inside
-          </Link>
-        </div>
-      </div>
-    </div>
+    <PlaybookPromo
+      body={
+        <>
+          The guides get you ready. The Playbook covers the day itself, from
+          the night before to the thank-you note.
+        </>
+      }
+    />
   );
 }
 
