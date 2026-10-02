@@ -1,12 +1,24 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { Check, ChevronDown, ChevronRight, ListChecks, Mic, Play, Ruler, Target, TrendingUp } from "lucide-react";
 import WaitlistForm from "./components/WaitlistForm";
 import TryEmbed from "./components/TryEmbed";
+import DeviceMockup from "./components/DeviceMockup";
+import JsonLd from "./components/JsonLd";
+import { Eyebrow, PlaybookPromo } from "./components/PageParts";
 import { APP_SIGNUP_URL } from "./lib/links";
+import { softwareAppLd } from "./lib/schema";
+
+// Title, description, OG and Twitter come from the root layout defaults;
+// the home page only adds its canonical.
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default function Home() {
   return (
     <main className="flex flex-col bg-background">
+      <JsonLd data={softwareAppLd} />
 
       {/* ── Section 1: Hero ── */}
       <section className="relative">
@@ -15,9 +27,9 @@ export default function Home() {
 
             {/* Left: copy */}
             <div>
-              <p className="mb-4 font-display text-sm font-semibold uppercase tracking-[0.18em] text-accent">
+              <Eyebrow>
                 Free while in beta · Real candidates, real feedback
-              </p>
+              </Eyebrow>
 
               <h1 className="mb-4 font-display text-4xl font-bold leading-[1.03] tracking-tight text-text-primary md:text-5xl lg:text-6xl">
                 Practice the oral board the way it&apos;s actually scored.
@@ -60,63 +72,32 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Right: device mockup, then the attribution line beneath it.
-                Frames are deliberately FLAT and front-facing. No perspective
-                or 3D rotation: angled CSS mockups read as cheap. Hard edges,
-                small radii, no glow or drop-shadow halo. This should read as
-                equipment sitting in the page, not a floating SaaS graphic.
-
-                Both screens carry real app screenshots. Each screen area is a
-                positioned box and the images fill it, so swapping in a newer
+            {/* Right: device mockup (components/DeviceMockup.tsx holds the
+                frame rules), then the attribution line beneath it. Both
+                screens carry real app screenshots; swapping in a newer
                 capture needs only a new file at the same aspect ratio:
                 16:10 for the laptop, 9:18 for the phone. */}
             <div>
-              <div className="relative mx-auto w-full max-w-[420px] pb-8">
-
-                {/* Laptop */}
-                <div className="rounded-t-[6px] border-[1.5px] border-b-0 border-device-edge bg-device-body shadow-[0_6px_8px_-2px_rgba(0,0,0,0.9)]">
-                  {/* Browser-style chrome */}
-                  <div aria-hidden="true" className="flex items-center gap-1.5 px-2.5 py-2">
-                    <span className="h-1.5 w-1.5 rounded-full bg-device-detail" />
-                    <span className="h-1.5 w-1.5 rounded-full bg-device-detail" />
-                    <span className="h-1.5 w-1.5 rounded-full bg-device-detail" />
-                  </div>
-                  {/* Laptop screen area, recessed below the frame */}
-                  <div className="relative aspect-[16/10] w-full overflow-hidden border-t border-device-detail bg-device-screen">
-                    <Image
-                      src="/screenshot-feedback.jpg"
-                      alt="First Call session feedback with scores and competency breakdown"
-                      fill
-                      sizes="(max-width: 640px) 100vw, 420px"
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
-                {/* Laptop base, slightly wider than the lid. Its top edge is
-                    the hinge line, since the lid carries border-b-0. */}
-                <div
-                  aria-hidden="true"
-                  className="relative left-1/2 h-2 w-[106%] -translate-x-1/2 rounded-b-[4px] border-[1.5px] border-device-edge bg-device-body shadow-[0_6px_8px_-2px_rgba(0,0,0,0.9)]"
-                />
-
-                {/* Phone, overlapping the laptop's lower-right corner. The ring
-                    is a knockout in the page colour, not a glow: it keeps the
-                    phone edge legible where it crosses the laptop. */}
-                <div className="absolute bottom-0 right-3 w-[25%] min-w-[80px] rounded-[0.75rem] border-[1.5px] border-device-edge bg-device-body p-1 shadow-[0_6px_8px_-2px_rgba(0,0,0,0.9)] ring-[3px] ring-background">
-                  <div aria-hidden="true" className="mx-auto mb-1 h-[2px] w-6 rounded-full bg-device-detail" />
-                  {/* Phone screen area, recessed below the frame */}
-                  <div className="relative aspect-[9/18] w-full overflow-hidden rounded-[0.4rem] bg-device-screen">
-                    <Image
-                      src="/screenshot-progress.jpg"
-                      alt="First Call progress tracking across sessions"
-                      fill
-                      sizes="(max-width: 640px) 25vw, 105px"
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
-
-              </div>
+              <DeviceMockup
+                laptopScreen={
+                  <Image
+                    src="/screenshot-feedback.jpg"
+                    alt="First Call session feedback with scores and competency breakdown"
+                    fill
+                    sizes="(max-width: 640px) 100vw, 420px"
+                    className="object-cover"
+                  />
+                }
+                phoneScreen={
+                  <Image
+                    src="/screenshot-progress.jpg"
+                    alt="First Call progress tracking across sessions"
+                    fill
+                    sizes="(max-width: 640px) 25vw, 105px"
+                    className="object-cover"
+                  />
+                }
+              />
 
               <p className="mt-6 text-base leading-relaxed text-text-secondary lg:mt-8">
                 Built by an active firefighter, on a research-backed rubric
@@ -163,9 +144,9 @@ export default function Home() {
         <div className="mx-auto w-full max-w-7xl px-6 py-[56px] lg:px-12 lg:py-[80px]">
 
           <div className="mb-8 lg:mb-10">
-            <p className="mb-3 font-display text-sm font-semibold uppercase tracking-[0.18em] text-accent">
+            <Eyebrow>
               The difference
-            </p>
+            </Eyebrow>
             <h2 className="mb-4 font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
               Anyone can hand you a score. We show you why.
             </h2>
@@ -293,9 +274,9 @@ export default function Home() {
         <div className="mx-auto w-full max-w-7xl px-6 py-[56px] lg:px-12 lg:py-[80px]">
 
           <div className="mb-8 lg:mb-10">
-            <p className="mb-3 font-display text-sm font-semibold uppercase tracking-[0.18em] text-accent">
+            <Eyebrow>
               Why First Call
-            </p>
+            </Eyebrow>
             <h2 className="mb-4 font-display text-4xl font-bold leading-tight text-text-primary lg:whitespace-nowrap lg:text-[2.5rem] xl:text-5xl">
               Built to grade like a board. Not like a chatbot.
             </h2>
@@ -411,9 +392,9 @@ export default function Home() {
         <div className="mx-auto w-full max-w-7xl px-6 py-[80px] lg:px-12 lg:py-[120px]">
 
           <div className="mb-12 lg:mb-16">
-            <p className="mb-3 font-display text-sm font-semibold uppercase tracking-[0.18em] text-accent">
+            <Eyebrow>
               How it works
-            </p>
+            </Eyebrow>
             <h2 className="font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
               Every session, end to end.
             </h2>
@@ -565,9 +546,9 @@ export default function Home() {
         <div className="mx-auto w-full max-w-7xl px-6 py-[80px] lg:px-12 lg:py-[120px]">
 
           <div className="mb-12 lg:mb-16">
-            <p className="mb-3 font-display text-sm font-semibold uppercase tracking-[0.18em] text-accent">
+            <Eyebrow>
               The rubric
-            </p>
+            </Eyebrow>
             <h2 className="mb-4 font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
               Not a vibe. A rubric.
             </h2>
@@ -689,9 +670,9 @@ export default function Home() {
 
             {/* Copy */}
             <div>
-              <p className="mb-3 font-display text-sm font-semibold uppercase tracking-[0.18em] text-accent">
+              <Eyebrow>
                 About
-              </p>
+              </Eyebrow>
               <h2 className="mb-6 font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
                 Why I&apos;m building this.
               </h2>
@@ -718,19 +699,19 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Photo slot. TODO: founder.jpg is the training-burn shot, not a
-                portrait. Scott to supply a real portrait; drop it in here and
-                update the alt text. Frame and sizing stay as-is. */}
-            <div>
+            {/* Photo: portrait at the image's own ratio, capped so it never
+                outweighs the copy (300px centred on mobile, 360px from lg).
+                The caption shares the cap so it reads as the photo's credit. */}
+            <div className="mx-auto w-full max-w-[300px] lg:mx-0 lg:max-w-[360px]">
               <div
                 className="relative w-full overflow-hidden rounded-md border border-border"
-                style={{ aspectRatio: "1035/691", maxHeight: "440px" }}
+                style={{ aspectRatio: "1038/1266" }}
               >
                 <Image
-                  src="/founder.jpg"
-                  alt="Scott Shimala, active firefighter and founder of First Call"
+                  src="/scott-ff.png"
+                  alt="Scott Shimala in turnout gear and an SCBA, kneeling with his facepiece"
                   fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  sizes="(max-width: 1023px) 300px, 360px"
                   className="object-cover"
                 />
               </div>
@@ -752,6 +733,17 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Board Day Playbook promo ── an addition, not a section change.
+           Sits after the founder story and before the conversion slot, so
+           the page's last word is still the main CTA. ── */}
+      <section aria-label="The Board Day Playbook">
+        <div className="mx-auto w-full max-w-7xl px-6 pt-[24px] lg:px-12 lg:pt-[40px]">
+          <div className="mx-auto max-w-5xl">
+            <PlaybookPromo />
+          </div>
+        </div>
+      </section>
+
       {/* ── Section 7: Conversion slot ──
            The swappable module. The FRAME below is fixed: eyebrow, headline,
            subcopy, CTA, micro-copy, dormant secondary. Flipping beta -> paid
@@ -761,9 +753,9 @@ export default function Home() {
           <div className="mx-auto max-w-xl text-center">
 
             {/* slot: eyebrow */}
-            <p className="mb-3 font-display text-sm font-semibold uppercase tracking-[0.18em] text-accent">
+            <Eyebrow center>
               Start now
-            </p>
+            </Eyebrow>
 
             {/* slot: headline */}
             <h2 className="mb-6 font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">

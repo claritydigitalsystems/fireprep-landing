@@ -10,9 +10,12 @@ import { APP_URL } from "../lib/links";
     this replaces it. One delegated listener on document, so buttons added
     later are covered without changes here.
 
-    Sends NO parameters. GA4 already records the page it happened on.
-    Privacy §4 discloses "whether a visitor clicked through to sign up";
-    keep it that narrow.
+    Sends ONE parameter, `cta`: which button was clicked, read from the
+    link's data-cta attribute ("playbook" on the Playbook signup buttons),
+    or "main" when the link has none. It is a button label only, never
+    anything about the visitor, the taster, or any id. GA4 already records
+    the page it happened on. Privacy §4 discloses "whether a visitor
+    clicked through to sign up"; keep it that narrow.
 
     Outside production GA4 isn't loaded, so nothing is sent (it only logs
     a console warning in dev and preview). */
@@ -27,7 +30,8 @@ export default function SignupClickTracker() {
       // Attribution.tsx may append ?src=taste and UTM params, so match on
       // the path prefix, never the full href. /login is deliberately excluded.
       if (!href || !href.startsWith(`${APP_URL}/signup`)) return;
-      sendGAEvent("event", "signup_click", {});
+      const cta = link.dataset.cta === "playbook" ? "playbook" : "main";
+      sendGAEvent("event", "signup_click", { cta });
     }
 
     document.addEventListener("click", onClick);
