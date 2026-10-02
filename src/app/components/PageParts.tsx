@@ -205,7 +205,7 @@ export function PlaybookPromo({
               : "flex shrink-0 flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row"
           }
         >
-          <a href={APP_PLAYBOOK_SIGNUP_URL} className={PRIMARY_BUTTON}>
+          <a href={APP_PLAYBOOK_SIGNUP_URL} data-cta="playbook" className={PRIMARY_BUTTON}>
             Get the Playbook
           </a>
           <Link href="/playbook" className={SECONDARY_BUTTON}>

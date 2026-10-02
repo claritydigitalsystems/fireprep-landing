@@ -42,7 +42,7 @@ const CHAPTERS: { title: string; body: string }[] = [
 
 function GetItButton() {
   return (
-    <a href={APP_PLAYBOOK_SIGNUP_URL} className={PRIMARY_BUTTON}>
+    <a href={APP_PLAYBOOK_SIGNUP_URL} data-cta="playbook" className={PRIMARY_BUTTON}>
       Get the free Playbook
     </a>
   );
