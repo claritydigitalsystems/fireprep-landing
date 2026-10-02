@@ -47,12 +47,15 @@ function writeAttr(attr: Attr) {
     running this a hundred times can never stack or duplicate params. The one
     param carried over from the authored href is a non-taste `src` (e.g. the
     Playbook CTAs' src=playbook): it names the CTA itself, so it wins over the
-    visitor-level taste flag on that link. Decoration only ever writes taste,
-    so a surviving non-taste src can only have come from the markup. */
+    visitor-level taste flag on that link. Decoration only ever writes taste
+    or main, so a surviving src that is neither can only have come from the
+    markup. */
 function decorate(attr: Attr) {
   // src=taste is what tells the app a signup came from the embedded grader
   // rather than a cold CTA, so it is set only by a real result message.
-  const tasteSrc = attr.tasted === true ? "taste" : null;
+  // Everyone else gets src=main, so a main-CTA signup is distinguishable from
+  // one that lost its attribution (e.g. a browser switch) and arrived bare.
+  const visitorSrc = attr.tasted === true ? "taste" : "main";
   const utm = new URLSearchParams();
   for (const key of UTM_KEYS) {
     const value = attr[key];
@@ -71,11 +74,16 @@ function decorate(attr: Attr) {
     // land on a third-party host, so assert it at the point of writing.
     if (!base.startsWith(`${APP_URL}/`)) return;
 
+    // taste and main are only ever written by this function, so on a re-run
+    // they are not "authored" and must yield to the current visitor value
+    // (main becomes taste once a result arrives).
     const authoredSrc = new URLSearchParams(rest).get("src");
     const src =
-      authoredSrc && authoredSrc !== "taste" ? authoredSrc : tasteSrc;
+      authoredSrc && authoredSrc !== "taste" && authoredSrc !== "main"
+        ? authoredSrc
+        : visitorSrc;
     const params = new URLSearchParams();
-    if (src) params.set("src", src);
+    params.set("src", src);
     utm.forEach((value, key) => params.set(key, value));
     const query = params.toString();
 
