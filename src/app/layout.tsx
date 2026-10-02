@@ -38,7 +38,7 @@ const barlow = Barlow({
 export const metadata: Metadata = {
   title: "First Call · Fire Interview Prep",
   description:
-    "AI-graded oral board practice mapped to the same competency frameworks panels use. Built by an active firefighter for entry-level candidates.",
+    "Practice the fire oral board out loud. Every answer is scored against a rubric written for that question. Built by a firefighter for entry-level candidates.",
 };
 
 export default function RootLayout({
