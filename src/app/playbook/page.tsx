@@ -15,7 +15,7 @@ import { breadcrumbLd } from "../lib/schema";
 export const metadata = pageMetadata({
   title: "The Board Day Playbook",
   description:
-    "A free guide to the day of your fire oral board, from the night before to the thank-you note. Create a free First Call account and it's on your dashboard.",
+    "A free guide to everything around your fire oral board, from the week before to after you walk out. Create a free First Call account and it's on your dashboard.",
   path: "/playbook",
 });
 
@@ -26,16 +26,18 @@ export const metadata = pageMetadata({
    from 1080px, and "How to get it" as the centred closing band (the
    /how-it-works ending), so the page has one ending. */
 
-// TODO-VERIFY: chapter titles and one-liners are placeholders until Scott's
-// final Playbook outline. Swap them here; nothing else depends on them.
 const CHAPTERS: { title: string; body: string }[] = [
-  { title: "The week before", body: "How to taper your prep, what to confirm, and what to stop doing." },
-  { title: "The night before", body: "What to review, what to leave alone, and how to get to sleep." },
-  { title: "What to wear and bring", body: "The outfit, the documents, and the small things people forget." },
-  { title: "Arrival", body: "When to get there, what to do while you wait, and how to walk in." },
-  { title: "In the room", body: "Greeting the panel, pacing your answers, and recovering from a rough one." },
-  { title: "After the board", body: "The thank-you note, what to write down, and what happens next." },
-  { title: "One-page checklist", body: "Everything above on a single page you can check off the morning of." },
+  { title: "Know your board's format", body: "Timed per question or one block of time, written copies of the questions, how many panels, and how to find out before you practice." },
+  { title: "The week before", body: "Confirm every detail in writing, drive the route, make if-then plans, and keep your prep light." },
+  { title: "What to wear and bring", body: "The suit, the watch, the folder, the facial hair rule, and why your phone goes off, not silent." },
+  { title: "The night before", body: "Protect your sleep and make the morning automatic." },
+  { title: "Board morning", body: "When to arrive, how to treat everyone you meet, and how to use your nerves instead of fighting them." },
+  { title: "The first minute", body: "Walking in, greeting the panel, and settling in, in person or on video." },
+  { title: "In the room", body: "Managing the clock, buying a moment, ignoring poker faces, and the closing question." },
+  { title: "Walking out", body: "What not to do on the way out, and why the drive-home replay isn't the whole story." },
+  { title: "After the board", body: "The same-day debrief, the thank-you note, the wait, and how to keep going." },
+  { title: "If you get a chief's interview", body: "How it differs from the board, and why conversational doesn't mean unscored." },
+  { title: "Board day checklist", body: "Every action item from every chapter, on one page you can check off as you go." },
 ];
 
 function GetItButton() {
@@ -68,9 +70,11 @@ export default function PlaybookPage() {
                 The Board Day Playbook
               </h1>
               <p className="mb-8 text-lg leading-relaxed text-text-secondary lg:text-xl">
-                Everything for the day of your oral board, from the night before
-                to the thank-you note. You&apos;ve put in the prep. This makes
-                sure nothing on the day gets in the way of it.
+                Ten chapters on everything around your answers, from the week
+                before to after the board. Every recommendation is labeled:
+                research-backed, fire-service norm, or from my own experience.
+                You&apos;ve put in the prep. This makes sure nothing on the day
+                gets in the way of it.
               </p>
               <GetItButton />
               <p className="mt-4 text-base text-text-muted">
@@ -90,7 +94,7 @@ export default function PlaybookPage() {
 
       <Section>
         <div className="max-w-3xl min-[1080px]:max-w-5xl">
-          <SectionHeading eyebrow="What's inside" title="Seven short chapters, in the order you'll need them." />
+          <SectionHeading eyebrow="What's inside" title="Ten chapters, in the order you'll need them." />
           {/* Two columns from 1080px; the checklist, last and in amber,
               spans the full final row. */}
           <ol className="grid grid-cols-1 border-t border-border min-[1080px]:grid-cols-2 min-[1080px]:gap-x-12">

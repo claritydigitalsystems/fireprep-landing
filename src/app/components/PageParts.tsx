@@ -193,9 +193,9 @@ export function PlaybookPromo({
             The Board Day Playbook
           </Heading>
           <p className="text-base leading-relaxed text-text-secondary">
-            Everything for the day of your oral board, from the night before
-            to the thank-you note. It&apos;s waiting on your dashboard when you
-            sign up.
+            Ten chapters on everything around your answers, from the week
+            before to after the board. It&apos;s waiting on your dashboard
+            when you sign up.
           </p>
         </div>
         <div

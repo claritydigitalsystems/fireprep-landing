@@ -167,7 +167,7 @@ function Body() {
       </UL>
       <P>
         The free <A href="/playbook">Board Day Playbook</A> walks through all
-        of it, from the night before to the thank-you note. For the bigger
+        of it, from the week before to after the board. For the bigger
         picture, read{" "}
         <A href="/guides/how-to-prepare-for-a-firefighter-oral-board">
           how to prepare for a firefighter oral board
