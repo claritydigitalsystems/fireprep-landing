@@ -113,9 +113,9 @@ export default function AboutPage() {
               aspect="4/5"
               frame="none"
               placeholderKind="Photo"
-              sizes="(max-width: 767px) 100vw, 40vw"
+              sizes="(max-width: 767px) 340px, 380px"
               eager
-              className="mx-auto w-full max-w-[420px] md:max-w-none"
+              className="mx-auto w-full max-w-[340px] md:mr-0 md:max-w-[380px]"
             />
           </div>
         </div>

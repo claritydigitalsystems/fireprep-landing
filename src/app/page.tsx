@@ -699,19 +699,19 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Photo slot. TODO: founder.jpg is the training-burn shot, not a
-                portrait. Scott to supply a real portrait; drop it in here and
-                update the alt text. Frame and sizing stay as-is. */}
-            <div>
+            {/* Photo: portrait at the image's own ratio, capped so it never
+                outweighs the copy (300px centred on mobile, 360px from lg).
+                The caption shares the cap so it reads as the photo's credit. */}
+            <div className="mx-auto w-full max-w-[300px] lg:mx-0 lg:max-w-[360px]">
               <div
                 className="relative w-full overflow-hidden rounded-md border border-border"
-                style={{ aspectRatio: "1035/691", maxHeight: "440px" }}
+                style={{ aspectRatio: "1038/1266" }}
               >
                 <Image
-                  src="/founder.jpg"
-                  alt="Scott Shimala, active firefighter and founder of First Call"
+                  src="/scott-ff.png"
+                  alt="Scott Shimala in turnout gear and an SCBA, kneeling with his facepiece"
                   fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  sizes="(max-width: 1023px) 300px, 360px"
                   className="object-cover"
                 />
               </div>

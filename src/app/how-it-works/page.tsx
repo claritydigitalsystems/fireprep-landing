@@ -115,14 +115,14 @@ const SCORING_CALLOUTS: {
     title: "A rubric for every question",
     body: "Each question has its own criteria and defined score levels. A teamwork question is graded on teamwork, not on a generic checklist.",
     side: "left",
-    x: 23,
+    x: 8,
     y: 18,
   },
   {
     title: "Feedback that quotes you",
     body: "The feedback points to what you actually said, so you can see exactly which part of your answer earned the score and which part cost you.",
     side: "left",
-    x: 9,
+    x: 8,
     y: 61,
   },
   {
