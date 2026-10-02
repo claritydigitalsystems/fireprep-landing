@@ -237,6 +237,20 @@ export default async function GuidePage({ params }: Props) {
         </div>
       </article>
 
+      {/* Board Day Playbook promo, sitewide rule: before the closing CTA.
+          Guides whose end CTA already IS the promo skip it, so it never
+          shows twice. */}
+      {meta.endCta !== "playbook" && (
+        <section
+          aria-label="The Board Day Playbook"
+          className={`${PAGE_GUTTER} pt-[40px] lg:pt-[56px]`}
+        >
+          <div className={LAYOUT}>
+            <PlaybookPromo narrow />
+          </div>
+        </section>
+      )}
+
       <section aria-label="Next step" className={`${PAGE_GUTTER} pt-[40px] lg:pt-[56px]`}>
         <div className={LAYOUT}>
           <EndCta variant={meta.endCta} />
