@@ -11,6 +11,7 @@ import JsonLd from "../components/JsonLd";
 import {
   Eyebrow,
   PRIMARY_BUTTON,
+  PlaybookPromo,
   SECONDARY_BUTTON,
   SectionHeading,
   TEXT_LINK,
@@ -506,6 +507,16 @@ export default function HowItWorksPage() {
           </div>
         </div>
       </Shell>
+
+      {/* Board Day Playbook promo, sitewide rule: immediately before the
+          page's closing CTA. */}
+      <section aria-label="The Board Day Playbook">
+        <div className="mx-auto w-full max-w-7xl px-6 pb-[72px] lg:px-12 lg:pb-[112px]">
+          <div className="mx-auto max-w-5xl">
+            <PlaybookPromo />
+          </div>
+        </div>
+      </section>
 
       {/* 6. Closing: who it's for + the CTA, merged into one ending. A
           centred CTA on the same raised band as the loop section, so the

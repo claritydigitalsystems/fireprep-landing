@@ -1,6 +1,6 @@
 import Link from "next/link";
 import JsonLd from "../components/JsonLd";
-import { CtaBlock, Eyebrow, TEXT_LINK } from "../components/PageParts";
+import { CtaBlock, Eyebrow, PlaybookPromo, TEXT_LINK } from "../components/PageParts";
 import ScreenSlot from "../components/ScreenSlot";
 import { pageMetadata } from "../lib/site";
 import { breadcrumbLd, founderLd } from "../lib/schema";
@@ -178,6 +178,16 @@ export default function AboutPage() {
               </Link>
               .
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Board Day Playbook promo, sitewide rule: immediately before the
+          page's closing CTA. */}
+      <section aria-label="The Board Day Playbook">
+        <div className="mx-auto w-full max-w-7xl px-6 pt-[24px] lg:px-12 lg:pt-[40px]">
+          <div className="mx-auto max-w-5xl">
+            <PlaybookPromo />
           </div>
         </div>
       </section>

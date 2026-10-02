@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { BookOpen } from "lucide-react";
 import { APP_PLAYBOOK_SIGNUP_URL, APP_SIGNUP_URL } from "../lib/links";
@@ -163,54 +164,77 @@ export function CtaBlock({
   );
 }
 
-/** The Board Day Playbook pitch. Same margin-note treatment as the
-    homepage's .fp-callout (amber left edge, square corners) so it reads as
-    an aside, not a competing hero. `narrow` holds the stacked layout until
-    1080px, for columns that are narrower than the page at lg (guides). */
+/** The Board Day Playbook pitch, shown sitewide just before each page's
+    closing CTA. A raised surface with the amber left accent so it reads as
+    its own block, not page background. From 1080px it adds the in-app
+    preview screenshot beside the copy; below that it is copy and buttons
+    only. `narrow` keeps the buttons stacked until xl, for columns narrower
+    than the page (guides). `body` swaps the one paragraph of copy for a
+    context that needs its own wording (the /guides index); everything else,
+    buttons included, is fixed. The screenshot frame copies ScreenSlot's browser
+    frame classes; ScreenSlot itself can't be used here because this module
+    is also imported by client components and ScreenSlot reads the
+    filesystem. */
 export function PlaybookPromo({
   headingLevel = "h2",
   narrow = false,
+  body,
 }: {
   headingLevel?: "h2" | "h3";
   narrow?: boolean;
+  body?: React.ReactNode;
 }) {
   const Heading = headingLevel;
   return (
-    <div className="fp-callout p-6 lg:p-8">
-      <div
-        className={
-          narrow
-            ? "flex flex-col gap-6 min-[1080px]:flex-row min-[1080px]:items-center min-[1080px]:justify-between min-[1080px]:gap-10"
-            : "flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between lg:gap-10"
-        }
-      >
-        <div className="max-w-2xl">
-          <p className="mb-2 flex items-center gap-2 font-display text-sm font-semibold uppercase tracking-[0.18em] text-accent">
+    <div className="border border-border border-l-2 border-l-accent bg-surface-raised p-8 lg:p-12">
+      <div className="min-[1080px]:grid min-[1080px]:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] min-[1080px]:items-center min-[1080px]:gap-12">
+        <div>
+          <p className="mb-3 flex items-center gap-2 font-display text-sm font-semibold uppercase tracking-[0.18em] text-accent">
             <BookOpen className="h-4 w-4" aria-hidden="true" />
             Free with an account
           </p>
-          <Heading className="mb-2 font-display text-2xl font-bold leading-snug text-text-primary lg:text-3xl">
+          <Heading className="mb-3 font-display text-3xl font-bold leading-tight text-text-primary lg:text-4xl">
             The Board Day Playbook
           </Heading>
-          <p className="text-base leading-relaxed text-text-secondary">
-            Ten chapters on everything around your answers, from the week
-            before to after the board. It&apos;s waiting on your dashboard
-            when you sign up.
+          <p className="max-w-2xl text-base leading-relaxed text-text-secondary lg:text-lg">
+            {body ?? (
+              <>
+                Everything for the day of your oral board, from the night
+                before to the thank-you note. It&apos;s waiting on your
+                dashboard when you sign up.
+              </>
+            )}
           </p>
+          <div
+            className={`mt-8 flex flex-col gap-3 ${
+              narrow ? "sm:flex-row min-[1080px]:flex-col xl:flex-row" : "sm:flex-row"
+            }`}
+          >
+            <a href={APP_PLAYBOOK_SIGNUP_URL} data-cta="playbook" className={PRIMARY_BUTTON}>
+              Get the Playbook
+            </a>
+            <Link href="/playbook" className={SECONDARY_BUTTON}>
+              See what&apos;s inside
+            </Link>
+          </div>
         </div>
-        <div
-          className={
-            narrow
-              ? "flex shrink-0 flex-col gap-3 sm:flex-row min-[1080px]:flex-col xl:flex-row"
-              : "flex shrink-0 flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row"
-          }
-        >
-          <a href={APP_PLAYBOOK_SIGNUP_URL} data-cta="playbook" className={PRIMARY_BUTTON}>
-            Get the Playbook
-          </a>
-          <Link href="/playbook" className={SECONDARY_BUTTON}>
-            See what&apos;s inside
-          </Link>
+        <div className="hidden min-[1080px]:block">
+          <div className="overflow-hidden rounded-[6px] border-[1.5px] border-text-muted bg-device-body shadow-[0_6px_8px_-2px_rgba(0,0,0,0.9)]">
+            <div aria-hidden="true" className="flex items-center gap-1.5 px-2.5 py-2">
+              <span className="h-1.5 w-1.5 rounded-full bg-device-detail" />
+              <span className="h-1.5 w-1.5 rounded-full bg-device-detail" />
+              <span className="h-1.5 w-1.5 rounded-full bg-device-detail" />
+            </div>
+            <div className="relative aspect-[16/10] w-full overflow-hidden border-t border-device-detail bg-device-screen">
+              <Image
+                src="/screens/playbook/playbook-preview-desktop.png"
+                alt="The Board Day Playbook open in the First Call app"
+                fill
+                sizes="(max-width: 1079px) 1px, 560px"
+                className="object-cover object-top"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
