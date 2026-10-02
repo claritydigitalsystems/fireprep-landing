@@ -128,7 +128,7 @@ export default function AboutPage() {
             {CREDENTIALS.map((c) => (
               <div
                 key={c.label}
-                className="flex flex-col-reverse gap-1 py-6 md:px-8 md:py-8 md:first:pl-0 md:last:pr-0"
+                className="flex flex-col-reverse gap-1 py-6 text-center md:px-8 md:py-8 md:text-left md:first:pl-0 md:last:pr-0"
               >
                 <dt className="text-base text-text-muted">{c.label}</dt>
                 <dd className="font-display text-4xl font-bold leading-none text-text-primary lg:text-5xl">

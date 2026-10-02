@@ -701,8 +701,11 @@ export default function Home() {
 
             {/* Photo: portrait at the image's own ratio, capped so it never
                 outweighs the copy (300px centred on mobile, 360px from lg).
-                The caption shares the cap so it reads as the photo's credit. */}
-            <div className="mx-auto w-full max-w-[300px] lg:mx-0 lg:max-w-[360px]">
+                The caption shares the cap so it reads as the photo's credit.
+                From lg the photo moves to the LEFT column, pushed to its right
+                edge, so it faces the text. Not mirrored: the gear carries
+                lettering that would read backwards. Stacked order unchanged. */}
+            <div className="mx-auto w-full max-w-[300px] lg:order-first lg:mr-0 lg:max-w-[360px]">
               <div
                 className="relative w-full overflow-hidden rounded-md border border-border"
                 style={{ aspectRatio: "1038/1266" }}
