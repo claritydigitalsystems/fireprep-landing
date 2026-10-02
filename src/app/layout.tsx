@@ -7,6 +7,12 @@ import Attribution from "./components/Attribution";
 import JsonLd from "./components/JsonLd";
 import { OG_IMAGE, SITE_NAME, SITE_URL } from "./lib/site";
 import { organizationLd, websiteLd } from "./lib/schema";
+import SignupClickTracker from "./components/SignupClickTracker";
+import { GoogleAnalytics } from "@next/third-parties/google";
+
+// Set in Vercel for Production ONLY. Unset in local dev and preview deploys,
+// so GA4 never loads there and our own testing stays out of the data.
+const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,7 +40,7 @@ const barlow = Barlow({
 
 const DEFAULT_TITLE = "First Call · Fire Interview Prep";
 const DEFAULT_DESCRIPTION =
-  "AI-graded oral board practice mapped to the same competency frameworks panels use. Built by an active firefighter for entry-level candidates.";
+  "Practice the fire oral board out loud. Every answer is scored against a rubric written for that question. Built by a firefighter for entry-level candidates.";
 
 // Site-wide defaults. Inner pages override through pageMetadata() in
 // lib/site.ts, which restates OG and Twitter in full because Next merges
@@ -80,7 +86,9 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <SignupClickTracker />
       </body>
+      {GA_ID ? <GoogleAnalytics gaId={GA_ID} /> : null}
     </html>
   );
 }

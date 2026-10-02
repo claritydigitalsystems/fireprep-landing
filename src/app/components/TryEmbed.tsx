@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { APP_URL } from "../lib/links";
+import { sendGAEvent } from "@next/third-parties/google";
 
 // Floor for a height message, so a bad or zero-height report can never
 // collapse the section to nothing.
@@ -43,6 +44,12 @@ export default function TryEmbed() {
       }
 
       if (data.event === "result") {
+        // GA4: count every finished taster. Sends NO score, answer, or attempt
+        // data. Privacy §4 promises nothing is attached to a sample answer, so
+        // never add params here.
+        // Outside production GA4 isn't loaded, so nothing is sent (it only
+        // logs a console warning in dev and preview).
+        sendGAEvent("event", "taster_completed", {});
         const reduced = window.matchMedia(
           "(prefers-reduced-motion: reduce)",
         ).matches;
