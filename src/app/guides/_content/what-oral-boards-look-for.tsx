@@ -40,35 +40,35 @@ export const guide: Guide = {
 const COMPETENCIES: { name: string; plain: string }[] = [
   {
     name: "Communication",
-    plain: "Can you get a point across clearly, in order, without making the listener work for it?",
+    plain: "Can you get your point across clearly and in order, with the right amount of detail for the question?",
   },
   {
-    name: "Decision-making",
-    plain: "When there's no perfect option, how do you weigh it, and do you actually make the call?",
+    name: "Decision-Making & Problem-Solving",
+    plain: "Can you work through a problem, weigh the options, and land on a call you can defend?",
   },
   {
-    name: "Composure",
-    plain: "Do you stay level when things get tense, including in the interview itself?",
+    name: "Composure Under Pressure",
+    plain: "Do you stay steady when the stakes rise, without panicking, getting defensive, or getting frustrated? That includes the interview itself.",
   },
   {
-    name: "Teamwork",
-    plain: "Do you work well with people, including the ones you don't get along with?",
+    name: "Teamwork & Collaboration",
+    plain: "Do you pull your weight, back up your teammates, handle disagreement, and put the crew ahead of your own credit?",
   },
   {
-    name: "Integrity",
-    plain: "Do you do the right thing when it's inconvenient, or when nobody would know?",
+    name: "Integrity & Ethics",
+    plain: "Do you tell the truth, own your mistakes, and hold the standard even when nobody's watching?",
   },
   {
     name: "Adaptability",
-    plain: "How do you handle change, criticism, and plans that fall apart?",
+    plain: "When plans change or new information comes in, do you adjust and keep working?",
   },
   {
-    name: "Public service",
-    plain: "Do you understand that the job is serving the community, and does it show in what you've done?",
+    name: "Customer Service / Public Interaction",
+    plain: "Do you treat people with respect and real concern on their worst days, and represent the department well?",
   },
   {
-    name: "Job knowledge",
-    plain: "Do you understand what the job really involves, and have you done the work to learn about it?",
+    name: "Professional/Technical Knowledge",
+    plain: "Do you understand what the job involves, and have you done the work to learn it?",
   },
 ];
 
@@ -109,7 +109,7 @@ function Body() {
       </P>
       <dl className="mb-8 divide-y divide-border border-y border-border">
         {COMPETENCIES.map((c) => (
-          <div key={c.name} className="grid grid-cols-1 gap-1 py-4 sm:grid-cols-[180px_1fr] sm:gap-6">
+          <div key={c.name} className="grid grid-cols-1 gap-1 py-4 sm:grid-cols-[220px_1fr] sm:gap-6">
             <dt className="font-display text-lg font-bold text-text-primary">{c.name}</dt>
             <dd className="text-base leading-relaxed text-text-secondary lg:text-lg">{c.plain}</dd>
           </div>
@@ -170,29 +170,46 @@ function Body() {
       </P>
       <UL>
         <LI>
-          <Strong>Look for patterns, not single scores.</Strong> One weak
+          <Strong>Look for patterns, not single scores.</Strong>{" "}One weak
           answer is noise. The same competency scoring low across several
           answers is a signal.
         </LI>
         <LI>
-          <Strong>Fix one thing at a time.</Strong> Pick the weakest area, work
+          <Strong>Fix one thing at a time.</Strong>{" "}Pick the weakest area, work
           on it for a few sessions, then check whether it moved.
         </LI>
         <LI>
-          <Strong>Read what was missing, not just the number.</Strong> The
+          <Strong>Read what was missing, not just the number.</Strong>{" "}The
           useful part of feedback is the gap between what you said and what a
           strong answer includes.
         </LI>
         <LI>
-          <Strong>Re-answer, don&apos;t re-read.</Strong> After you read the
+          <Strong>Re-answer, don&apos;t re-read.</Strong>{" "}After you read the
           feedback, answer again out loud. That&apos;s where the improvement
           actually happens.
         </LI>
       </UL>
       <P>
-        That loop is what First Call is built around: every answer is scored
-        against criteria for that question, and your results roll up into
-        these eight competencies so you can see which one to work on.{" "}
+        That loop is exactly what First Call is built for, and it works the
+        way a real board works. Turn on First Call Live and a panel reads you
+        the question out loud. You answer on the clock. Then your answer is
+        scored against a rubric written for that specific question, with
+        weak-to-strong descriptions like the ones on a board&apos;s rating
+        sheet, built on the qualities fire departments publish for their own
+        oral boards.
+      </P>
+      <P>
+        You see which criteria you hit, which ones you missed, and the one
+        thing to focus on next time. Every answer rolls up into these eight
+        competencies, so after a few sessions the pattern shows: which one
+        keeps costing you points, and whether it&apos;s moving. Answer, see
+        the gap, answer again.
+      </P>
+      <P>
+        Plenty of candidates walk into their board having never once heard
+        how their answers would score. You don&apos;t have to be one of them.
+      </P>
+      <P>
         <A href="/how-it-works">See how the scoring works</A>, or start with the
         full guide on{" "}
         <A href="/guides/how-to-prepare-for-a-firefighter-oral-board">

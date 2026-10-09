@@ -68,7 +68,7 @@ const LOOP = [
   {
     n: "01",
     title: "The board asks",
-    body: "You get a real oral board question. Turn on the read-aloud board and it's asked out loud, the way a panel would ask it.",
+    body: "You get a real oral board question. Turn on First Call Live and a three-person panel asks it out loud, the way a real board would.",
     slot: "board-asks",
     label: "Live session: the question showing, board members visible",
     alt: "A First Call practice session with the oral board question on screen and the board members visible",
@@ -169,13 +169,13 @@ const PRACTICE: { title: string; body: string; Icon: LucideIcon }[] = [
 
 const COMPETENCIES = [
   "Communication",
-  "Decision-making",
-  "Composure",
-  "Teamwork",
-  "Integrity",
+  "Decision-Making & Problem-Solving",
+  "Composure Under Pressure",
+  "Teamwork & Collaboration",
+  "Integrity & Ethics",
   "Adaptability",
-  "Public service",
-  "Job knowledge",
+  "Customer Service / Public Interaction",
+  "Professional/Technical Knowledge",
 ];
 
 /* ── Pieces ───────────────────────────────────────────────────────────── */
@@ -489,9 +489,16 @@ export default function HowItWorksPage() {
           />
           <div className="md:order-1">
             <p className={BODY}>
-              Every answer feeds eight core competencies. Over time you see
-              your session scores, your strongest area, and the one that keeps
-              costing you points.
+              Every answer feeds eight core competencies. They aren&apos;t our
+              invention: they&apos;re drawn from the oral board frameworks fire
+              departments publish for their own hiring, and from personnel
+              selection research. And preparation matters. Studies of fire and
+              police candidates have found that interview coaching and
+              preparation are linked to higher interview scores.
+            </p>
+            <p className={`mt-4 ${BODY}`}>
+              Over time you see your session scores, your strongest area, and
+              the one that keeps costing you points.
             </p>
             <p className="mt-4 text-base leading-relaxed text-text-muted">
               <span className="font-semibold text-text-secondary">The eight: </span>

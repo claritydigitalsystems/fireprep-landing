@@ -121,7 +121,7 @@ export default function GuidesIndex() {
         ])}
       />
 
-      <PageHeader eyebrow="Guides" title="Prepare for the oral board like it counts.">
+      <PageHeader eyebrow="Guides" title="Guides for the fire oral board">
         <p>
           Short, practical guides to the fire service oral board, written by a
           firefighter. How you&apos;re scored, how to practice, and how to

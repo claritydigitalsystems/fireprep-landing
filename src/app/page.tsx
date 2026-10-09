@@ -31,21 +31,13 @@ export default function Home() {
                 Free while in beta · Real candidates, real feedback
               </Eyebrow>
 
-              <h1 className="mb-4 font-display text-4xl font-bold leading-[1.03] tracking-tight text-text-primary md:text-5xl lg:text-6xl">
-                Practice the oral board the way it&apos;s actually scored.
+              <h1 className="mb-4 font-display text-4xl font-bold leading-[1.03] tracking-tight text-text-primary md:text-5xl lg:text-7xl">
+                Fire oral board practice, scored like the real thing.
               </h1>
 
-              <p className="mb-3 text-base font-semibold leading-relaxed text-text-primary lg:text-lg">
-                It&apos;s the part most candidates walk into blind, and the part
-                that most often costs them the job.
-              </p>
-
               <p className="mb-7 text-base leading-relaxed text-text-secondary lg:text-lg">
-                The oral board is the most subjective-feeling part of fire
-                hiring. First Call scores your spoken answers against the same
-                competencies panels use, criterion by criterion, the moment you
-                finish. You see what landed, what didn&apos;t, and what to fix
-                before it counts.
+                Answer real oral board questions out loud, on the clock. See
+                what landed, what didn&apos;t, and what to fix before it counts.
               </p>
 
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
@@ -110,28 +102,50 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Video slot ── target of the hero's secondary CTA. ── */}
-      <section id="watch" className="scroll-mt-20">
-        <div className="mx-auto w-full max-w-7xl px-6 pt-[48px] pb-[80px] lg:px-12 lg:pt-[72px] lg:pb-[120px]">
-          <div className="mx-auto max-w-4xl">
-            <video
-              controls
-              preload="metadata"
-              poster="/firstcall-demo-poster.jpg"
-              className="aspect-video w-full rounded-md border border-border bg-surface"
-            >
-              <source src="/firstcall-demo-1080.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <div className="mt-8 flex justify-center lg:mt-10">
-              <a
-                href={APP_SIGNUP_URL}
-                className="w-full rounded-md bg-accent px-8 py-4 text-center text-base font-semibold text-background transition-colors sm:w-auto hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-              >
-                Try It Free
-              </a>
-            </div>
+      {/* ── Fire video banner ── full-bleed break directly after the hero,
+           ahead of the two-grader comparison. The poster Image sits UNDER the video rather than on the
+           <video poster> attribute: globals.css hides video[autoplay] under
+           prefers-reduced-motion, and a hidden video shows no poster, so the
+           still has to be its own layer to survive that rule. ── */}
+      <section aria-label="No more guessing" className="relative overflow-hidden">
+        <div className="relative h-[40vh] w-full lg:h-[58vh]">
+
+          <Image
+            src="/firefighters.jpg"
+            alt=""
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
+
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="none"
+            aria-hidden="true"
+            className="absolute inset-0 h-full w-full object-cover"
+          >
+            <source src="/fire-loop.mp4" type="video/mp4" />
+          </video>
+
+          {/* Legibility wash. Structural, not decorative. */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 bg-black/60"
+          />
+
+          <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
+            <p className="font-display text-4xl font-bold leading-tight text-text-primary lg:text-6xl">
+              No more guessing.
+            </p>
+            <p className="mt-3 max-w-2xl font-display text-2xl font-bold leading-snug text-text-primary lg:text-4xl">
+              Walk in knowing exactly what panels are{" "}
+              <span className="text-accent">scoring.</span>
+            </p>
           </div>
+
         </div>
       </section>
 
@@ -262,8 +276,41 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Video slot ── target of the hero's secondary CTA. ── */}
+      <section id="watch" className="scroll-mt-20">
+        <div className="mx-auto w-full max-w-7xl px-6 pt-[48px] pb-[80px] lg:px-12 lg:pt-[72px] lg:pb-[120px]">
+          <div className="mx-auto max-w-4xl">
+            <div className="mb-8 text-center lg:mb-10">
+              <Eyebrow center>
+                See it in action
+              </Eyebrow>
+              <h2 className="font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
+                How First Call works, in 60 seconds.
+              </h2>
+            </div>
+            <video
+              controls
+              preload="metadata"
+              poster="/firstcall-demo-poster.jpg"
+              className="aspect-video w-full rounded-md border border-border bg-surface"
+            >
+              <source src="/firstcall-demo-1080.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div className="mt-8 flex justify-center lg:mt-10">
+              <a
+                href={APP_SIGNUP_URL}
+                className="w-full rounded-md bg-accent px-8 py-4 text-center text-base font-semibold text-background transition-colors sm:w-auto hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              >
+                Try It Free
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── The free taste ── the app's grader, embedded. Sits right after
-           the two-grader comparison so the claim and the proof are adjacent. ── */}
+           the #watch video, so a visitor who just saw it can try it. ── */}
       <TryEmbed />
 
       {/* ── Section 3: Differentiators (replaces the old comparison) ──
@@ -485,53 +532,6 @@ export default function Home() {
               3 to 8 questions per session. Criterion-level scoring on every
               answer. Eight competencies tracked across all of them, so you
               know exactly what to sharpen before the panel does.
-            </p>
-          </div>
-
-        </div>
-      </section>
-
-      {/* ── Fire video banner ── full-bleed break between how-it-works and
-           the rubric. The poster Image sits UNDER the video rather than on the
-           <video poster> attribute: globals.css hides video[autoplay] under
-           prefers-reduced-motion, and a hidden video shows no poster, so the
-           still has to be its own layer to survive that rule. ── */}
-      <section aria-label="No more guessing" className="relative overflow-hidden">
-        <div className="relative h-[40vh] w-full lg:h-[58vh]">
-
-          <Image
-            src="/firefighters.jpg"
-            alt=""
-            fill
-            sizes="100vw"
-            className="object-cover"
-          />
-
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="none"
-            aria-hidden="true"
-            className="absolute inset-0 h-full w-full object-cover"
-          >
-            <source src="/fire-loop.mp4" type="video/mp4" />
-          </video>
-
-          {/* Legibility wash. Structural, not decorative. */}
-          <div
-            aria-hidden="true"
-            className="absolute inset-0 bg-black/60"
-          />
-
-          <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
-            <p className="font-display text-4xl font-bold leading-tight text-text-primary lg:text-6xl">
-              No more guessing.
-            </p>
-            <p className="mt-3 max-w-2xl font-display text-2xl font-bold leading-snug text-text-primary lg:text-4xl">
-              Walk in knowing exactly what panels are{" "}
-              <span className="text-accent">scoring.</span>
             </p>
           </div>
 

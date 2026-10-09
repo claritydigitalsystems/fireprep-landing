@@ -82,15 +82,15 @@ function Body() {
       </P>
       <UL>
         <LI>
-          <Strong>Out loud, every time.</Strong> Answering in your head
+          <Strong>Out loud, every time.</Strong>{" "}Answering in your head
           doesn&apos;t train delivery.
         </LI>
         <LI>
-          <Strong>Add pressure on purpose.</Strong> A timer, a recording, a
+          <Strong>Add pressure on purpose.</Strong>{" "}A timer, a recording, a
           friend sitting across from you, questions you haven&apos;t seen.
         </LI>
         <LI>
-          <Strong>Don&apos;t script.</Strong> Practicing a script makes you
+          <Strong>Don&apos;t script.</Strong>{" "}Practicing a script makes you
           comfortable with the script, not with answering. Practice with
           questions you can&apos;t predict.
         </LI>
@@ -144,27 +144,35 @@ function Body() {
       <H2 id={SECTIONS.nightBefore.id}>{SECTIONS.nightBefore.title}</H2>
       <UL>
         <LI>
-          <Strong>Stop cramming.</Strong> A light review of your stories is
+          <Strong>Stop cramming.</Strong>{" "}A light review of your stories is
           fine. New material the night before just adds noise.
         </LI>
         <LI>
-          <Strong>Get everything ready early.</Strong> Clothes, documents,
+          <Strong>Get everything ready early.</Strong>{" "}Clothes, documents,
           directions, parking. Fewer decisions in the morning means fewer
           things to be nervous about.
         </LI>
         <LI>
-          <Strong>Sleep and eat like it matters.</Strong> Because it does.
+          <Strong>Sleep and eat like it matters.</Strong>{" "}Because it does.
         </LI>
         <LI>
-          <Strong>Warm up out loud.</Strong> Talk through a story or two on the
+          <Strong>Warm up out loud.</Strong>{" "}Talk through a story or two on the
           drive so the first words you say that day aren&apos;t in front of the
           panel.
         </LI>
         <LI>
-          <Strong>Arrive early.</Strong> Give yourself time to settle instead
+          <Strong>Arrive early.</Strong>{" "}Give yourself time to settle instead
           of walking in out of breath.
         </LI>
       </UL>
+      <P>
+        Nerves don&apos;t go away because you decide they should. They shrink
+        because the room stops being new. Every answer you give out loud, on
+        a clock, is one less thing that feels unfamiliar on the day. By the
+        time you sit down in front of the panel, the goal is for the format to
+        be the easy part, so everything you&apos;ve got can go into the
+        answer.
+      </P>
       <P>
         The free <A href="/playbook">Board Day Playbook</A> walks through all
         of it, from the week before to after the board. For the bigger

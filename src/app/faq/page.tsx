@@ -39,19 +39,31 @@ const FAQ_GROUPS: FaqGroup[] = [
         id: "what-is-first-call",
         q: "What is First Call?",
         answer:
-          "First Call is a practice tool for the fire service oral board. You answer real oral board questions out loud, on a timer, and every answer is scored against a rubric written for that question. You see what landed, what didn't, and what to work on next.",
+          "First Call is a mock oral board for firefighter candidates. It lets you practice the fire department oral board interview the way it actually happens: a three-person panel can read each question out loud, you answer on a timer, and every answer is scored against a rubric written for that specific question. You see which parts of a strong answer you hit, which ones you missed, and the one thing to fix next time. Over time your scores roll up into the eight competencies oral boards evaluate, from composure under pressure to integrity, so you can see where you're strong and where you're losing points. It works for entry-level and lateral candidates, on a phone or computer, and it's free while in beta.",
         link: { href: "/how-it-works", label: "See how it works." },
+      },
+      {
+        id: "what-makes-first-call-different",
+        q: "What makes First Call different from other oral board prep?",
+        answer:
+          "A lot of prep gives you questions to read or a person to talk to. First Call gives you the part that's hardest to get anywhere else: a full practice board, out loud, on the clock, scored the same way every time against a rubric written for that specific question. You don't get a vague \"good job\" or a single generic score. You see exactly which parts of a strong answer you hit and which you missed, and your results build across sessions so you can see what's actually improving. It was built by a working firefighter who went through the hiring process himself.",
+      },
+      {
+        id: "will-first-call-help-me-get-hired",
+        q: "Will First Call help me get hired?",
+        answer:
+          "No tool can promise that, and you should be wary of any that does. What research does show is that preparation matters: in studies of fire and police candidates, interview coaching and preparation were linked to higher interview scores. First Call is built to make that kind of preparation something you can do anytime, out loud, with honest scoring. As users get hired, we'll share what we learn.",
       },
       {
         id: "who-built-it",
         q: "Who built it?",
         answer:
-          "Scott Shimala, a firefighter who spent two years preparing for oral boards before getting hired, and who has a master's in human-computer interaction.",
+          "Scott Shimala, a firefighter with nine years on the job. Before he got hired, he spent two years testing, sat ten oral boards, and finished second on one hiring list out of several hundred candidates. The whole time, the oral board was the hardest part to prepare for. Friends couldn't score him, coaching was expensive, and question lists just taught him to sound rehearsed. He later earned a master's in human-computer interaction, with his work focused on public safety recruitment and hiring, and built First Call to be the practice tool he wished he'd had.",
         link: { href: "/about", label: "Read the story." },
       },
       {
         id: "do-i-need-fire-service-experience",
-        q: "Do I need fire service experience?",
+        q: "Do I need fire service experience to use First Call?",
         answer:
           "No. The questions are the kind oral boards ask entry-level candidates, and none of them require you to have worked in the fire service. Your answers can draw on work, school, sports, volunteering, or anything else from your own life.",
       },
@@ -77,7 +89,7 @@ const FAQ_GROUPS: FaqGroup[] = [
         id: "is-the-feedback-from-ai",
         q: "Is the feedback from AI?",
         answer:
-          "Yes. AI does the scoring, but it doesn't decide what a good answer is. Every question has its own rubric, written by a person, with specific criteria and a defined description of each score level. The AI's job is to measure your answer against that rubric. The rubric sets the bar, not the AI's opinion.",
+          "Yes. AI does the scoring, but it doesn't decide what a good answer is. Every question has its own rubric, built and reviewed by Scott, a working firefighter, with specific criteria and a defined description of each score level. The rubrics are grounded in the oral board frameworks fire departments publish for their own hiring and in hiring research on what separates strong interview answers from weak ones. The AI's job is to measure your answer against that rubric. The rubric sets the bar, not the AI's opinion.",
       },
       {
         id: "how-is-this-different-from-practicing-with-a-friend-or-reading-question-lists",
@@ -118,8 +130,7 @@ const FAQ_GROUPS: FaqGroup[] = [
       {
         id: "will-the-questions-be-exactly-what-my-department-asks",
         q: "Will the questions be exactly what my department asks?",
-        answer:
-          "No one can promise that, and you should be skeptical of anyone who does. Departments write their own questions. What First Call covers is what oral boards consistently evaluate, so the skills you build carry over to whatever you're actually asked.",
+        answer: `No one can promise that, and you should be skeptical of anyone who does. Departments write their own questions. But the questions in First Call aren't random. Each one is chosen to cover what oral boards consistently ask about and the qualities they score, so many of them will likely feel familiar on board day, even when the wording is different. The question bank keeps growing, and new questions are added to fill real gaps, not just to make the number bigger. Were you asked a question you think belongs here? Email ${SUPPORT_EMAIL}. Every suggestion gets read.`,
       },
     ],
   },

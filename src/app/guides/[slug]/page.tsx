@@ -138,7 +138,20 @@ function KeyTakeaways({ items }: { items: string[] }) {
 /** End-of-article CTA. Guides alternate between the two via meta.endCta,
     so the Playbook offer rotates through the set. */
 function EndCta({ variant }: { variant: GuideMeta["endCta"] }) {
-  if (variant === "playbook") return <PlaybookPromo narrow />;
+  if (variant === "playbook") {
+    return (
+      <>
+        <PlaybookPromo narrow />
+        <p className="mt-6 text-center text-base text-text-secondary">
+          Ready to practice out loud?{" "}
+          <a href={APP_SIGNUP_URL} data-cta="main" className={TEXT_LINK}>
+            Start a free mock board
+          </a>
+          .
+        </p>
+      </>
+    );
+  }
   return (
     <div className="fp-callout p-6 lg:p-8">
       <h2 className="mb-2 font-display text-2xl font-bold leading-snug text-text-primary lg:text-3xl">
@@ -203,7 +216,7 @@ export default async function GuidePage({ params }: Props) {
                 <span>
                   By{" "}
                   <Link href="/about" className={TEXT_LINK}>
-                    Scott Shimala
+                    Scott
                   </Link>
                   , firefighter
                 </span>

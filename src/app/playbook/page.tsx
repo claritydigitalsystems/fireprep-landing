@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import { Check } from "lucide-react";
 import JsonLd from "../components/JsonLd";
 import {
   Eyebrow,
@@ -23,19 +25,19 @@ export const metadata = pageMetadata({
    sells it and never reproduces it. Every CTA carries src=playbook (kept by
    Attribution.tsx alongside any UTMs).
    Layout: hero with the in-app preview slot, chapters as a two-column grid
-   from 1080px, and "How to get it" as the centred closing band (the
-   /how-it-works ending), so the page has one ending. */
+   from 1080px, and "How to get it" as the closing band: one centred column
+   on mobile, preview image beside left-aligned copy from 768px. */
 
 const CHAPTERS: { title: string; body: string }[] = [
-  { title: "Know your board's format", body: "Timed per question or one block of time, written copies of the questions, how many panels, and how to find out before you practice." },
-  { title: "The week before", body: "Confirm every detail in writing, drive the route, make if-then plans, and keep your prep light." },
+  { title: "Know your board's format", body: "Timed per question or one block of time, written copies of the questions, who sits on the panel, how many panels and interviews, and how to find out before you practice." },
+  { title: "The week before", body: "Confirm every detail in writing, drive the route, make if-then plans, keep your prep light, and why one minute late can cost you the board." },
   { title: "What to wear and bring", body: "The suit, the watch, the folder, the facial hair rule, and why your phone goes off, not silent." },
   { title: "The night before", body: "Protect your sleep and make the morning automatic." },
   { title: "Board morning", body: "When to arrive, how to treat everyone you meet, and how to use your nerves instead of fighting them." },
   { title: "The first minute", body: "Walking in, greeting the panel, and settling in, in person or on video." },
-  { title: "In the room", body: "Managing the clock, buying a moment, ignoring poker faces, and the closing question." },
+  { title: "In the room: the mechanics", body: "Managing the clock, buying a moment, ignoring poker faces, letting a rough answer go, and the closing question." },
   { title: "Walking out", body: "What not to do on the way out, and why the drive-home replay isn't the whole story." },
-  { title: "After the board", body: "The same-day debrief, the thank-you note, the wait, and how to keep going." },
+  { title: "After the board", body: "The same-day debrief, the thank-you note (only if they give you a way), the wait, and how to keep going." },
   { title: "If you get a chief's interview", body: "How it differs from the board, and why conversational doesn't mean unscored." },
   { title: "Board day checklist", body: "Every action item from every chapter, on one page you can check off as you go." },
 ];
@@ -94,9 +96,10 @@ export default function PlaybookPage() {
 
       <Section>
         <div className="max-w-3xl min-[1080px]:max-w-5xl">
-          <SectionHeading eyebrow="What's inside" title="Ten chapters, in the order you'll need them." />
+          <SectionHeading eyebrow="What's inside" title="Ten chapters and a checklist, in the order you'll need them." />
           {/* Two columns from 1080px; the checklist, last and in amber,
-              spans the full final row. */}
+              spans the full final row and gets a check instead of a
+              numeral. */}
           <ol className="grid grid-cols-1 border-t border-border min-[1080px]:grid-cols-2 min-[1080px]:gap-x-12">
             {CHAPTERS.map((c, i) => {
               const last = i === CHAPTERS.length - 1;
@@ -113,7 +116,11 @@ export default function PlaybookPage() {
                       last ? "text-accent" : "text-text-secondary"
                     }`}
                   >
-                    {String(i + 1).padStart(2, "0")}
+                    {last ? (
+                      <Check className="h-6 w-6 text-accent" aria-hidden="true" />
+                    ) : (
+                      String(i + 1).padStart(2, "0")
+                    )}
                   </span>
                   <div>
                     <h3 className="mb-1 font-display text-xl font-bold text-text-primary lg:text-2xl">
@@ -128,54 +135,80 @@ export default function PlaybookPage() {
         </div>
       </Section>
 
-      {/* Closing band: same raised full-bleed treatment and centred 640px
-          column as the /how-it-works ending. Steps and callout stay
-          left-aligned inside it so the numbers line up. */}
+      {/* Closing band: same raised full-bleed treatment as the
+          /how-it-works ending. Mobile is one centred column with the preview
+          on top; from 768px the preview sits left of left-aligned copy.
+          Steps and callout stay left-aligned throughout so the numbers line
+          up. The preview is the same capture PlaybookPromo uses, in the same
+          browser frame. */}
       <section aria-labelledby="how-to-get-it" className="border-y border-border bg-surface">
         <div className="mx-auto w-full max-w-7xl px-6 py-[72px] lg:px-12 lg:py-[112px]">
-          <div className="mx-auto max-w-[640px] text-center">
-            <Eyebrow center>How to get it</Eyebrow>
-            <h2
-              id="how-to-get-it"
-              className="mb-8 font-display text-3xl font-bold leading-tight text-balance text-text-primary lg:text-5xl"
-            >
-              Create a free account. It&apos;s on your dashboard.
-            </h2>
-            <ol className="mb-8 space-y-3 text-left text-lg leading-relaxed text-text-secondary">
-              <li className="flex gap-3">
-                <span className="font-semibold text-text-primary">1.</span>
-                <span>Create
-                a free First Call account. Google sign-in is the fastest.</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="font-semibold text-text-primary">2.</span>
-                <span>Open
-                your dashboard. The Playbook is there, ready to read.</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="font-semibold text-text-primary">3.</span>
-                <span>While
-                you&apos;re in, run a practice board and hear how you sound.</span>
-              </li>
-            </ol>
-            <div className="fp-callout mb-10 p-5 text-left">
-              <p className="text-base leading-relaxed text-text-secondary">
-                The Playbook covers the day. The practice is what gets you ready
-                for it.{" "}
-                <Link href="/how-it-works" className={TEXT_LINK}>
-                  See how First Call scores your answers
+          <div className="mx-auto grid max-w-[640px] grid-cols-1 gap-10 md:max-w-5xl md:grid-cols-2 md:items-center lg:gap-16">
+            <div className="overflow-hidden rounded-[6px] border-[1.5px] border-text-muted bg-device-body shadow-[0_6px_8px_-2px_rgba(0,0,0,0.9)]">
+              <div aria-hidden="true" className="flex items-center gap-1.5 px-2.5 py-2">
+                <span className="h-1.5 w-1.5 rounded-full bg-device-detail" />
+                <span className="h-1.5 w-1.5 rounded-full bg-device-detail" />
+                <span className="h-1.5 w-1.5 rounded-full bg-device-detail" />
+              </div>
+              <div className="relative aspect-[16/10] w-full overflow-hidden border-t border-device-detail bg-device-screen">
+                <Image
+                  src="/screens/playbook/playbook-preview-desktop.png"
+                  alt="The Board Day Playbook open in the First Call app"
+                  fill
+                  sizes="(min-width: 768px) 480px, 100vw"
+                  className="object-cover object-top"
+                />
+              </div>
+            </div>
+            <div className="text-center md:text-left">
+              {/* Eyebrow bar centred on mobile, left-aligned from 768px. */}
+              <div className="[&>p]:after:mx-auto md:[&>p]:after:mx-0">
+                <Eyebrow>How to get it</Eyebrow>
+              </div>
+              <h2
+                id="how-to-get-it"
+                className="mb-8 font-display text-3xl font-bold leading-tight text-balance text-text-primary lg:text-4xl"
+              >
+                Create a free account. It&apos;s on your dashboard.
+              </h2>
+              <ol className="mb-8 space-y-3 text-left text-lg leading-relaxed text-text-secondary">
+                <li className="flex gap-3">
+                  <span className="font-display font-bold text-accent">01</span>
+                  <span>Create
+                  a free First Call account. Google sign-in is the fastest.</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="font-display font-bold text-accent">02</span>
+                  <span>Open
+                  your dashboard. The Playbook is there, ready to read.</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="font-display font-bold text-accent">03</span>
+                  <span>While
+                  you&apos;re in, run a practice board and hear how you sound.</span>
+                </li>
+              </ol>
+              <div className="fp-callout mb-10 p-5 text-left">
+                <p className="text-base leading-relaxed text-text-secondary">
+                  The Playbook covers the day. The practice is what gets you ready
+                  for it.{" "}
+                  <Link href="/how-it-works" className={TEXT_LINK}>
+                    See how First Call scores your answers
+                  </Link>
+                  .
+                </p>
+              </div>
+              <GetItButton />
+              <p className="mt-6 text-base text-text-muted">
+                Board still a ways out? That&apos;s the best time to start. The
+                earlier you&apos;re in, the more reps you get before it counts.
+                Want the big picture first? Read{" "}
+                <Link href="/guides/how-to-prepare-for-a-firefighter-oral-board" className={TEXT_LINK}>
+                  how to prepare for a firefighter oral board
                 </Link>
                 .
               </p>
             </div>
-            <GetItButton />
-            <p className="mt-6 text-base text-text-muted">
-              Still weeks out? Start with{" "}
-              <Link href="/guides/how-to-prepare-for-a-firefighter-oral-board" className={TEXT_LINK}>
-                how to prepare for a firefighter oral board
-              </Link>
-              .
-            </p>
           </div>
         </div>
       </section>

@@ -17,12 +17,12 @@ export const metadata = pageMetadata({
    story in a centred reading column, broken by "It worked." on a
    full-bleed raised band (the /how-it-works band treatment). */
 
-/** Credentials strip. Stacked under 768px: "Human-Computer Interaction"
-    won't fit a third of a 375px screen without wrapping. */
+/** Credentials strip. Stacked under 768px: "out of several hundred
+    candidates" won't fit a third of a 375px screen without wrapping. */
 const CREDENTIALS = [
-  { value: "Close to 10", label: "oral boards" },
+  { value: "10", label: "oral boards in 2 years" },
   { value: "9 years", label: "on the job" },
-  { value: "M.S.", label: "Human-Computer Interaction" },
+  { value: "#2", label: "out of several hundred candidates" },
 ];
 
 const STORY = [
@@ -30,7 +30,7 @@ const STORY = [
     id: "the-grind",
     label: "The grind",
     paragraphs: [
-      "When I decided I was getting hired, I went all in for two years. I interviewed with close to ten departments. I recorded myself answering questions and made myself listen back. I wrote out answers, took them apart, and took notes on what actually landed. I did in-person prep classes run by chiefs, made station visits, read the books, talked to everyone on the job who'd give me the time, and learned exactly how the hiring process works.",
+      "When I decided I was getting hired, I went all in for two years. I interviewed with ten departments. I recorded myself answering questions and made myself listen back. I wrote out answers, took them apart, and took notes on what actually landed. I did in-person prep classes run by chiefs, made station visits, read the books, talked to everyone on the job who'd give me the time, and learned exactly how the hiring process works.",
       "The whole time, one part was harder to prepare for than everything else: the oral board. It's the highest-stakes part of hiring and the one with the least real way to practice. Friends can't score you. Coaching is expensive. Question lists just teach you to sound rehearsed. There was no way to practice out loud and get honest, structured feedback on where I actually stood.",
     ],
   },
@@ -38,7 +38,7 @@ const STORY = [
     id: "why-it-exists",
     label: "Why it exists",
     paragraphs: [
-      "But I never stopped thinking about that gap. Alongside the career, I earned a master's in human-computer interaction, a research-heavy program, and the work I did through it focused on public safety recruitment and hiring. So I built the thing that should have existed: a full mock oral board. A panel reads you each question out loud, you answer on the clock, and every answer is scored against a rubric built for that specific question, the way a structured board scores it. Not \"did that feel okay.\" Real feedback on where you're strong, where you're weak, and whether you're getting better.",
+      "But I never stopped thinking about that gap. Alongside the career, I earned a master's in human-computer interaction, a research-heavy program, and the work I did through it focused on public safety recruitment and hiring. So I built the thing that should have existed: a full mock oral board. A panel reads you each question out loud, you answer on the clock, and every answer is scored against a rubric built for that specific question, the way a structured board scores it. Not \"did that feel okay?\" Real feedback on where you're strong, where you're weak, and whether you're getting better.",
     ],
   },
   {

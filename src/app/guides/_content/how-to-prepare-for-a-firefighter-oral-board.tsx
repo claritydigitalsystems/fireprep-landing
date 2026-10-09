@@ -57,7 +57,7 @@ function Intro() {
   return (
     <P>
       You can ace the written test, crush the physical agility, and still
-      lose the job in a twenty-minute conversation. The oral board is where
+      lose the job in a ten-minute conversation. The oral board is where
       a lot of hiring processes get decided, and it&apos;s the part most
       candidates prepare for the least. This guide covers what the board is,
       how you&apos;re scored, and how to prepare in a way that holds up when
@@ -79,7 +79,9 @@ function Body() {
       <P>
         In many departments, that score carries a lot of weight in where you
         land on the hiring list, and sometimes whether you make the list at
-        all. Physical agility is usually pass/fail, and in many departments
+        all. In some it&apos;s the biggest piece: Valley Regional Fire
+        Authority in Washington, for example, weights its oral board at 70
+        percent of the final score. Physical agility is usually pass/fail, and in many departments
         the written test works as a gate too. The board is where candidates
         who all passed the
         gates get separated from each other. That&apos;s why it deserves more
@@ -94,11 +96,11 @@ function Body() {
       </P>
       <UL>
         <LI>
-          <Strong>Consistent questions.</Strong> Every candidate gets the same
+          <Strong>Consistent questions.</Strong>{" "}Every candidate gets the same
           questions in the same order, so answers can be compared fairly.
         </LI>
         <LI>
-          <Strong>Structured criteria.</Strong> Panel members score each
+          <Strong>Structured criteria.</Strong>{" "}Panel members score each
           answer against defined criteria, often on a rating scale with a
           written description of what a weak, average, and strong answer looks
           like.
@@ -148,7 +150,7 @@ function Body() {
       </P>
 
       <Note>
-        <Strong>No model answers here, on purpose.</Strong> A memorized answer
+        <Strong>No model answers here, on purpose.</Strong>{" "}A memorized answer
         to a predicted question is the most common way good candidates score
         badly. The rest of this guide is about preparing so you can answer
         whatever they ask.
@@ -218,27 +220,27 @@ function Body() {
       <H2 id={SECTIONS.mistakes.id}>{SECTIONS.mistakes.title}</H2>
       <UL>
         <LI>
-          <Strong>Memorized scripts.</Strong> They sound rehearsed, and they
+          <Strong>Memorized scripts.</Strong>{" "}They sound rehearsed, and they
           break the moment the question is worded a little differently than
           you expected.
         </LI>
         <LI>
-          <Strong>Rambling.</Strong> Long answers aren&apos;t better answers.
+          <Strong>Rambling.</Strong>{" "}Long answers aren&apos;t better answers.
           If the panel has to dig for your point, you&apos;ve lost points.
         </LI>
         <LI>
-          <Strong>Generic answers.</Strong> &ldquo;I&apos;m a team
+          <Strong>Generic answers.</Strong>{" "}&ldquo;I&apos;m a team
           player&rdquo; is a claim, not evidence. Specifics are what score.
         </LI>
         <LI>
-          <Strong>Answering a different question.</Strong> Nerves push people
+          <Strong>Answering a different question.</Strong>{" "}Nerves push people
           toward the answer they prepared instead of the question they were
           asked. Listen to the whole question before you start.
         </LI>
       </UL>
 
       <H2 id={SECTIONS.timeline.id}>{SECTIONS.timeline.title}</H2>
-      <H3>Weeks out</H3>
+      <H3>4 to 8 weeks out</H3>
       <UL>
         <LI>Build your story inventory.</LI>
         <LI>Start practicing out loud, several times a week, on a timer.</LI>
@@ -269,7 +271,8 @@ function Body() {
         First Call exists for the hardest part of this plan: practicing out
         loud and getting honest, structured feedback on how you did. You
         answer real oral board questions on a timer, and every answer is
-        scored against a rubric written for that question.{" "}
+        scored against a rubric written for that question, built on what fire
+        departments actually look for.{" "}
         <A href="/how-it-works">See how it works</A>.
       </P>
     </>
