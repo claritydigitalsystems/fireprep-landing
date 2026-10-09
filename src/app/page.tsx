@@ -21,7 +21,11 @@ export default function Home() {
       <JsonLd data={softwareAppLd} />
 
       {/* ── Section 1: Hero ── */}
-      <section className="relative">
+      {/* min-h: one viewport minus the sticky nav (h-14 / lg:h-16, plus its
+          1px bottom border), so the banner below always starts at or after
+          the fold. svh, not vh or dvh, so it doesn't jump as the iOS URL bar
+          collapses. Content is centred within it. */}
+      <section className="relative flex min-h-[calc(100svh-57px)] flex-col justify-center lg:min-h-[calc(100svh-65px)]">
         <div className="mx-auto w-full max-w-7xl px-6 pt-[80px] pb-[56px] lg:px-12 lg:pt-[80px] lg:pb-[80px]">
           <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2 lg:gap-14">
 
@@ -45,7 +49,7 @@ export default function Home() {
                   href={APP_SIGNUP_URL}
                   className="w-full rounded-md bg-accent px-8 py-4 text-center text-base font-semibold text-background transition-colors sm:w-auto hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                 >
-                  Try It Free
+                  Sign up free
                 </a>
                 {/* Transparent outlined counterpart, so the pair reads as one
                     primary and one secondary rather than a button and a link. */}
@@ -103,7 +107,7 @@ export default function Home() {
       </section>
 
       {/* ── Fire video banner ── full-bleed break directly after the hero,
-           ahead of the two-grader comparison. The poster Image sits UNDER the video rather than on the
+           ahead of the #watch video. The poster Image sits UNDER the video rather than on the
            <video poster> attribute: globals.css hides video[autoplay] under
            prefers-reduced-motion, and a hidden video shows no poster, so the
            still has to be its own layer to survive that rule. ── */}
@@ -137,10 +141,10 @@ export default function Home() {
           />
 
           <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
-            <p className="font-display text-4xl font-bold leading-tight text-text-primary lg:text-6xl">
+            <p className="font-display text-5xl font-bold leading-tight text-text-primary md:text-4xl lg:text-6xl">
               No more guessing.
             </p>
-            <p className="mt-3 max-w-2xl font-display text-2xl font-bold leading-snug text-text-primary lg:text-4xl">
+            <p className="mt-3 max-w-2xl font-display text-3xl font-bold leading-snug text-text-primary md:text-2xl lg:text-4xl">
               Walk in knowing exactly what panels are{" "}
               <span className="text-accent">scoring.</span>
             </p>
@@ -148,6 +152,44 @@ export default function Home() {
 
         </div>
       </section>
+
+      {/* ── Video slot ── target of the hero's secondary CTA. ── */}
+      <section id="watch" className="scroll-mt-20">
+        <div className="mx-auto w-full max-w-7xl px-6 pt-[48px] pb-[80px] lg:px-12 lg:pt-[72px] lg:pb-[120px]">
+          <div className="mx-auto max-w-4xl">
+            <div className="mb-8 text-center lg:mb-10">
+              <Eyebrow center>
+                See it in action
+              </Eyebrow>
+              <h2 className="font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
+                How First Call works, in 60 seconds.
+              </h2>
+            </div>
+            <video
+              controls
+              preload="metadata"
+              poster="/firstcall-demo-poster.jpg"
+              className="aspect-video w-full rounded-md border border-border bg-surface"
+            >
+              <source src="/firstcall-demo-1080.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div className="mt-8 flex justify-center lg:mt-10">
+              <a
+                href={APP_SIGNUP_URL}
+                className="w-full rounded-md bg-accent px-8 py-4 text-center text-base font-semibold text-background transition-colors sm:w-auto hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              >
+                Sign up free
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── The free taste ── the app's grader, embedded. Sits right after
+           the #watch video, so a visitor who just saw it can try it, and
+           ahead of the two-grader comparison. ── */}
+      <TryEmbed />
 
       {/* ── Section 2: Two-grader demo ──
            The left card is a representative composite of instant-scoring
@@ -173,7 +215,7 @@ export default function Home() {
                 href="#try"
                 className="text-base text-text-muted underline underline-offset-2 transition-colors hover:text-text-primary"
               >
-                Try it yourself, no account &darr;
+                Try it yourself, no account
               </a>
             </p>
           </div>
@@ -267,7 +309,7 @@ export default function Home() {
                 href={APP_SIGNUP_URL}
                 className="text-text-secondary underline underline-offset-2 transition-colors hover:text-text-primary"
               >
-                Try it free
+                Sign up free
               </a>{" "}
               to see the full feedback on your own answers.
             </p>
@@ -275,43 +317,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* ── Video slot ── target of the hero's secondary CTA. ── */}
-      <section id="watch" className="scroll-mt-20">
-        <div className="mx-auto w-full max-w-7xl px-6 pt-[48px] pb-[80px] lg:px-12 lg:pt-[72px] lg:pb-[120px]">
-          <div className="mx-auto max-w-4xl">
-            <div className="mb-8 text-center lg:mb-10">
-              <Eyebrow center>
-                See it in action
-              </Eyebrow>
-              <h2 className="font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
-                How First Call works, in 60 seconds.
-              </h2>
-            </div>
-            <video
-              controls
-              preload="metadata"
-              poster="/firstcall-demo-poster.jpg"
-              className="aspect-video w-full rounded-md border border-border bg-surface"
-            >
-              <source src="/firstcall-demo-1080.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <div className="mt-8 flex justify-center lg:mt-10">
-              <a
-                href={APP_SIGNUP_URL}
-                className="w-full rounded-md bg-accent px-8 py-4 text-center text-base font-semibold text-background transition-colors sm:w-auto hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-              >
-                Try It Free
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── The free taste ── the app's grader, embedded. Sits right after
-           the #watch video, so a visitor who just saw it can try it. ── */}
-      <TryEmbed />
 
       {/* ── Section 3: Differentiators (replaces the old comparison) ──
            Two claims on a numbered rail. Each gets exactly one device: 01 a
