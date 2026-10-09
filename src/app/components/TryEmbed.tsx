@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { APP_URL } from "../lib/links";
+import { Eyebrow } from "./PageParts";
 import { sendGAEvent } from "@next/third-parties/google";
 
 // Floor for a height message, so a bad or zero-height report can never
@@ -11,9 +12,9 @@ const MIN_HEIGHT = 480;
 // nudges the section rather than jumping it.
 const DEFAULT_HEIGHT = 760;
 
-/** The app's free-taste grader, embedded. The iframe carries its own heading
-    ("A short version of the real thing"), so this section deliberately has
-    none: two stacked headings would read as two sections. */
+/** The app's free-taste grader, embedded. The section heading sits inside
+    #try, above the iframe, so the anchor lands on it. The iframe still
+    carries its own heading ("A short version of the real thing") below. */
 export default function TryEmbed() {
   const sectionRef = useRef<HTMLElement>(null);
   const frameRef = useRef<HTMLIFrameElement>(null);
@@ -70,6 +71,14 @@ export default function TryEmbed() {
         {/* The widget is 900px wide; max-w-5xl frames it without letting it
             stretch on a wide desktop. */}
         <div className="mx-auto max-w-5xl">
+          <div className="mb-8 text-center lg:mb-10">
+            <Eyebrow center>
+              No account needed
+            </Eyebrow>
+            <h2 className="font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
+              Try it before you sign up.
+            </h2>
+          </div>
           {/* The frame is always sized to the height the widget reports, so
               it never needs a scrollbar of its own. Suppressing it is what
               stops the frame from swallowing wheel and touch on a short

@@ -174,12 +174,18 @@ export default function Home() {
               <source src="/firstcall-demo-1080.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-            <div className="mt-8 flex justify-center lg:mt-10">
+            <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row sm:items-center sm:gap-6 lg:mt-10">
               <a
                 href={APP_SIGNUP_URL}
                 className="w-full rounded-md bg-accent px-8 py-4 text-center text-base font-semibold text-background transition-colors sm:w-auto hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               >
                 Sign up free
+              </a>
+              <a
+                href="#try"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-md border border-border bg-transparent px-6 py-4 text-base font-medium text-text-secondary transition-colors sm:w-auto hover:border-text-secondary hover:text-text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              >
+                Try one question first
               </a>
             </div>
           </div>
