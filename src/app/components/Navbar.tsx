@@ -87,6 +87,7 @@ export default function Navbar() {
 
           <a
             href={APP_SIGNUP_URL}
+            data-cta="main"
             className="rounded-md bg-accent px-3 py-2 text-sm font-semibold text-background transition-colors hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background lg:px-5"
           >
             Sign up free
@@ -133,6 +134,7 @@ export default function Navbar() {
 
           <a
             href={APP_SIGNUP_URL}
+            data-cta="main"
             onClick={() => setMenuOpen(false)}
             className="mt-4 mb-2 flex min-h-[44px] items-center justify-center rounded-md bg-accent px-5 text-base font-semibold text-background transition-colors hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
           >

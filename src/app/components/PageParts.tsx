@@ -148,7 +148,7 @@ export function CtaBlock({
               "Answer a real oral board question out loud and get it scored against its rubric. No account needed for the first one."}
           </p>
           <div className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
-            <a href={APP_SIGNUP_URL} className={PRIMARY_BUTTON}>
+            <a href={APP_SIGNUP_URL} data-cta="main" className={PRIMARY_BUTTON}>
               Create a free account
             </a>
             <Link href="/#try" className={SECONDARY_BUTTON}>

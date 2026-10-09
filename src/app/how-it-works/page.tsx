@@ -542,7 +542,7 @@ export default function HowItWorksPage() {
           </p>
           {/* Stacked full width on mobile, primary on top. */}
           <div className="flex flex-col gap-3 sm:flex-row sm:justify-center sm:gap-4">
-            <a href={APP_SIGNUP_URL} className={PRIMARY_BUTTON}>
+            <a href={APP_SIGNUP_URL} data-cta="main" className={PRIMARY_BUTTON}>
               Create a free account
             </a>
             <Link href="/#try" className={SECONDARY_BUTTON}>

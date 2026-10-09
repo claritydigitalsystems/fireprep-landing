@@ -47,6 +47,7 @@ export default function Home() {
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
                 <a
                   href={APP_SIGNUP_URL}
+                  data-cta="main"
                   className="w-full rounded-md bg-accent px-8 py-4 text-center text-base font-semibold text-background transition-colors sm:w-auto hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                 >
                   Sign up free
@@ -177,6 +178,7 @@ export default function Home() {
             <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row sm:items-center sm:gap-6 lg:mt-10">
               <a
                 href={APP_SIGNUP_URL}
+                data-cta="main"
                 className="w-full rounded-md bg-accent px-8 py-4 text-center text-base font-semibold text-background transition-colors sm:w-auto hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               >
                 Sign up free
@@ -313,6 +315,7 @@ export default function Home() {
               Illustrative example.{" "}
               <a
                 href={APP_SIGNUP_URL}
+                data-cta="main"
                 className="text-text-secondary underline underline-offset-2 transition-colors hover:text-text-primary"
               >
                 Sign up free
@@ -788,6 +791,7 @@ export default function Home() {
             {/* slot: primary CTA */}
             <a
               href={APP_SIGNUP_URL}
+              data-cta="main"
               className="inline-block rounded-md bg-accent px-10 py-5 text-lg font-semibold text-background transition-colors hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
               Start practicing free
