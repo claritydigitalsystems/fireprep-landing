@@ -6,11 +6,12 @@ import { Eyebrow } from "./PageParts";
 import { sendGAEvent } from "@next/third-parties/google";
 
 // Floor for a height message, so a bad or zero-height report can never
-// collapse the section to nothing.
-const MIN_HEIGHT = 480;
-// Roughly the consent card the widget opens on, so the first height message
-// nudges the section rather than jumping it.
-const DEFAULT_HEIGHT = 760;
+// collapse the section. Kept below every real phase height (the consent card
+// measures under 480 on desktop) so it never pads real content.
+const MIN_HEIGHT = 320;
+// About the consent card's height on mobile (measured 532px on 2026-10-31),
+// so the first height message nudges the section rather than jumping it.
+const DEFAULT_HEIGHT = 520;
 
 /** The app's free-taste grader, embedded. The section heading sits inside
     #try, above the iframe, so the anchor lands on it. */
