@@ -104,7 +104,7 @@ export default function TryEmbed() {
           <iframe
             ref={frameRef}
             src={`${APP_URL}/try`}
-            title="Try one real oral board question"
+            title="Try one oral board question"
             allow="microphone"
             scrolling="no"
             className="block w-full border-0"

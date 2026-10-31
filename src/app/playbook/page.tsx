@@ -17,7 +17,7 @@ import { breadcrumbLd } from "../lib/schema";
 export const metadata = pageMetadata({
   title: "The Board Day Playbook",
   description:
-    "A free guide to everything around your fire oral board, from the week before to after you walk out. Create a free First Call account and it's on your dashboard.",
+    "A free guide to everything around your firefighter interview, from the week before to after you walk out. Free with a First Call account.",
   path: "/playbook",
 });
 
@@ -204,7 +204,7 @@ export default function PlaybookPage() {
                 earlier you&apos;re in, the more reps you get before it counts.
                 Want the big picture first? Read{" "}
                 <Link href="/guides/how-to-prepare-for-a-firefighter-oral-board" className={TEXT_LINK}>
-                  how to prepare for a firefighter oral board
+                  how to prepare for a firefighter interview
                 </Link>
                 .
               </p>

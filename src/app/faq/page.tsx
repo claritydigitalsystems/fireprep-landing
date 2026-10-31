@@ -11,7 +11,7 @@ import { OpenFromHash } from "./OpenFromHash";
 export const metadata = pageMetadata({
   title: "FAQ",
   description:
-    "Straight answers about First Call: how the oral board scoring works, what happens to your recordings, who it's for, and what it costs.",
+    "Straight answers about First Call's firefighter interview practice: how the scoring works, what happens to your recordings, and what it costs.",
   path: "/faq",
 });
 
@@ -39,12 +39,12 @@ const FAQ_GROUPS: FaqGroup[] = [
         id: "what-is-first-call",
         q: "What is First Call?",
         answer:
-          "First Call is a mock oral board for firefighter candidates. It lets you practice the fire department oral board interview the way it actually happens: a three-person panel can read each question out loud, you answer on a timer, and every answer is scored against a rubric written for that specific question. You see which parts of a strong answer you hit, which ones you missed, and the one thing to fix next time. Over time your scores roll up into the eight competencies oral boards evaluate, from composure under pressure to integrity, so you can see where you're strong and where you're losing points. It works for entry-level and lateral candidates, on a phone or computer, and it's free while in beta.",
+          "First Call is a mock oral board for firefighter candidates. It lets you practice the firefighter interview the way it actually happens: a three-person panel can read each question out loud, you answer on a timer, and every answer is scored against a rubric written for that specific question. You see which parts of a strong answer you hit, which ones you missed, and the one thing to fix next time. Over time your scores roll up into eight core competencies, drawn from the frameworks fire departments publish for their own hiring, from composure under pressure to integrity, so you can see where you're strong and where you're losing points. It works for entry-level and lateral candidates, on a phone or computer, and it's free while in beta.",
         link: { href: "/how-it-works", label: "See how it works." },
       },
       {
         id: "what-makes-first-call-different",
-        q: "What makes First Call different from other oral board prep?",
+        q: "What makes First Call different from other firefighter interview prep?",
         answer:
           "A lot of prep gives you questions to read or a person to talk to. First Call gives you the part that's hardest to get anywhere else: a full practice board, out loud, on the clock, scored the same way every time against a rubric written for that specific question. You don't get a vague \"good job\" or a single generic score. You see exactly which parts of a strong answer you hit and which you missed, and your results build across sessions so you can see what's actually improving. It was built by a working firefighter who went through the hiring process himself.",
       },
@@ -78,6 +78,32 @@ const FAQ_GROUPS: FaqGroup[] = [
         q: "What do I need?",
         answer:
           "A phone or computer with a microphone, and a quiet space where you can talk out loud. That's it.",
+      },
+    ],
+  },
+  {
+    id: "the-firefighter-interview",
+    title: "The firefighter interview",
+    faqs: [
+      {
+        id: "how-do-i-prepare-for-a-firefighter-interview",
+        q: "How do I prepare for a firefighter interview?",
+        answer:
+          "Start with how you'll be scored. On a structured oral board, each answer is rated against defined criteria, so specific examples from your own life beat polished, general claims. Build a list of real experiences you can draw on instead of memorizing answers, then practice out loud, on a timer, and listen back to yourself. Research the department so your answers about why you want the job are specific to them.",
+        link: { href: "/guides/how-to-prepare-for-a-firefighter-oral-board", label: "Read the full guide." },
+      },
+      {
+        id: "what-should-i-expect-at-a-firefighter-interview",
+        q: "What should I expect at a firefighter interview?",
+        answer:
+          "It varies by department, but the most common format is a structured interview called an oral board. A small panel, usually a few people from the department and sometimes from outside it, asks every candidate the same questions and scores each answer. Expect questions about things you've done (\"tell us about a time...\"), hypothetical situations (\"what would you do if...\"), and why you want the job. Some boards are in person and some are on video. Your department's testing information is the best source for the exact format.",
+        link: { href: "/guides/what-oral-boards-look-for", label: "What oral boards look for." },
+      },
+      {
+        id: "how-long-is-a-firefighter-interview",
+        q: "How long is a firefighter interview?",
+        answer:
+          "It depends on the department. Many boards give you a set amount of time per answer, often a few minutes, and the number of questions varies, so the total length varies too. Check the department's testing information for specifics, and practice on a timer so the clock doesn't surprise you on the day.",
       },
     ],
   },
@@ -357,7 +383,7 @@ export default function FaqPage() {
       </section>
 
       <CtaBlock title="Easier to try it than read about it.">
-        Answer one real oral board question and see how it scores. No account
+        Answer one oral board question and see how it scores. No account
         needed.
       </CtaBlock>
     </main>

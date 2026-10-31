@@ -6,9 +6,9 @@ import { pageMetadata } from "../lib/site";
 import { breadcrumbLd, founderLd } from "../lib/schema";
 
 export const metadata = pageMetadata({
-  title: "About",
+  title: "About: Built by a Working Firefighter",
   description:
-    "First Call was built by a firefighter who spent two years learning how to win the oral board, then built the practice tool he wished he had.",
+    "First Call was built by a working firefighter who spent two years preparing for oral boards, then built the interview practice tool he wished he'd had.",
   path: "/about",
 });
 
@@ -38,14 +38,14 @@ const STORY = [
     id: "why-it-exists",
     label: "Why it exists",
     paragraphs: [
-      "But I never stopped thinking about that gap. Alongside the career, I earned a master's in human-computer interaction, a research-heavy program, and the work I did through it focused on public safety recruitment and hiring. So I built the thing that should have existed: a full mock oral board. A panel reads you each question out loud, you answer on the clock, and every answer is scored against a rubric built for that specific question, the way a structured board scores it. Not \"did that feel okay?\" Real feedback on where you're strong, where you're weak, and whether you're getting better.",
+      "But I never stopped thinking about that gap. Alongside the career, I earned a master's in human-computer interaction, a research-heavy program, and the work I did through it focused on public safety recruitment and hiring. So I built the thing that should have existed: a full mock oral board. A panel reads you each question out loud, you answer on the clock, and every answer is scored against a rubric built for that specific question, with defined criteria, the way structured boards score. Not \"did that feel okay?\" Real feedback on where you're strong, where you're weak, and whether you're getting better.",
     ],
   },
   {
     id: "the-standard",
     label: "The standard behind it",
     paragraphs: [
-      "Everything in it is built on how fire-service oral boards actually evaluate candidates and on published research about what separates a strong interview from a weak one. The point is simple: walk into your board already knowing how you sound, instead of finding out when it counts.",
+      "Everything in it is built on the oral board frameworks fire departments publish for their own hiring, and on published research about what separates a strong interview from a weak one. The point is simple: walk into your board already knowing how you sound, instead of finding out when it counts.",
     ],
   },
 ];
@@ -101,7 +101,7 @@ export default function AboutPage() {
                 I&apos;d had.
               </p>
               <p className="mt-6 font-display text-base font-semibold text-text-primary">
-                Scott Shimala &middot; Firefighter, founder of First Call
+                Scott Shimala &middot; Working firefighter, founder of First Call
               </p>
             </div>
             <ScreenSlot
@@ -193,8 +193,8 @@ export default function AboutPage() {
       </section>
 
       <CtaBlock title="If you've got a board coming up, the worst way to walk in is untested.">
-        Try one real question free, or create an account and run a full
-        practice board.
+        Try one question free, or create an account and run a full practice
+        board.
       </CtaBlock>
     </main>
   );

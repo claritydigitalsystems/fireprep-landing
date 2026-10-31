@@ -158,12 +158,12 @@ function EndCta({ variant }: { variant: GuideMeta["endCta"] }) {
         Practice it out loud, and see how it scores.
       </h2>
       <p className="mb-6 max-w-2xl text-base leading-relaxed text-text-secondary">
-        First Call asks you real oral board questions and scores every answer
-        against a rubric written for that question. Free while in beta.
+        First Call asks you oral board questions out loud and scores every
+        answer against a rubric written for that question. Free while in beta.
       </p>
       <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
         <a href={APP_SIGNUP_URL} data-cta="main" className={PRIMARY_BUTTON}>
-          Create a free account
+          Sign up free
         </a>
         <Link href="/#try" className={SECONDARY_BUTTON}>
           Try one question first
@@ -218,7 +218,7 @@ export default async function GuidePage({ params }: Props) {
                   <Link href="/about" className={TEXT_LINK}>
                     Scott
                   </Link>
-                  , firefighter
+                  , working firefighter
                 </span>
                 <span aria-hidden="true">·</span>
                 <time dateTime={meta.updated ?? meta.published}>

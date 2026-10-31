@@ -38,9 +38,9 @@ const barlow = Barlow({
   weight: ["400", "500", "600", "700"],
 });
 
-const DEFAULT_TITLE = "First Call · Fire Interview Prep";
+const DEFAULT_TITLE = "Firefighter Interview Prep & Oral Board Practice | First Call";
 const DEFAULT_DESCRIPTION =
-  "Practice the fire oral board out loud. Every answer is scored against a rubric written for that question. Built by a firefighter for entry-level candidates.";
+  "Firefighter interview practice: answer oral board questions out loud, on the clock, each scored against a rubric written for that question.";
 
 // Site-wide defaults. Inner pages override through pageMetadata() in
 // lib/site.ts, which restates OG and Twitter in full because Next merges

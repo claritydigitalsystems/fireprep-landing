@@ -6,7 +6,7 @@ import { A, H2, H3, LI, Note, P, Strong, UL } from "./prose";
 const SECTIONS = {
   normal: { id: "normal", title: "Nerves are normal, and they mean you care" },
   delivery: { id: "delivery", title: "Why nerves hit your delivery, not your content" },
-  reps: { id: "reps", title: "The fix: reps, out loud, under pressure" },
+  reps: { id: "reps", title: "The fix for interview nerves: reps, out loud, under pressure" },
   inTheRoom: { id: "in-the-room", title: "In the room" },
   nightBefore: { id: "night-before", title: "The night before and the morning of" },
 } satisfies Record<string, GuideSection>;
@@ -14,12 +14,13 @@ const SECTIONS = {
 export const guide: Guide = {
   meta: {
     slug: "interview-nerves",
-    title: "How to Handle Nerves at Your Fire Oral Board",
+    title: "How to Handle Firefighter Interview Nerves",
     description:
-      "Oral board nerves are normal. Why they hit your delivery harder than your content, how to train them down with reps, and what to do in the room.",
+      "Firefighter interview nerves are normal. Why they hit your delivery more than your content, how reps train them down, and what to do in the room.",
     summary:
       "Why nerves hit your delivery, how reps fix it, and what to do in the room when they show up anyway.",
     published: "2026-09-28",
+    updated: "2026-10-31",
     readMinutes: 6,
     related: ["how-to-prepare-for-a-firefighter-oral-board", "what-oral-boards-look-for"],
     endCta: "playbook",
@@ -38,12 +39,20 @@ export const guide: Guide = {
 
 function Intro() {
   return (
-    <P>
-      Almost everyone is nervous at an oral board. People who run into
-      burning buildings for a living will tell you their board was one of
-      the most nerve-racking things they&apos;ve done. So if your heart is
-      pounding just thinking about it, you&apos;re in good company.
-    </P>
+    <>
+      <P>
+        To handle firefighter interview nerves, make the format familiar:
+        answer out loud, on a timer, enough times that hearing a question and
+        starting to talk feels routine. Panels expect some nerves. What
+        matters is whether your answer still comes through.
+      </P>
+      <P>
+        Almost everyone is nervous at an oral board. People who run into
+        burning buildings for a living will tell you their board was one of
+        the most nerve-racking things they&apos;ve done. So if your heart is
+        pounding just thinking about it, you&apos;re in good company.
+      </P>
+    </>
   );
 }
 
@@ -178,7 +187,7 @@ function Body() {
         of it, from the week before to after the board. For the bigger
         picture, read{" "}
         <A href="/guides/how-to-prepare-for-a-firefighter-oral-board">
-          how to prepare for a firefighter oral board
+          how to prepare for a firefighter interview
         </A>
         , or <A href="/how-it-works">see how First Call gives you the reps</A>.
       </P>

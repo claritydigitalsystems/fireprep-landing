@@ -22,9 +22,9 @@ import { pageMetadata } from "../lib/site";
 import { breadcrumbLd } from "../lib/schema";
 
 export const metadata = pageMetadata({
-  title: "How It Works",
+  title: "How It Works: Firefighter Mock Interview Practice",
   description:
-    "Answer real fire oral board questions out loud, on a timer, and get every answer scored criterion by criterion against a rubric written for that question.",
+    "Firefighter mock interview practice: answer out loud, on a timer, like an oral board, with every answer scored against a rubric written for that question.",
   path: "/how-it-works",
 });
 
@@ -68,7 +68,7 @@ const LOOP = [
   {
     n: "01",
     title: "The board asks",
-    body: "You get a real oral board question. Turn on First Call Live and a three-person panel asks it out loud, the way a real board would.",
+    body: "You get an oral board question. Turn on First Call Live and a three-person panel asks it out loud, the way a real board would.",
     slot: "board-asks",
     label: "Live session: the question showing, board members visible",
     alt: "A First Call practice session with the oral board question on screen and the board members visible",
@@ -385,13 +385,13 @@ export default function HowItWorksPage() {
             <div>
               <Eyebrow>How it works</Eyebrow>
               <h1 className="mb-5 font-display text-4xl font-bold leading-[1.05] tracking-tight text-text-primary md:text-5xl lg:text-6xl">
-                Practice the oral board out loud. Get scored like a real panel.
+                A firefighter mock interview, out loud. Scored like a real panel.
               </h1>
               <p className="text-lg leading-relaxed text-text-secondary">
-                First Call asks you real oral board questions, you answer out
-                loud, and every answer is scored against a rubric built for
-                that question. Here&apos;s what a session looks like, start to
-                finish.
+                First Call is a mock oral board for firefighter candidates.
+                You hear a question, answer it out loud on a timer, and every
+                answer is scored against a rubric built for that question.
+                Here&apos;s what a session looks like, start to finish.
               </p>
             </div>
             <DeviceMockup
@@ -420,7 +420,7 @@ export default function HowItWorksPage() {
 
       {/* 2. The loop: alternating rows on a rail. The centrepiece. */}
       <Shell band>
-        <SectionHeading eyebrow="The loop" title="One question, start to finish." />
+        <SectionHeading eyebrow="The loop" title="Your mock interview, one question at a time." />
         {/* Capped (not centred) so rows stay on the page's left edge while
             text, rail and screen read as one tight unit. */}
         <ol className="mt-4 max-w-5xl md:mt-8">
@@ -532,7 +532,7 @@ export default function HowItWorksPage() {
         <div className="mx-auto max-w-[640px] text-center">
           <Eyebrow center>Who it&apos;s for</Eyebrow>
           <h2 className="mb-5 font-display text-3xl font-bold leading-tight text-balance text-text-primary lg:text-5xl">
-            Anyone with a fire oral board coming up.
+            Anyone with a firefighter interview coming up.
           </h2>
           <p className={`mb-8 ${BODY}`}>
             Entry-level or lateral, any department. You don&apos;t need fire
@@ -543,7 +543,7 @@ export default function HowItWorksPage() {
           {/* Stacked full width on mobile, primary on top. */}
           <div className="flex flex-col gap-3 sm:flex-row sm:justify-center sm:gap-4">
             <a href={APP_SIGNUP_URL} data-cta="main" className={PRIMARY_BUTTON}>
-              Create a free account
+              Sign up free
             </a>
             <Link href="/#try" className={SECONDARY_BUTTON}>
               Try one question first
@@ -555,7 +555,7 @@ export default function HowItWorksPage() {
           <p className="mt-8 text-base leading-relaxed text-text-muted">
             New to the board?{" "}
             <Link href="/guides/how-to-prepare-for-a-firefighter-oral-board" className={TEXT_LINK}>
-              Read how to prepare for a firefighter oral board
+              Read how to prepare for a firefighter interview
             </Link>
             , or check the{" "}
             <Link href="/faq" className={TEXT_LINK}>

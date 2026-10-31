@@ -5,7 +5,7 @@ import { A, H2, LI, Note, P, Strong, UL } from "./prose";
     contents both render from here. */
 const SECTIONS = {
   criteria: { id: "criteria", title: "Boards score against criteria, not vibes" },
-  competencies: { id: "competencies", title: "The core competencies, in plain language" },
+  competencies: { id: "competencies", title: "What boards look for in a firefighter interview" },
   specifics: { id: "specifics", title: "Specifics beat polish" },
   answerTheQuestion: { id: "answer-the-question", title: "Answer the question that was asked" },
   rehearsed: { id: "rehearsed", title: "Why rehearsed answers score badly" },
@@ -15,12 +15,13 @@ const SECTIONS = {
 export const guide: Guide = {
   meta: {
     slug: "what-oral-boards-look-for",
-    title: "What Fire Oral Boards Actually Look For",
+    title: "What Oral Boards Look For in a Firefighter Interview",
     description:
-      "Fire oral boards score against defined criteria, not gut feel. Learn the core competencies panels evaluate and why specific, honest answers beat polished ones.",
+      "What oral boards look for in a firefighter interview: answers scored against defined criteria, the core competencies, and why specifics beat polish.",
     summary:
       "The competencies panels score, why specifics beat polish, and how to use feedback to get better.",
     published: "2026-09-28",
+    updated: "2026-10-31",
     readMinutes: 6,
     related: ["how-to-prepare-for-a-firefighter-oral-board", "interview-nerves"],
     endCta: "playbook",
@@ -74,13 +75,20 @@ const COMPETENCIES: { name: string; plain: string }[] = [
 
 function Intro() {
   return (
-    <P>
-      A lot of candidates walk out of an oral board with no idea how it
-      went. It felt fine. They were friendly. Then the list comes out and
-      they&apos;re lower than they expected. Most of that confusion comes
-      from not knowing what the panel was actually listening for. Here it
-      is.
-    </P>
+    <>
+      <P>
+        Oral boards look for specific, honest answers that show the qualities
+        the department is hiring for, and they score them against a rating
+        sheet, not on whether they liked you.
+      </P>
+      <P>
+        A lot of candidates walk out of an oral board with no idea how it
+        went. It felt fine. They were friendly. Then the list comes out and
+        they&apos;re lower than they expected. Most of that confusion comes
+        from not knowing what the panel was actually listening for. Here it
+        is.
+      </P>
+    </>
   );
 }
 
@@ -89,7 +97,7 @@ function Body() {
     <>
       <H2 id={SECTIONS.criteria.id}>{SECTIONS.criteria.title}</H2>
       <P>
-        Most fire oral boards are structured. Each question is tied to one or
+        Most firefighter oral boards are structured. Each question is tied to one or
         more things the department wants to measure, and each panel member has
         a rating sheet that describes what a weak, acceptable, and strong
         answer looks like. They score what you say against that sheet.
@@ -104,8 +112,8 @@ function Body() {
       <H2 id={SECTIONS.competencies.id}>{SECTIONS.competencies.title}</H2>
       <P>
         Departments name them differently, but most boards come back to the
-        same handful of qualities. Here are eight that cover most of what
-        you&apos;ll be scored on:
+        same handful of qualities. Here they are in plain language: eight
+        that cover most of what boards look for.
       </P>
       <dl className="mb-8 divide-y divide-border border-y border-border">
         {COMPETENCIES.map((c) => (
@@ -190,13 +198,13 @@ function Body() {
         </LI>
       </UL>
       <P>
-        That loop is exactly what First Call is built for, and it works the
-        way a real board works. Turn on First Call Live and a panel reads you
+        That loop is exactly what First Call is for, and it&apos;s built to
+        feel like a real board. Turn on First Call Live and a panel reads you
         the question out loud. You answer on the clock. Then your answer is
         scored against a rubric written for that specific question, with
         weak-to-strong descriptions like the ones on a board&apos;s rating
-        sheet, built on the qualities fire departments publish for their own
-        oral boards.
+        sheet, drawn from the frameworks fire departments publish for their
+        own hiring.
       </P>
       <P>
         You see which criteria you hit, which ones you missed, and the one
@@ -213,7 +221,7 @@ function Body() {
         <A href="/how-it-works">See how the scoring works</A>, or start with the
         full guide on{" "}
         <A href="/guides/how-to-prepare-for-a-firefighter-oral-board">
-          how to prepare for a firefighter oral board
+          how to prepare for a firefighter interview
         </A>
         .
       </P>

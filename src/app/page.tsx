@@ -32,15 +32,15 @@ export default function Home() {
             {/* Left: copy */}
             <div>
               <Eyebrow>
-                Free while in beta · Real candidates, real feedback
+                Built by a working firefighter · Free while in beta
               </Eyebrow>
 
               <h1 className="mb-4 font-display text-4xl font-bold leading-[1.03] tracking-tight text-text-primary md:text-5xl lg:text-7xl">
-                Fire oral board practice, scored like the real thing.
+                Firefighter interview practice, scored like the real oral board.
               </h1>
 
               <p className="mb-7 text-base leading-relaxed text-text-secondary lg:text-lg">
-                Answer real oral board questions out loud, on the clock. See
+                Answer oral board questions out loud, on the clock. See
                 what landed, what didn&apos;t, and what to fix before it counts.
               </p>
 
@@ -97,9 +97,9 @@ export default function Home() {
               />
 
               <p className="mt-6 text-base leading-relaxed text-text-secondary lg:mt-8">
-                Built by an active firefighter, on a research-backed rubric
-                sourced from published fire-service hiring frameworks. Not
-                generic interview tips.
+                Built by a working firefighter. Every answer is scored against
+                a rubric drawn from the frameworks fire departments publish for
+                their own hiring. Not generic interview tips.
               </p>
             </div>
 
@@ -146,8 +146,8 @@ export default function Home() {
               No more guessing.
             </p>
             <p className="mt-3 max-w-2xl font-display text-3xl font-bold leading-snug text-text-primary md:text-2xl lg:text-4xl">
-              Walk in knowing exactly what panels are{" "}
-              <span className="text-accent">scoring.</span>
+              Walk in knowing what a strong answer{" "}
+              <span className="text-accent">sounds like.</span>
             </p>
           </div>
 
@@ -367,8 +367,8 @@ export default function Home() {
                     behaviorally anchored rating scales
                   </span>
                   , the same 0 to 3 anchored method used in formal hiring
-                  research, built on published fire-service competency
-                  frameworks.
+                  research, with competencies drawn from the frameworks fire
+                  departments publish for their own hiring.
                 </p>
 
                 <div className="fp-callout mt-4 p-4">
@@ -398,7 +398,7 @@ export default function Home() {
                 </div>
 
                 <p className="text-base leading-[1.55] text-text-secondary lg:text-lg">
-                  Every answer feeds eight fire-service competencies, tracked
+                  Every answer feeds eight core competencies, tracked
                   across every session. You watch each one climb over time, and
                   see exactly which keep costing you points.
                 </p>
@@ -427,8 +427,8 @@ export default function Home() {
                 Instant tools score fast but grade shallow. Human coaches grade
                 deep but can&apos;t be there at 11pm for your hundredth rep.{" "}
                 <strong className="font-semibold text-accent">
-                  First Call is the only one that grades with real rigor and
-                  remembers everything, as many times as you need it.
+                  First Call grades with real rigor and remembers everything,
+                  as many times as you need it.
                 </strong>
               </p>
             </div>
@@ -449,7 +449,7 @@ export default function Home() {
               How it works
             </Eyebrow>
             <h2 className="font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
-              Every session, end to end.
+              Firefighter interview practice, end to end.
             </h2>
           </div>
 
@@ -468,9 +468,10 @@ export default function Home() {
                   Practice
                 </h3>
                 <p className="text-base leading-relaxed text-text-secondary">
-                  Answer real oral board questions out loud, on the clock.
-                  Recorded, transcribed, and ready to grade. The way
-                  you&apos;ll have to deliver it in the room.
+                  &ldquo;Tell us about a time,&rdquo; &ldquo;what would you
+                  do,&rdquo; and &ldquo;why this job&rdquo; questions, answered
+                  out loud, on the clock. Recorded, transcribed, and ready to
+                  grade. The way you&apos;ll have to deliver it in the room.
                 </p>
               </div>
 
@@ -526,7 +527,7 @@ export default function Home() {
                   Track
                 </h3>
                 <p className="text-base leading-relaxed text-text-secondary">
-                  Every answer feeds eight fire-service competencies, tracked
+                  Every answer feeds eight core competencies, tracked
                   across every session. See where you keep losing points, drill
                   those, and walk in with all eight dialed.
                 </p>
@@ -580,7 +581,8 @@ export default function Home() {
                 <p className="text-base leading-relaxed text-text-secondary">
                   Every answer is scored 0 to 3 on each criterion, against
                   written anchors that define exactly what each score looks
-                  like. No mystery number.
+                  like, the rating method structured interviews are built on.
+                  No mystery number.
                 </p>
 
                 {/* Four connected segments; only the 3 is lit. The paragraph
@@ -613,13 +615,13 @@ export default function Home() {
                   </h3>
                 </div>
                 <p className="text-base leading-relaxed text-text-secondary">
-                  Drawn from real fire-service hiring criteria, not a generic
-                  interview template. The areas boards actually weigh, scored
-                  the way they weigh them.
+                  Drawn from the oral board frameworks fire departments publish
+                  for their own hiring, and from personnel selection research.
+                  Not a generic interview template.
                 </p>
 
                 <div className="mt-6 flex flex-wrap gap-2">
-                  {["Composure", "Decision-making", "Communication", "Integrity", "Teamwork"].map(
+                  {["Composure Under Pressure", "Decision-Making & Problem-Solving", "Communication", "Integrity & Ethics", "Teamwork & Collaboration"].map(
                     (name) => (
                       <span
                         key={name}
@@ -660,8 +662,9 @@ export default function Home() {
             </div>
 
             <p className="mx-auto max-w-3xl pt-8 text-center text-base leading-relaxed text-text-muted">
-              Sourced from published fire-service frameworks and the interview
-              research behind them. Not generic tips dressed up with a score.
+              Drawn from the frameworks fire departments publish for their own
+              hiring, and from personnel selection research. Not generic tips
+              dressed up with a score.
             </p>
 
           </div>
@@ -685,22 +688,22 @@ export default function Home() {
 
               <div className="space-y-5 text-lg leading-relaxed text-text-secondary">
                 <p>
-                  I&apos;m Scott, an active firefighter. Before I got hired, I
+                  I&apos;m Scott, a working firefighter. Before I got hired, I
                   went through hiring process after hiring process, different
                   departments, different formats, the same panel asking
                   variations of the same questions.
                 </p>
                 <p>
                   I learned the prep gap firsthand. The advice online is
-                  generic. The good coaching is expensive and books out. And
-                  the scoring criteria panels actually use have been public for
-                  decades, rooted in real fire-service competency frameworks,
-                  but no tool ever used them to grade your practice.
+                  generic. The good coaching is expensive and books out. But
+                  how structured boards score isn&apos;t a secret: departments
+                  publish the competencies they hire for, and hiring research
+                  has spent decades on how to score answers against them.
                 </p>
                 <p className="text-text-primary">
-                  So I built the one that does. First Call grades against those
-                  frameworks the way a board would, so you get real signal on
-                  every rep instead of a pat on the back.
+                  So I built a practice tool on that. First Call scores every
+                  answer against a rubric built from those frameworks, so you
+                  get real signal on every rep instead of a pat on the back.
                 </p>
               </div>
             </div>
@@ -726,7 +729,7 @@ export default function Home() {
                   the portrait rather than a footer to the copy column. */}
               <div className="mt-5 border-t border-border pt-5">
                 <p className="font-display text-base font-semibold text-text-primary">
-                  Scott Shimala &middot; Active firefighter, building First Call.
+                  Scott Shimala &middot; Working firefighter, building First Call.
                 </p>
                 <p className="mt-1 text-base text-text-muted">
                   Free while I test it with real candidates.
@@ -773,8 +776,8 @@ export default function Home() {
               First Call is live and free while I test it with real
               candidates.{" "}
               <strong className="font-semibold text-text-primary">
-                Real questions, real scoring, real feedback on every answer. No
-                credit card, no catch.
+                Oral board questions, honest scoring, real feedback on every
+                answer. No credit card, no catch.
               </strong>{" "}
               I&apos;m looking for candidates who&apos;ll actually use it and
               tell me what&apos;s working.
@@ -786,7 +789,7 @@ export default function Home() {
               data-cta="main"
               className="inline-block rounded-md bg-accent px-10 py-5 text-lg font-semibold text-background transition-colors hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
-              Start practicing free
+              Sign up free
             </a>
 
             {/* slot: micro-copy */}

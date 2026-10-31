@@ -9,7 +9,7 @@ import { A, H2, H3, LI, Note, P, Strong, UL } from "./prose";
     meta.highlights picks from here, so the /guides preview always matches
     the article. */
 const SECTIONS = {
-  whatItIs: { id: "what-it-is", title: "What the oral board is, and why it matters so much" },
+  whatItIs: { id: "what-it-is", title: "What to expect at the oral board, and why it matters so much" },
   howYoureScored: { id: "how-youre-scored", title: "How panels evaluate you" },
   questionTypes: { id: "question-types", title: "The main question types" },
   storyInventory: { id: "story-inventory", title: "Build a story inventory, not a script" },
@@ -17,19 +17,20 @@ const SECTIONS = {
   practiceOnAClock: { id: "practice-on-a-clock", title: "Practice under a clock" },
   research: { id: "research", title: "Research the department" },
   mistakes: { id: "mistakes", title: "Common mistakes" },
-  timeline: { id: "timeline", title: "A simple prep timeline" },
+  timeline: { id: "timeline", title: "A simple timeline to prepare for your firefighter interview" },
   whereFirstCallFits: { id: "where-first-call-fits", title: "Where First Call fits" },
 } satisfies Record<string, GuideSection>;
 
 export const guide: Guide = {
   meta: {
     slug: "how-to-prepare-for-a-firefighter-oral-board",
-    title: "How to Prepare for a Firefighter Oral Board",
+    title: "How to Prepare for a Firefighter Interview",
     description:
-      "A firefighter's guide to preparing for the fire department oral board: how panels score you, the question types, building stories, and practicing out loud.",
+      "How to prepare for a firefighter interview: what the oral board is, how panels score you, the main question types, and how to practice out loud.",
     summary:
-      "What the oral board is, how panels score it, and a prep plan that works without memorized answers.",
+      "What to expect at the oral board, how panels score it, and a prep plan that works without memorized answers.",
     published: "2026-09-28",
+    updated: "2026-10-31",
     readMinutes: 9,
     related: ["what-oral-boards-look-for", "interview-nerves"],
     highlights: [
@@ -55,14 +56,22 @@ export const guide: Guide = {
 
 function Intro() {
   return (
-    <P>
-      You can ace the written test, crush the physical agility, and still
-      lose the job in a ten-minute conversation. The oral board is where
-      a lot of hiring processes get decided, and it&apos;s the part most
-      candidates prepare for the least. This guide covers what the board is,
-      how you&apos;re scored, and how to prepare in a way that holds up when
-      you&apos;re actually sitting in the chair.
-    </P>
+    <>
+      <P>
+        To prepare for a firefighter interview, learn how the oral board
+        scores you, build a list of real experiences to draw on instead of
+        memorizing answers, and practice answering out loud, on a timer,
+        until it feels routine. That&apos;s the short version.
+      </P>
+      <P>
+        You can ace the written test, crush the physical agility, and still
+        lose the job in a ten-minute conversation. The oral board is where
+        a lot of hiring processes get decided, and it&apos;s the part most
+        candidates prepare for the least. This guide covers what to expect,
+        how you&apos;re scored, and how to prepare in a way that holds up when
+        you&apos;re actually sitting in the chair.
+      </P>
+    </>
   );
 }
 
@@ -263,16 +272,16 @@ function Body() {
         thank-you note, get the free{" "}
         <A href="/playbook">Board Day Playbook</A>. If nerves are your biggest
         worry, read{" "}
-        <A href="/guides/interview-nerves">how to handle oral board nerves</A>.
+        <A href="/guides/interview-nerves">how to handle firefighter interview nerves</A>.
       </P>
 
       <H2 id={SECTIONS.whereFirstCallFits.id}>{SECTIONS.whereFirstCallFits.title}</H2>
       <P>
         First Call exists for the hardest part of this plan: practicing out
         loud and getting honest, structured feedback on how you did. You
-        answer real oral board questions on a timer, and every answer is
-        scored against a rubric written for that question, built on what fire
-        departments actually look for.{" "}
+        answer oral board questions out loud, on a timer, and every answer is
+        scored against a rubric written for that question, drawn from the
+        frameworks fire departments publish for their own hiring.{" "}
         <A href="/how-it-works">See how it works</A>.
       </P>
     </>

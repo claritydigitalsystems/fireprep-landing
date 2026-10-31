@@ -13,9 +13,9 @@ import { offPathGuides, readingPath, type PathStep } from "./_content";
 import { GuideCard } from "./_content/GuideCard";
 
 export const metadata = pageMetadata({
-  title: "Fire Oral Board Guides",
+  title: "Firefighter Interview Guides",
   description:
-    "Short, practical guides to preparing for the fire service oral board, written by a firefighter. How panels score, how to practice, and handling nerves.",
+    "Practical firefighter interview guides, written by a working firefighter: how the oral board scores you, how to prepare, and how to handle nerves.",
   path: "/guides",
 });
 
@@ -121,18 +121,18 @@ export default function GuidesIndex() {
         ])}
       />
 
-      <PageHeader eyebrow="Guides" title="Guides for the fire oral board">
+      <PageHeader eyebrow="Guides" title="Guides for the firefighter interview">
         <p>
-          Short, practical guides to the fire service oral board, written by a
-          firefighter. How you&apos;re scored, how to practice, and how to
-          show up ready. No scripts, no model answers.
+          Short, practical guides to the firefighter interview, written by a
+          working firefighter. How the oral board scores you, how to practice,
+          and how to show up ready. No scripts, no model answers.
         </p>
         <p className="mt-4 text-base text-text-muted">
           Written by{" "}
           <Link href="/about" className={TEXT_LINK}>
             Scott
           </Link>
-          , a firefighter who went through close to ten oral boards.
+          , a working firefighter who went through ten oral boards.
         </p>
       </PageHeader>
 
