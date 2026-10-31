@@ -154,124 +154,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Section 3: Differentiators (replaces the old comparison) ──
-           Two claims on a numbered rail. Each gets exactly one device: 01 a
-           margin callout, 02 a rising-bar sparkline. Amber marks only the
-           First Call side of each claim. ── */}
-      <section id="why" className="scroll-mt-20">
-        <div className="mx-auto w-full max-w-7xl px-6 py-[56px] lg:px-12 lg:py-[80px]">
-
-          <div className="mb-8 lg:mb-10">
-            <Eyebrow>
-              Why First Call
-            </Eyebrow>
-            <h2 className="mb-4 font-display text-4xl font-bold leading-tight text-text-primary lg:whitespace-nowrap lg:text-[2.5rem] xl:text-5xl">
-              Built to grade like a board. Not like a chatbot.
-            </h2>
-            <p className="max-w-3xl text-lg leading-relaxed text-text-secondary">
-              Two things separate First Call from every other way to prep. Both
-              are things a keyword grader or a busy coach can&apos;t give you.
-            </p>
-          </div>
-
-          <div className="mx-auto max-w-4xl">
-
-            {/* 01 */}
-            <div className="grid grid-cols-[28px_1fr] gap-x-4 lg:grid-cols-[48px_1fr] lg:gap-x-5">
-              <div className="flex flex-col items-center">
-                <span className="font-display text-2xl font-bold leading-none text-accent">
-                  01
-                </span>
-                <span
-                  aria-hidden="true"
-                  className="fp-rail-connector mt-3 w-px flex-1"
-                />
-              </div>
-
-              <div className="pb-8 lg:pb-10">
-                <div className="mb-3 flex items-center gap-3">
-                  <Ruler className="h-5 w-5 shrink-0 text-accent" aria-hidden="true" />
-                  <h3 className="font-display text-2xl font-bold leading-snug text-text-primary lg:text-3xl">
-                    Research-backed scoring, not a vibe check
-                  </h3>
-                </div>
-
-                <p className="text-base leading-[1.55] text-text-secondary lg:text-lg">
-                  Every answer is graded on{" "}
-                  <span className="font-medium text-text-primary">
-                    behaviorally anchored rating scales
-                  </span>
-                  , the same 0 to 3 anchored method used in formal hiring
-                  research, built on published fire-service competency
-                  frameworks.
-                </p>
-
-                <div className="fp-callout mt-4 p-4">
-                  <p className="text-base leading-relaxed text-text-secondary">
-                    Each question carries its own rubric. You&apos;re scored on
-                    what it actually tests, never dinged for what it never
-                    asked.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* 02 */}
-            <div className="grid grid-cols-[28px_1fr] gap-x-4 lg:grid-cols-[48px_1fr] lg:gap-x-5">
-              <div className="flex flex-col items-center">
-                <span className="font-display text-2xl font-bold leading-none text-accent">
-                  02
-                </span>
-              </div>
-
-              <div>
-                <div className="mb-3 flex items-center gap-3">
-                  <TrendingUp className="h-5 w-5 shrink-0 text-accent" aria-hidden="true" />
-                  <h3 className="font-display text-2xl font-bold leading-snug text-text-primary lg:text-3xl">
-                    Progress you can see, rep after rep
-                  </h3>
-                </div>
-
-                <p className="text-base leading-[1.55] text-text-secondary lg:text-lg">
-                  Every answer feeds eight fire-service competencies, tracked
-                  across every session. You watch each one climb over time, and
-                  see exactly which keep costing you points.
-                </p>
-
-                {/* The shape is the claim: one competency climbing over reps.
-                    Decorative for screen readers; the caption states it. */}
-                <div className="fp-spark mt-5" aria-hidden="true">
-                  <span />
-                  <span />
-                  <span />
-                  <span />
-                  <span />
-                  <span />
-                </div>
-
-                <p className="mt-3 text-base leading-relaxed text-text-muted">
-                  Practice becomes a plan: drill the weak competency, watch it
-                  move, walk in with all eight dialed.
-                </p>
-              </div>
-            </div>
-
-            {/* Closer */}
-            <div className="mt-8 border-t border-border pt-6 lg:mt-10">
-              <p className="text-base leading-[1.55] text-text-primary lg:text-lg">
-                Instant tools score fast but grade shallow. Human coaches grade
-                deep but can&apos;t be there at 11pm for your hundredth rep.{" "}
-                <strong className="font-semibold text-accent">
-                  First Call is the only one that grades with real rigor and
-                  remembers everything, as many times as you need it.
-                </strong>
-              </p>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
       {/* ── Video slot ── target of the hero's secondary CTA. ── */}
       <section id="watch" className="scroll-mt-20">
         <div className="mx-auto w-full max-w-7xl px-6 pt-[48px] pb-[80px] lg:px-12 lg:pt-[72px] lg:pb-[120px]">
@@ -436,6 +318,124 @@ export default function Home() {
            after the two-grader comparison as its payoff: the visitor has
            just seen honest scoring, now they get their own. ── */}
       <TryEmbed />
+
+      {/* ── Section 3: Differentiators (replaces the old comparison) ──
+           Two claims on a numbered rail. Each gets exactly one device: 01 a
+           margin callout, 02 a rising-bar sparkline. Amber marks only the
+           First Call side of each claim. ── */}
+      <section id="why" className="scroll-mt-20">
+        <div className="mx-auto w-full max-w-7xl px-6 py-[56px] lg:px-12 lg:py-[80px]">
+
+          <div className="mb-8 lg:mb-10">
+            <Eyebrow>
+              Why First Call
+            </Eyebrow>
+            <h2 className="mb-4 font-display text-4xl font-bold leading-tight text-text-primary lg:whitespace-nowrap lg:text-[2.5rem] xl:text-5xl">
+              Built to grade like a board. Not like a chatbot.
+            </h2>
+            <p className="max-w-3xl text-lg leading-relaxed text-text-secondary">
+              Two things separate First Call from every other way to prep. Both
+              are things a keyword grader or a busy coach can&apos;t give you.
+            </p>
+          </div>
+
+          <div className="mx-auto max-w-4xl">
+
+            {/* 01 */}
+            <div className="grid grid-cols-[28px_1fr] gap-x-4 lg:grid-cols-[48px_1fr] lg:gap-x-5">
+              <div className="flex flex-col items-center">
+                <span className="font-display text-2xl font-bold leading-none text-accent">
+                  01
+                </span>
+                <span
+                  aria-hidden="true"
+                  className="fp-rail-connector mt-3 w-px flex-1"
+                />
+              </div>
+
+              <div className="pb-8 lg:pb-10">
+                <div className="mb-3 flex items-center gap-3">
+                  <Ruler className="h-5 w-5 shrink-0 text-accent" aria-hidden="true" />
+                  <h3 className="font-display text-2xl font-bold leading-snug text-text-primary lg:text-3xl">
+                    Research-backed scoring, not a vibe check
+                  </h3>
+                </div>
+
+                <p className="text-base leading-[1.55] text-text-secondary lg:text-lg">
+                  Every answer is graded on{" "}
+                  <span className="font-medium text-text-primary">
+                    behaviorally anchored rating scales
+                  </span>
+                  , the same 0 to 3 anchored method used in formal hiring
+                  research, built on published fire-service competency
+                  frameworks.
+                </p>
+
+                <div className="fp-callout mt-4 p-4">
+                  <p className="text-base leading-relaxed text-text-secondary">
+                    Each question carries its own rubric. You&apos;re scored on
+                    what it actually tests, never dinged for what it never
+                    asked.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* 02 */}
+            <div className="grid grid-cols-[28px_1fr] gap-x-4 lg:grid-cols-[48px_1fr] lg:gap-x-5">
+              <div className="flex flex-col items-center">
+                <span className="font-display text-2xl font-bold leading-none text-accent">
+                  02
+                </span>
+              </div>
+
+              <div>
+                <div className="mb-3 flex items-center gap-3">
+                  <TrendingUp className="h-5 w-5 shrink-0 text-accent" aria-hidden="true" />
+                  <h3 className="font-display text-2xl font-bold leading-snug text-text-primary lg:text-3xl">
+                    Progress you can see, rep after rep
+                  </h3>
+                </div>
+
+                <p className="text-base leading-[1.55] text-text-secondary lg:text-lg">
+                  Every answer feeds eight fire-service competencies, tracked
+                  across every session. You watch each one climb over time, and
+                  see exactly which keep costing you points.
+                </p>
+
+                {/* The shape is the claim: one competency climbing over reps.
+                    Decorative for screen readers; the caption states it. */}
+                <div className="fp-spark mt-5" aria-hidden="true">
+                  <span />
+                  <span />
+                  <span />
+                  <span />
+                  <span />
+                  <span />
+                </div>
+
+                <p className="mt-3 text-base leading-relaxed text-text-muted">
+                  Practice becomes a plan: drill the weak competency, watch it
+                  move, walk in with all eight dialed.
+                </p>
+              </div>
+            </div>
+
+            {/* Closer */}
+            <div className="mt-8 border-t border-border pt-6 lg:mt-10">
+              <p className="text-base leading-[1.55] text-text-primary lg:text-lg">
+                Instant tools score fast but grade shallow. Human coaches grade
+                deep but can&apos;t be there at 11pm for your hundredth rep.{" "}
+                <strong className="font-semibold text-accent">
+                  First Call is the only one that grades with real rigor and
+                  remembers everything, as many times as you need it.
+                </strong>
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
 
       {/* ── Section 4: Practice, Score, Track ──
            Carries the nav's #how-it-works anchor. Flat cards, no deepening
