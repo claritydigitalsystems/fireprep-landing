@@ -154,179 +154,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Video slot ── target of the hero's secondary CTA. ── */}
-      <section id="watch" className="scroll-mt-20">
-        <div className="mx-auto w-full max-w-7xl px-6 pt-[48px] pb-[80px] lg:px-12 lg:pt-[72px] lg:pb-[120px]">
-          <div className="mx-auto max-w-4xl">
-            <div className="mb-8 text-center lg:mb-10">
-              <Eyebrow center>
-                See it in action
-              </Eyebrow>
-              <h2 className="font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
-                How First Call works, in 60 seconds.
-              </h2>
-            </div>
-            <video
-              controls
-              preload="metadata"
-              poster="/firstcall-demo-poster.jpg"
-              className="aspect-video w-full rounded-md border border-border bg-surface"
-            >
-              <source src="/firstcall-demo-1080.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row sm:items-center sm:gap-6 lg:mt-10">
-              <a
-                href={APP_SIGNUP_URL}
-                data-cta="main"
-                className="w-full rounded-md bg-accent px-8 py-4 text-center text-base font-semibold text-background transition-colors sm:w-auto hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-              >
-                Sign up free
-              </a>
-              <a
-                href="#try"
-                className="inline-flex w-full items-center justify-center gap-2 rounded-md border border-border bg-transparent px-6 py-4 text-base font-medium text-text-secondary transition-colors sm:w-auto hover:border-text-secondary hover:text-text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-              >
-                Try one question first
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── The free taste ── the app's grader, embedded. Sits right after
-           the #watch video, so a visitor who just saw it can try it, and
-           ahead of the two-grader comparison. ── */}
-      <TryEmbed />
-
-      {/* ── Section 2: Two-grader demo ──
-           The left card is a representative composite of instant-scoring
-           tools. The right card mirrors the shape the app actually returns:
-           real competency name, 0 to 3 anchor score, "what the panel heard"
-           and "to reach a 3". Do not prettify the right side. ── */}
-      <section>
-        <div className="mx-auto w-full max-w-7xl px-6 py-[56px] lg:px-12 lg:py-[80px]">
-
-          <div className="mb-8 lg:mb-10">
-            <Eyebrow>
-              The difference
-            </Eyebrow>
-            <h2 className="mb-4 font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
-              Anyone can hand you a score. We show you why.
-            </h2>
-            <p className="max-w-3xl text-lg leading-relaxed text-text-secondary">
-              The same answer, two kinds of feedback. One tells you
-              you&apos;re great. One tells you the truth.
-            </p>
-            <p className="mt-4">
-              <a
-                href="#try"
-                className="text-base text-text-muted underline underline-offset-2 transition-colors hover:text-text-primary"
-              >
-                Try it yourself, no account
-              </a>
-            </p>
-          </div>
-
-          <div className="mx-auto max-w-5xl">
-
-            {/* Shared question + answer */}
-            <div className="rounded-md border border-border bg-surface p-5 lg:p-6">
-              <p className="mb-2 font-display text-sm font-semibold uppercase tracking-[0.18em] text-text-muted">
-                Question
-              </p>
-              <p className="mb-4 text-base leading-relaxed text-text-primary lg:text-lg">
-                Tell us about a time you worked through a conflict with a
-                coworker.
-              </p>
-              <p className="mb-2 font-display text-sm font-semibold uppercase tracking-[0.18em] text-text-muted">
-                Answer
-              </p>
-              <p className="text-base italic leading-relaxed text-text-secondary lg:text-lg">
-                &ldquo;I always get along with everyone on the crew. If
-                there&apos;s ever a problem I just stay professional and handle
-                it. Being a team player is one of my biggest strengths.&rdquo;
-              </p>
-            </div>
-
-            {/* The two graders */}
-            <div className="mt-4 grid grid-cols-1 items-stretch gap-4 lg:grid-cols-2">
-
-              {/* Left: most tools. Hollow praise, so the score reads dull
-                  olive rather than a healthy success green. */}
-              <div className="rounded-md border border-border bg-surface p-5 lg:p-6">
-                <p className="mb-4 font-display text-lg font-bold uppercase tracking-[0.12em] text-text-secondary">
-                  Most tools
-                </p>
-                <div className="mb-4 flex items-baseline gap-3">
-                  <span className="font-display text-5xl font-bold leading-none text-[#7d9463]">
-                    92%
-                  </span>
-                  <span className="inline-flex items-center gap-1.5 text-lg font-semibold text-[#7d9463]">
-                    <Check className="h-5 w-5" aria-hidden="true" />
-                    Strong answer
-                  </span>
-                </div>
-                <p className="mb-4 text-base leading-relaxed text-text-primary">
-                  &ldquo;Great job. Strong teamwork and professionalism.
-                  You&apos;re interview-ready.&rdquo;
-                </p>
-                <p className="text-base leading-relaxed text-text-muted">
-                  Right keywords, confident tone. Never notices the answer
-                  describes no actual conflict.
-                </p>
-              </div>
-
-              {/* Right: First Call. The one saturated element on the page. */}
-              <div className="rounded-md border border-accent bg-surface p-5 lg:p-6">
-                <p className="mb-4 font-display text-lg font-bold uppercase tracking-[0.12em] text-text-primary">
-                  First Call
-                </p>
-                <div className="mb-4 flex items-baseline gap-3">
-                  <span className="font-display text-5xl font-bold leading-none text-text-primary">
-                    1 <span className="text-text-muted">/</span> 3
-                  </span>
-                  <span className="text-lg font-semibold text-text-secondary">
-                    Teamwork &amp; Collaboration
-                  </span>
-                </div>
-                <p className="mb-4 text-base leading-relaxed text-text-primary">
-                  <span className="font-semibold">What the panel heard:</span>{" "}
-                  a claim about being a team player, but no real situation and
-                  nothing you actually did. Boards read this as dodging the
-                  question.
-                </p>
-                <p className="text-base leading-relaxed text-accent">
-                  <span className="font-semibold">To reach a 3:</span> name one
-                  real disagreement. What it was, what you did, how it ended.
-                </p>
-              </div>
-
-            </div>
-
-            {/* Closing + honesty label */}
-            <p className="mt-8 text-center font-display text-xl font-bold leading-snug text-text-primary lg:text-2xl">
-              The first score feels good.{" "}
-              <span className="text-accent">
-                The second one gets you hired.
-              </span>
-            </p>
-            <p className="mt-3 text-center text-base text-text-muted">
-              Illustrative example.{" "}
-              <a
-                href={APP_SIGNUP_URL}
-                data-cta="main"
-                className="text-text-secondary underline underline-offset-2 transition-colors hover:text-text-primary"
-              >
-                Sign up free
-              </a>{" "}
-              to see the full feedback on your own answers.
-            </p>
-
-          </div>
-        </div>
-      </section>
-
       {/* ── Section 3: Differentiators (replaces the old comparison) ──
            Two claims on a numbered rail. Each gets exactly one device: 01 a
            margin callout, 02 a rising-bar sparkline. Amber marks only the
@@ -444,6 +271,171 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ── Video slot ── target of the hero's secondary CTA. ── */}
+      <section id="watch" className="scroll-mt-20">
+        <div className="mx-auto w-full max-w-7xl px-6 pt-[48px] pb-[80px] lg:px-12 lg:pt-[72px] lg:pb-[120px]">
+          <div className="mx-auto max-w-4xl">
+            <div className="mb-8 text-center lg:mb-10">
+              <Eyebrow center>
+                See it in action
+              </Eyebrow>
+              <h2 className="font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
+                How First Call works, in 60 seconds.
+              </h2>
+            </div>
+            <video
+              controls
+              preload="metadata"
+              poster="/firstcall-demo-poster.jpg"
+              className="aspect-video w-full rounded-md border border-border bg-surface"
+            >
+              <source src="/firstcall-demo-1080.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row sm:items-center sm:gap-6 lg:mt-10">
+              <a
+                href={APP_SIGNUP_URL}
+                data-cta="main"
+                className="w-full rounded-md bg-accent px-8 py-4 text-center text-base font-semibold text-background transition-colors sm:w-auto hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              >
+                Sign up free
+              </a>
+              <a
+                href="#try"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-md border border-border bg-transparent px-6 py-4 text-base font-medium text-text-secondary transition-colors sm:w-auto hover:border-text-secondary hover:text-text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              >
+                Try one question first
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Section 2: Two-grader demo ──
+           The left card is a representative composite of instant-scoring
+           tools. The right card mirrors the shape the app actually returns:
+           real competency name, 0 to 3 anchor score, "what the panel heard"
+           and "to reach a 3". Do not prettify the right side. ── */}
+      <section>
+        <div className="mx-auto w-full max-w-7xl px-6 py-[56px] lg:px-12 lg:py-[80px]">
+
+          <div className="mb-8 lg:mb-10">
+            <Eyebrow>
+              The difference
+            </Eyebrow>
+            <h2 className="mb-4 font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
+              Anyone can hand you a score. We show you why.
+            </h2>
+            <p className="max-w-3xl text-lg leading-relaxed text-text-secondary">
+              The same answer, two kinds of feedback. One tells you
+              you&apos;re great. One tells you the truth.
+            </p>
+          </div>
+
+          <div className="mx-auto max-w-5xl">
+
+            {/* Shared question + answer */}
+            <div className="rounded-md border border-border bg-surface p-5 lg:p-6">
+              <p className="mb-2 font-display text-sm font-semibold uppercase tracking-[0.18em] text-text-muted">
+                Question
+              </p>
+              <p className="mb-4 text-base leading-relaxed text-text-primary lg:text-lg">
+                Tell us about a time you worked through a conflict with a
+                coworker.
+              </p>
+              <p className="mb-2 font-display text-sm font-semibold uppercase tracking-[0.18em] text-text-muted">
+                Answer
+              </p>
+              <p className="text-base italic leading-relaxed text-text-secondary lg:text-lg">
+                &ldquo;I always get along with everyone on the crew. If
+                there&apos;s ever a problem I just stay professional and handle
+                it. Being a team player is one of my biggest strengths.&rdquo;
+              </p>
+            </div>
+
+            {/* The two graders */}
+            <div className="mt-4 grid grid-cols-1 items-stretch gap-4 lg:grid-cols-2">
+
+              {/* Left: most tools. Hollow praise, so the score reads dull
+                  olive rather than a healthy success green. */}
+              <div className="rounded-md border border-border bg-surface p-5 lg:p-6">
+                <p className="mb-4 font-display text-lg font-bold uppercase tracking-[0.12em] text-text-secondary">
+                  Most tools
+                </p>
+                <div className="mb-4 flex items-baseline gap-3">
+                  <span className="font-display text-5xl font-bold leading-none text-[#7d9463]">
+                    92%
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 text-lg font-semibold text-[#7d9463]">
+                    <Check className="h-5 w-5" aria-hidden="true" />
+                    Strong answer
+                  </span>
+                </div>
+                <p className="mb-4 text-base leading-relaxed text-text-primary">
+                  &ldquo;Great job. Strong teamwork and professionalism.
+                  You&apos;re interview-ready.&rdquo;
+                </p>
+                <p className="text-base leading-relaxed text-text-muted">
+                  Right keywords, confident tone. Never notices the answer
+                  describes no actual conflict.
+                </p>
+              </div>
+
+              {/* Right: First Call. The one saturated element on the page. */}
+              <div className="rounded-md border border-accent bg-surface p-5 lg:p-6">
+                <p className="mb-4 font-display text-lg font-bold uppercase tracking-[0.12em] text-text-primary">
+                  First Call
+                </p>
+                <div className="mb-4 flex items-baseline gap-3">
+                  <span className="font-display text-5xl font-bold leading-none text-text-primary">
+                    1 <span className="text-text-muted">/</span> 3
+                  </span>
+                  <span className="text-lg font-semibold text-text-secondary">
+                    Teamwork &amp; Collaboration
+                  </span>
+                </div>
+                <p className="mb-4 text-base leading-relaxed text-text-primary">
+                  <span className="font-semibold">What the panel heard:</span>{" "}
+                  a claim about being a team player, but no real situation and
+                  nothing you actually did. Boards read this as dodging the
+                  question.
+                </p>
+                <p className="text-base leading-relaxed text-accent">
+                  <span className="font-semibold">To reach a 3:</span> name one
+                  real disagreement. What it was, what you did, how it ended.
+                </p>
+              </div>
+
+            </div>
+
+            {/* Closing + honesty label */}
+            <p className="mt-8 text-center font-display text-xl font-bold leading-snug text-text-primary lg:text-2xl">
+              The first score feels good.{" "}
+              <span className="text-accent">
+                The second one gets you hired.
+              </span>
+            </p>
+            <p className="mt-3 text-center text-base text-text-muted">
+              Illustrative example.{" "}
+              <a
+                href={APP_SIGNUP_URL}
+                data-cta="main"
+                className="text-text-secondary underline underline-offset-2 transition-colors hover:text-text-primary"
+              >
+                Sign up free
+              </a>{" "}
+              to see the full feedback on your own answers.
+            </p>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ── The free taste ── the app's grader, embedded. Sits directly
+           after the two-grader comparison as its payoff: the visitor has
+           just seen honest scoring, now they get their own. ── */}
+      <TryEmbed />
 
       {/* ── Section 4: Practice, Score, Track ──
            Carries the nav's #how-it-works anchor. Flat cards, no deepening

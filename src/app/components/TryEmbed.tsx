@@ -13,8 +13,7 @@ const MIN_HEIGHT = 480;
 const DEFAULT_HEIGHT = 760;
 
 /** The app's free-taste grader, embedded. The section heading sits inside
-    #try, above the iframe, so the anchor lands on it. The iframe still
-    carries its own heading ("A short version of the real thing") below. */
+    #try, above the iframe, so the anchor lands on it. */
 export default function TryEmbed() {
   const sectionRef = useRef<HTMLElement>(null);
   const frameRef = useRef<HTMLIFrameElement>(null);
@@ -73,11 +72,14 @@ export default function TryEmbed() {
         <div className="mx-auto max-w-5xl">
           <div className="mb-8 text-center lg:mb-10">
             <Eyebrow center>
-              No account needed
+              Your turn
             </Eyebrow>
             <h2 className="font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
-              Try it before you sign up.
+              Now get your own score.
             </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-text-secondary">
+              One real board question, scored the same way. No account needed.
+            </p>
           </div>
           {/* The frame is always sized to the height the widget reports, so
               it never needs a scrollbar of its own. Suppressing it is what
