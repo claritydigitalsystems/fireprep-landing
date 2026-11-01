@@ -9,10 +9,13 @@ import { OG_IMAGE, SITE_NAME, SITE_URL } from "./lib/site";
 import { organizationLd, websiteLd } from "./lib/schema";
 import SignupClickTracker from "./components/SignupClickTracker";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import Clarity from "./components/Clarity";
 
 // Set in Vercel for Production ONLY. Unset in local dev and preview deploys,
 // so GA4 never loads there and our own testing stays out of the data.
 const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+// Also Production-only in Vercel. Unset in dev and preview, so Clarity never loads there.
+const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -89,6 +92,7 @@ export default function RootLayout({
         <SignupClickTracker />
       </body>
       {GA_ID ? <GoogleAnalytics gaId={GA_ID} /> : null}
+      {CLARITY_ID ? <Clarity projectId={CLARITY_ID} /> : null}
     </html>
   );
 }
