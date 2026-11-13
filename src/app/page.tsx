@@ -77,6 +77,7 @@ export default function Home() {
                 16:10 for the laptop, 9:18 for the phone. */}
             <div>
               <DeviceMockup
+                animated
                 laptopScreen={
                   <Image
                     src="/screenshot-feedback.jpg"
