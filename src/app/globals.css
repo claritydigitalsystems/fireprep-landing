@@ -93,12 +93,12 @@ body {
 }
 
 /* ── Hero device animation (DeviceMockup `animated`) ──
-   Two separate jobs on two separate properties so they never overwrite each
-   other: the one-time LOAD animation drives `transform`; the DESKTOP SCROLL
-   animation drives the individual `rotate` property. Same axis, so the browser
-   adds them. Each device has its OWN perspective (its own 3D context) so the
-   lid tilting toward the viewer can never depth-sort in front of the phone;
-   each is flattened separately and paints in DOM order (phone on top).
+   One-time LOAD animation only: the lid opens and the phone turns in to face
+   front. No scroll-linked motion (built and removed after preview review,
+   2026-11-13; do not re-add without a new decision). Each device has its OWN
+   perspective (its own 3D context) so the lid tilting toward the viewer can
+   never depth-sort in front of the phone; each is flattened separately and
+   paints in DOM order (phone on top).
    No opacity anywhere: an element at opacity 0 is skipped for LCP. */
 .device-mockup--animated .device-laptop,
 .device-mockup--animated .device-phone-wrap {
@@ -112,7 +112,8 @@ body {
 }
 
 /* Negative rotateX tips the lid's top edge TOWARD the viewer (down onto the
-   base). Do not flip the sign: positive swings it back, away from the viewer. */
+   base), so the lid opens up from there. Do not flip the sign: positive
+   swings it back, away from the viewer. */
 @keyframes device-lid-open {
   from { transform: rotateX(-80deg); }
   to   { transform: rotateX(0deg); }
@@ -121,51 +122,14 @@ body {
   from { transform: rotateY(70deg); }
   to   { transform: rotateY(0deg); }
 }
-@keyframes device-lid-close {
-  from { rotate: x 0deg; }
-  to   { rotate: x -88deg; }
-}
-@keyframes device-phone-turn-away {
-  from { rotate: y 0deg; }
-  to   { rotate: y 90deg; }
-}
 
-/* Load animation: every width, motion allowed only. */
+/* Every width, motion allowed only; reduced motion = fully static. */
 @media (prefers-reduced-motion: no-preference) {
   .device-mockup--animated .device-lid {
-    animation: device-lid-open 900ms cubic-bezier(0.22, 1, 0.36, 1) 150ms both;
+    animation: device-lid-open 1200ms cubic-bezier(0.22, 1, 0.36, 1) 150ms both;
   }
   .device-mockup--animated .device-phone {
-    animation: device-phone-turn-in 800ms cubic-bezier(0.22, 1, 0.36, 1) 350ms both;
-  }
-}
-
-/* Scroll animation: desktop only, supporting browsers only, motion allowed
-   only. Longhands on purpose: the `animation` shorthand resets
-   animation-timeline, and the scroll animation needs duration `auto`.
-   List index 0 = load animation (time-based), index 1 = scroll animation.
-   Range 0 to 60vh of page scroll: the hero is the top of the page, so the
-   close plays while the mockup is still on screen. */
-@supports (animation-timeline: scroll()) {
-  @media (prefers-reduced-motion: no-preference) and (min-width: 768px) {
-    .device-mockup--animated .device-lid {
-      animation-name: device-lid-open, device-lid-close;
-      animation-duration: 900ms, auto;
-      animation-delay: 150ms, 0s;
-      animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1), linear;
-      animation-fill-mode: both, both;
-      animation-timeline: auto, scroll(root);
-      animation-range: normal, 0 60vh;
-    }
-    .device-mockup--animated .device-phone {
-      animation-name: device-phone-turn-in, device-phone-turn-away;
-      animation-duration: 800ms, auto;
-      animation-delay: 350ms, 0s;
-      animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1), linear;
-      animation-fill-mode: both, both;
-      animation-timeline: auto, scroll(root);
-      animation-range: normal, 0 60vh;
-    }
+    animation: device-phone-turn-in 1100ms cubic-bezier(0.22, 1, 0.36, 1) 450ms both;
   }
 }
 

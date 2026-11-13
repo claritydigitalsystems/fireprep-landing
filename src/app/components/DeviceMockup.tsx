@@ -3,12 +3,10 @@
 
     Frames are deliberately FLAT and front-facing at rest. Angled CSS
     mockups read as cheap, so 3D appears only DURING motion: with `animated`
-    (homepage hero only), the lid opens and the phone turns in on load, and
-    on desktop the lid closes and the phone turns edge-on as the page
-    scrolls. Hard edges, small radii, no glow or drop-shadow halo. This
-    should read as equipment sitting in the page, not a floating SaaS
-    graphic. Animation CSS lives in the global stylesheet under "Hero device
-    animation".
+    (homepage hero only), the lid opens and the phone turns in once on load.
+    Hard edges, small radii, no glow or drop-shadow halo. This should read
+    as equipment sitting in the page, not a floating SaaS graphic. Animation
+    CSS lives in the global stylesheet under "Hero device animation".
 
     The screens are slots: each is a positioned box at a fixed aspect ratio
     (16:10 laptop, 9:18 phone), and whatever is passed in fills it. Pass a
