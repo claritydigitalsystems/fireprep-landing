@@ -550,7 +550,7 @@ export default function HowItWorksPage() {
             </Link>
           </div>
           <p className="mt-4 text-base text-text-muted">
-            Free while in beta. No credit card.
+            Practice free. No credit card to sign up.
           </p>
           <p className="mt-8 text-base leading-relaxed text-text-muted">
             New to the board?{" "}

@@ -80,7 +80,7 @@ export default function PlaybookPage() {
               </p>
               <GetItButton />
               <p className="mt-4 text-base text-text-muted">
-                Free while in beta. Signing in with Google is the fastest way in.
+                No credit card to sign up. Signing in with Google is the fastest way in.
               </p>
             </div>
             <ScreenSlot

@@ -159,7 +159,8 @@ function EndCta({ variant }: { variant: GuideMeta["endCta"] }) {
       </h2>
       <p className="mb-6 max-w-2xl text-base leading-relaxed text-text-secondary">
         First Call asks you oral board questions out loud and scores every
-        answer against a rubric written for that question. Free while in beta.
+        answer against a rubric written for that question. Practice free, and
+        your first session&apos;s feedback is free.
       </p>
       <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
         <a href={APP_SIGNUP_URL} data-cta="main" className={PRIMARY_BUTTON}>

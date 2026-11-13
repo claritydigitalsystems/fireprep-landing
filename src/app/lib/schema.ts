@@ -40,8 +40,8 @@ export const founderLd = {
     "Firefighter and founder of First Call, an oral board practice tool for fire service candidates.",
 };
 
-/** No `offers` on purpose: the only honest price is "free while in beta",
-    and a published price of 0 would outlive the beta in search results. */
+/** No `offers` on purpose: prices live in the FAQ only, and keeping them
+    out of structured data keeps a price change to one marketing location. */
 export const softwareAppLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",

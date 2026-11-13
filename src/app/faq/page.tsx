@@ -39,7 +39,7 @@ const FAQ_GROUPS: FaqGroup[] = [
         id: "what-is-first-call",
         q: "What is First Call?",
         answer:
-          "First Call is a mock oral board for firefighter candidates. It lets you practice the firefighter interview the way it actually happens: a three-person panel can read each question out loud, you answer on a timer, and every answer is scored against a rubric written for that specific question. You see which parts of a strong answer you hit, which ones you missed, and the one thing to fix next time. Over time your scores roll up into eight core competencies, drawn from the frameworks fire departments publish for their own hiring, from composure under pressure to integrity, so you can see where you're strong and where you're losing points. It works for entry-level and lateral candidates, on a phone or computer, and it's free while in beta.",
+          "First Call is a mock oral board for firefighter candidates. It lets you practice the firefighter interview the way it actually happens: a three-person panel can read each question out loud, you answer on a timer, and every answer is scored against a rubric written for that specific question. You see which parts of a strong answer you hit, which ones you missed, and the one thing to fix next time. Over time your scores roll up into eight core competencies, drawn from the frameworks fire departments publish for their own hiring, from composure under pressure to integrity, so you can see where you're strong and where you're losing points. It works for entry-level and lateral candidates, on a phone or computer. Practice is free, and feedback on your first session is free.",
         link: { href: "/how-it-works", label: "See how it works." },
       },
       {
@@ -178,7 +178,7 @@ const FAQ_GROUPS: FaqGroup[] = [
       {
         id: "how-much-does-it-cost",
         q: "How much does it cost?",
-        answer: "First Call is free while in beta. No credit card needed to sign up.",
+        answer: "Signing up and practicing are free, with no credit card. Feedback on your first session is free too. After that, scored feedback and progress tracking take a plan: $49 a month, or $199 once for lifetime access, plus applicable tax. Monthly renews until you cancel, and you can cancel anytime from your Account page. Lifetime is one payment that covers every department you test with. If you've paid monthly before, upgrading to lifetime is $149.",
       },
       {
         id: "how-do-i-get-help",

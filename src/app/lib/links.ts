@@ -2,7 +2,7 @@
     domain, so every CTA links to one of the derived routes below. */
 export const APP_URL = "https://app.firstcallprep.com";
 
-/** New users: "Start free", "Start practicing free", "Try it free". */
+/** New users: every signup CTA reads "Sign up free" (P3-240). */
 export const APP_SIGNUP_URL = `${APP_URL}/signup`;
 
 /** Returning users: the nav "Sign in" link. */

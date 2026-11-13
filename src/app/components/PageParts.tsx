@@ -156,7 +156,7 @@ export function CtaBlock({
             </Link>
           </div>
           <p className="mt-4 text-base text-text-muted">
-            Free while in beta. No credit card.
+            Practice free. No credit card to sign up.
           </p>
         </div>
       </div>

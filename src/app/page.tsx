@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { Check, ChevronDown, ChevronRight, ListChecks, Mic, Play, Ruler, Target, TrendingUp } from "lucide-react";
 import WaitlistForm from "./components/WaitlistForm";
 import TryEmbed from "./components/TryEmbed";
 import DeviceMockup from "./components/DeviceMockup";
 import JsonLd from "./components/JsonLd";
-import { Eyebrow, PlaybookPromo } from "./components/PageParts";
+import { Eyebrow, PlaybookPromo, TEXT_LINK } from "./components/PageParts";
 import { APP_SIGNUP_URL } from "./lib/links";
 import { softwareAppLd } from "./lib/schema";
 
@@ -32,7 +33,7 @@ export default function Home() {
             {/* Left: copy */}
             <div>
               <Eyebrow>
-                Built by a working firefighter · Free while in beta
+                Built by a working firefighter
               </Eyebrow>
 
               <h1 className="mb-4 font-display text-4xl font-bold leading-[1.03] tracking-tight text-text-primary md:text-5xl lg:text-7xl">
@@ -64,8 +65,8 @@ export default function Home() {
               </div>
 
               <p className="mt-4 text-base text-text-muted">
-                Free while I run live beta testing with real candidates. No
-                credit card.
+                Practice free. Your first session&apos;s feedback is free. No
+                credit card to sign up.
               </p>
             </div>
 
@@ -731,9 +732,6 @@ export default function Home() {
                 <p className="font-display text-base font-semibold text-text-primary">
                   Scott Shimala &middot; Working firefighter, building First Call.
                 </p>
-                <p className="mt-1 text-base text-text-muted">
-                  Free while I test it with real candidates.
-                </p>
               </div>
             </div>
 
@@ -755,7 +753,7 @@ export default function Home() {
 
       {/* ── Section 7: Conversion slot ──
            The swappable module. The FRAME below is fixed: eyebrow, headline,
-           subcopy, CTA, micro-copy, dormant secondary. Flipping beta -> paid
+           subcopy, CTA, micro-copy, dormant secondary. Changing the offer
            swaps the CONTENTS of these slots and changes no structure. ── */}
       <section>
         <div className="mx-auto w-full max-w-7xl px-6 py-[120px] lg:px-12 lg:py-[160px]">
@@ -768,19 +766,22 @@ export default function Home() {
 
             {/* slot: headline */}
             <h2 className="mb-6 font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
-              It&apos;s built. It&apos;s free. Go use it.
+              Get your first session scored free.
             </h2>
 
             {/* slot: subcopy */}
             <p className="mb-10 text-lg leading-relaxed text-text-secondary">
-              First Call is live and free while I test it with real
-              candidates.{" "}
+              Sign up, run a full practice board, and get{" "}
               <strong className="font-semibold text-text-primary">
-                Oral board questions, honest scoring, real feedback on every
-                answer. No credit card, no catch.
+                every answer scored against its rubric, with the one thing to fix
+                next time.
               </strong>{" "}
-              I&apos;m looking for candidates who&apos;ll actually use it and
-              tell me what&apos;s working.
+              Practice stays free after that. Ongoing feedback and progress
+              tracking take a plan.{" "}
+              <Link href="/faq#how-much-does-it-cost" className={TEXT_LINK}>
+                See pricing
+              </Link>
+              .
             </p>
 
             {/* slot: primary CTA */}
@@ -794,8 +795,8 @@ export default function Home() {
 
             {/* slot: micro-copy */}
             <p className="mt-4 text-base text-text-muted">
-              Free while in beta. Takes about a minute to start your first
-              session.
+              No credit card to sign up. Takes about a minute to start your
+              first session.
             </p>
 
             {/* slot: dormant secondary. Built and wired to the retired
