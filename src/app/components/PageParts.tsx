@@ -213,7 +213,7 @@ export function CtaBlock({
               </Link>
             </div>
             <p className="mt-4 text-base text-text-muted">
-              Practice free. No credit card to sign up.
+              Practice free, as much as you want. Scored feedback after your first session takes a plan. No credit card to sign up.
             </p>
           </PracticeCard>
         </div>

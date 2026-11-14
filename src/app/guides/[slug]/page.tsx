@@ -157,8 +157,9 @@ function EndCta({ variant }: { variant: GuideMeta["endCta"] }) {
     <PracticeCard title="Practice it out loud, and see how it scores.">
       <p className="max-w-2xl text-base leading-relaxed text-text-secondary lg:text-lg">
         First Call asks you oral board questions out loud and scores every
-        answer against a rubric written for that question. Practice free, and
-        your first session&apos;s feedback is free.
+        answer against a rubric written for that question. Practice free, as
+        much as you want. Your first session&apos;s feedback is free; after
+        that, scored feedback and progress tracking take a plan.
       </p>
       {/* Stacking matches PlaybookPromo's `narrow`: the guide column is
           narrower than the page. */}

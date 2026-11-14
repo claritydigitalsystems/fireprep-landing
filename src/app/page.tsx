@@ -65,8 +65,8 @@ export default function Home() {
               </div>
 
               <p className="mt-4 text-base text-text-muted">
-                Practice free. Your first session&apos;s feedback is free. No
-                credit card to sign up.
+                Practice free, as much as you want. Scored feedback after your
+                first session takes a plan. No credit card to sign up.
               </p>
             </div>
 
@@ -761,17 +761,12 @@ export default function Home() {
           <div className="mx-auto max-w-5xl">
             {/* slots: eyebrow + headline, rendered by PracticeCard (the
                 shared primary closing card, same as every inner page). */}
-            <PracticeCard title="Get your first session scored free.">
+            <PracticeCard title="Practice free, as much as you want.">
 
               {/* slot: subcopy */}
               <p className="mb-10 text-lg leading-relaxed text-text-secondary">
-                Sign up, run a full practice board, and get{" "}
-                <strong className="font-semibold text-text-primary">
-                  every answer scored against its rubric, with the one thing to fix
-                  next time.
-                </strong>{" "}
-                Practice stays free after that. Ongoing feedback and progress
-                tracking take a plan.{" "}
+                Your first session&apos;s feedback is free. After that, scored
+                feedback and progress tracking take a plan.{" "}
                 <Link href="/faq#how-much-does-it-cost" className={TEXT_LINK}>
                   See pricing
                 </Link>
