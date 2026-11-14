@@ -193,8 +193,8 @@ export default function AboutPage() {
       </section>
 
       <CtaBlock title="If you've got a board coming up, the worst way to walk in is untested.">
-        Try one question free, or create an account and run a full practice
-        board.
+        Try one question without an account, or sign up free and run a full
+        practice board.
       </CtaBlock>
     </main>
   );
