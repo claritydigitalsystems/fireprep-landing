@@ -1,11 +1,12 @@
 import type { Guide, GuideMeta } from "./types";
 import { guide as prepare } from "./how-to-prepare-for-a-firefighter-oral-board";
+import { guide as questions } from "./firefighter-interview-questions";
 import { guide as lookFor } from "./what-oral-boards-look-for";
 import { guide as nerves } from "./interview-nerves";
 
 /** Every published guide, in index order. Adding a guide = one content file
     in this folder + one entry here. */
-export const GUIDES: Guide[] = [prepare, lookFor, nerves];
+export const GUIDES: Guide[] = [prepare, questions, lookFor, nerves];
 
 /** The /guides reading path, in order. The first entry is the featured
     "Start here" guide. To add a guide to the path, add its slug and a short
@@ -13,6 +14,7 @@ export const GUIDES: Guide[] = [prepare, lookFor, nerves];
     it on the index. */
 export const READING_PATH: { slug: string; label: string }[] = [
   { slug: "how-to-prepare-for-a-firefighter-oral-board", label: "Start here" },
+  { slug: "firefighter-interview-questions", label: "Know the question types" },
   { slug: "what-oral-boards-look-for", label: "What boards look for" },
   { slug: "interview-nerves", label: "Handling nerves" },
 ];
