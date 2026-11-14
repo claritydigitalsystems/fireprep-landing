@@ -771,8 +771,8 @@ export default function Home() {
                   every answer scored against its rubric, with the one thing to fix
                   next time
                 </strong>
-                . After that, scored feedback and progress tracking take a
-                plan.{" "}
+                . After that, practice stays free, and scored feedback and
+                progress tracking take a plan.{" "}
                 <Link href="/faq#how-much-does-it-cost" className={TEXT_LINK}>
                   See pricing
                 </Link>
