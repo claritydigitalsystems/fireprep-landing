@@ -6,7 +6,7 @@ import WaitlistForm from "./components/WaitlistForm";
 import TryEmbed from "./components/TryEmbed";
 import DeviceMockup from "./components/DeviceMockup";
 import JsonLd from "./components/JsonLd";
-import { Eyebrow, PlaybookPromo, TEXT_LINK } from "./components/PageParts";
+import { Eyebrow, PlaybookPromo, PracticeCard, TEXT_LINK } from "./components/PageParts";
 import { APP_SIGNUP_URL } from "./lib/links";
 import { softwareAppLd } from "./lib/schema";
 
@@ -758,58 +758,52 @@ export default function Home() {
            swaps the CONTENTS of these slots and changes no structure. ── */}
       <section>
         <div className="mx-auto w-full max-w-7xl px-6 py-[120px] lg:px-12 lg:py-[160px]">
-          <div className="mx-auto max-w-xl text-center">
+          <div className="mx-auto max-w-5xl">
+            {/* slots: eyebrow + headline, rendered by PracticeCard (the
+                shared primary closing card, same as every inner page). */}
+            <PracticeCard title="Get your first session scored free.">
 
-            {/* slot: eyebrow */}
-            <Eyebrow center>
-              Start now
-            </Eyebrow>
-
-            {/* slot: headline */}
-            <h2 className="mb-6 font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
-              Get your first session scored free.
-            </h2>
-
-            {/* slot: subcopy */}
-            <p className="mb-10 text-lg leading-relaxed text-text-secondary">
-              Sign up, run a full practice board, and get{" "}
-              <strong className="font-semibold text-text-primary">
-                every answer scored against its rubric, with the one thing to fix
-                next time.
-              </strong>{" "}
-              Practice stays free after that. Ongoing feedback and progress
-              tracking take a plan.{" "}
-              <Link href="/faq#how-much-does-it-cost" className={TEXT_LINK}>
-                See pricing
-              </Link>
-              .
-            </p>
-
-            {/* slot: primary CTA */}
-            <a
-              href={APP_SIGNUP_URL}
-              data-cta="main"
-              className="inline-block rounded-md bg-accent px-10 py-5 text-lg font-semibold text-background transition-colors hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-            >
-              Sign up free
-            </a>
-
-            {/* slot: micro-copy */}
-            <p className="mt-4 text-base text-text-muted">
-              No credit card to sign up. Takes about a minute to start your
-              first session.
-            </p>
-
-            {/* slot: dormant secondary. Built and wired to the retired
-                MailerLite form, deliberately hidden. Remove the `hidden`
-                attribute to bring it back; nothing else needs to change. */}
-            <div hidden className="mt-10 border-t border-border pt-8">
-              <p className="mb-4 text-base text-text-secondary">
-                Not ready? Get notified as it grows
+              {/* slot: subcopy */}
+              <p className="mb-10 text-lg leading-relaxed text-text-secondary">
+                Sign up, run a full practice board, and get{" "}
+                <strong className="font-semibold text-text-primary">
+                  every answer scored against its rubric, with the one thing to fix
+                  next time.
+                </strong>{" "}
+                Practice stays free after that. Ongoing feedback and progress
+                tracking take a plan.{" "}
+                <Link href="/faq#how-much-does-it-cost" className={TEXT_LINK}>
+                  See pricing
+                </Link>
+                .
               </p>
-              <WaitlistForm id="notify-form" />
-            </div>
 
+              {/* slot: primary CTA */}
+              <a
+                href={APP_SIGNUP_URL}
+                data-cta="main"
+                className="inline-block rounded-md bg-accent px-10 py-5 text-lg font-semibold text-background transition-colors hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              >
+                Sign up free
+              </a>
+
+              {/* slot: micro-copy */}
+              <p className="mt-4 text-base text-text-muted">
+                No credit card to sign up. Takes about a minute to start your
+                first session.
+              </p>
+
+              {/* slot: dormant secondary. Built and wired to the retired
+                  MailerLite form, deliberately hidden. Remove the `hidden`
+                  attribute to bring it back; nothing else needs to change. */}
+              <div hidden className="mt-10 border-t border-border pt-8">
+                <p className="mb-4 text-base text-text-secondary">
+                  Not ready? Get notified as it grows
+                </p>
+                <WaitlistForm id="notify-form" />
+              </div>
+
+            </PracticeCard>
           </div>
         </div>
       </section>

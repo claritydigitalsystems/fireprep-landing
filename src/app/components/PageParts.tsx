@@ -118,9 +118,72 @@ export function SectionHeading({
   );
 }
 
+/** The practice/signup closing card: the page's primary ask, so it sits
+    after PlaybookPromo and outranks it visually. Same frame and grid as
+    PlaybookPromo, with a full amber outline instead of the left rail and a
+    headline one step larger. From 1080px it adds the scored-answer
+    screenshot beside the copy; below that it is copy and buttons only.
+    Callers pass the copy under the headline (body, buttons, micro-copy) as
+    children, so each page keeps its own wording and links. */
+export function PracticeCard({
+  title,
+  children,
+}: {
+  title: React.ReactNode;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="border-2 border-accent bg-surface-raised p-8 lg:p-12">
+      <div className="min-[1080px]:grid min-[1080px]:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] min-[1080px]:items-center min-[1080px]:gap-12">
+        <div>
+          <p className="mb-3 flex items-center gap-2 font-display text-sm font-semibold uppercase tracking-[0.18em] text-accent">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="h-4 w-4"
+              aria-hidden="true"
+            >
+              <rect x="9" y="2" width="6" height="12" rx="3" />
+              <path d="M19 10v1a7 7 0 0 1-14 0v-1" />
+              <path d="M12 18v4" />
+            </svg>
+            Start practicing
+          </p>
+          <h2 className="mb-3 font-display text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
+            {title}
+          </h2>
+          {children}
+        </div>
+        <div className="hidden min-[1080px]:block">
+          <div className="overflow-hidden rounded-[6px] border-[1.5px] border-text-muted bg-device-body shadow-[0_6px_8px_-2px_rgba(0,0,0,0.9)]">
+            <div aria-hidden="true" className="flex items-center gap-1.5 px-2.5 py-2">
+              <span className="h-1.5 w-1.5 rounded-full bg-device-detail" />
+              <span className="h-1.5 w-1.5 rounded-full bg-device-detail" />
+              <span className="h-1.5 w-1.5 rounded-full bg-device-detail" />
+            </div>
+            <div className="relative aspect-[16/10] w-full overflow-hidden border-t border-device-detail bg-device-screen">
+              <Image
+                src="/screens/how-it-works/scored-desktop.png"
+                alt="An answer scored criterion by criterion in the First Call app"
+                fill
+                sizes="(max-width: 1079px) 1px, 560px"
+                className="object-cover object-top"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 /** Closing conversion block. Amber button = create the free account; the
     outlined one sends a cold visitor to the no-account taster on the home
-    page instead. */
+    page instead. Renders as PracticeCard, at PlaybookPromo's width. */
 export function CtaBlock({
   title = "Hear how you actually sound before the board does.",
   children,
@@ -135,29 +198,24 @@ export function CtaBlock({
   return (
     <section className={band ? "border-y border-border bg-surface" : undefined}>
       <div className="mx-auto w-full max-w-7xl px-6 py-[72px] lg:px-12 lg:py-[112px]">
-        <div
-          className={`mx-auto max-w-2xl text-center ${
-            band ? "" : "border-t border-border pt-[56px] lg:pt-[72px]"
-          }`}
-        >
-          <h2 className="mb-5 font-display text-3xl font-bold leading-tight text-text-primary lg:text-5xl">
-            {title}
-          </h2>
-          <p className="mb-8 text-lg leading-relaxed text-text-secondary">
-            {children ??
-              "Answer an oral board question out loud and get it scored against its rubric. No account needed for the first one."}
-          </p>
-          <div className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
-            <a href={APP_SIGNUP_URL} data-cta="main" className={PRIMARY_BUTTON}>
-              Sign up free
-            </a>
-            <Link href="/#try" className={SECONDARY_BUTTON}>
-              Try one question first
-            </Link>
-          </div>
-          <p className="mt-4 text-base text-text-muted">
-            Practice free. No credit card to sign up.
-          </p>
+        <div className="mx-auto max-w-5xl">
+          <PracticeCard title={title}>
+            <p className="mb-8 max-w-2xl text-base leading-relaxed text-text-secondary lg:text-lg">
+              {children ??
+                "Answer an oral board question out loud and get it scored against its rubric. No account needed for the first one."}
+            </p>
+            <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
+              <a href={APP_SIGNUP_URL} data-cta="main" className={PRIMARY_BUTTON}>
+                Sign up free
+              </a>
+              <Link href="/#try" className={SECONDARY_BUTTON}>
+                Try one question first
+              </Link>
+            </div>
+            <p className="mt-4 text-base text-text-muted">
+              Practice free. No credit card to sign up.
+            </p>
+          </PracticeCard>
         </div>
       </div>
     </section>

@@ -12,9 +12,9 @@ const SECTIONS = {
     id: "the-three-types-of-firefighter-interview-questions",
     title: "The three types of firefighter interview questions",
   },
-  behavioral: { id: "behavioral-questions", title: 'Behavioral questions: "Tell us about a time…"' },
-  situational: { id: "situational-questions", title: 'Situational questions: "What would you do if…"' },
-  values: { id: "values-questions", title: 'Values questions: "Why this job?"' },
+  behavioral: { id: "behavioral-questions", title: "Behavioral questions: “Tell us about a time…”" },
+  situational: { id: "situational-questions", title: "Situational questions: “What would you do if…”" },
+  values: { id: "values-questions", title: "Values questions: “Why this job?”" },
   howToPractice: { id: "how-to-practice-them", title: "How to practice them" },
 } satisfies Record<string, GuideSection>;
 
@@ -88,7 +88,7 @@ function Body() {
       <UL>
         <LI>
           Pick one specific event, not a summary of how you usually act.
-          &quot;I stay calm under pressure&quot; is a claim. The night at work
+          &ldquo;I stay calm under pressure&rdquo; is a claim. The night at work
           when you stayed calm is evidence.
         </LI>
         <LI>
@@ -139,8 +139,9 @@ function Body() {
       </P>
       <UL>
         <LI>
-          Work with the facts they give you. You aren&apos;t expected to know a
-          department&apos;s policies. If something important is missing, say
+          Work with the facts they give you. You usually aren&apos;t expected
+          to know a department&apos;s policies unless the question gives them
+          to you. If something important is missing, say
           what you&apos;d assume and keep going.
         </LI>
         <LI>
@@ -150,8 +151,8 @@ function Body() {
           another.
         </LI>
         <LI>
-          Commit to an action. Weighing options is good. Ending on &quot;it
-          depends&quot; isn&apos;t.
+          Commit to an action. Weighing options is good. Ending on &ldquo;it
+          depends&rdquo; isn&apos;t.
         </LI>
         <LI>
           Keep it realistic. A heroic answer that skips the ordinary, correct
@@ -190,7 +191,7 @@ function Body() {
       </P>
       <UL>
         <LI>
-          Be specific. &quot;I want to help people&quot; is where a lot of
+          Be specific. &ldquo;I want to help people&rdquo; is where a lot of
           answers start. What in your own life makes that true is what makes
           yours different.
         </LI>

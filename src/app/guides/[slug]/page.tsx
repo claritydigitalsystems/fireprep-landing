@@ -6,6 +6,7 @@ import { SectionToc } from "../../components/SectionToc";
 import {
   Eyebrow,
   PlaybookPromo,
+  PracticeCard,
   PRIMARY_BUTTON,
   SECONDARY_BUTTON,
   TEXT_LINK,
@@ -153,16 +154,15 @@ function EndCta({ variant }: { variant: GuideMeta["endCta"] }) {
     );
   }
   return (
-    <div className="fp-callout p-6 lg:p-8">
-      <h2 className="mb-2 font-display text-2xl font-bold leading-snug text-text-primary lg:text-3xl">
-        Practice it out loud, and see how it scores.
-      </h2>
-      <p className="mb-6 max-w-2xl text-base leading-relaxed text-text-secondary">
+    <PracticeCard title="Practice it out loud, and see how it scores.">
+      <p className="max-w-2xl text-base leading-relaxed text-text-secondary lg:text-lg">
         First Call asks you oral board questions out loud and scores every
         answer against a rubric written for that question. Practice free, and
         your first session&apos;s feedback is free.
       </p>
-      <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
+      {/* Stacking matches PlaybookPromo's `narrow`: the guide column is
+          narrower than the page. */}
+      <div className="mt-8 flex flex-col gap-3 sm:flex-row min-[1080px]:flex-col xl:flex-row">
         <a href={APP_SIGNUP_URL} data-cta="main" className={PRIMARY_BUTTON}>
           Sign up free
         </a>
@@ -170,7 +170,7 @@ function EndCta({ variant }: { variant: GuideMeta["endCta"] }) {
           Try one question first
         </Link>
       </div>
-    </div>
+    </PracticeCard>
   );
 }
 

@@ -12,6 +12,7 @@ import {
   Eyebrow,
   PRIMARY_BUTTON,
   PlaybookPromo,
+  PracticeCard,
   SECONDARY_BUTTON,
   SectionHeading,
   TEXT_LINK,
@@ -526,43 +527,41 @@ export default function HowItWorksPage() {
       </section>
 
       {/* 6. Closing: who it's for + the CTA, merged into one ending. A
-          centred CTA on the same raised band as the loop section, so the
-          page is bookended. Text column capped at 640px. */}
+          CTA card (PracticeCard) on the same raised band as the loop section, so the
+          page is bookended. Card at PlaybookPromo's width. */}
       <Shell label="Get started" band>
-        <div className="mx-auto max-w-[640px] text-center">
-          <Eyebrow center>Who it&apos;s for</Eyebrow>
-          <h2 className="mb-5 font-display text-3xl font-bold leading-tight text-balance text-text-primary lg:text-5xl">
-            Anyone with a firefighter interview coming up.
-          </h2>
-          <p className={`mb-8 ${BODY}`}>
-            Entry-level or lateral, any department. You don&apos;t need fire
-            experience to use it. The questions cover what oral boards
-            consistently evaluate, so the practice carries over wherever
-            you&apos;re testing.
-          </p>
-          {/* Stacked full width on mobile, primary on top. */}
-          <div className="flex flex-col gap-3 sm:flex-row sm:justify-center sm:gap-4">
-            <a href={APP_SIGNUP_URL} data-cta="main" className={PRIMARY_BUTTON}>
-              Sign up free
-            </a>
-            <Link href="/#try" className={SECONDARY_BUTTON}>
-              Try one question first
-            </Link>
-          </div>
-          <p className="mt-4 text-base text-text-muted">
-            Practice free. No credit card to sign up.
-          </p>
-          <p className="mt-8 text-base leading-relaxed text-text-muted">
-            New to the board?{" "}
-            <Link href="/guides/how-to-prepare-for-a-firefighter-oral-board" className={TEXT_LINK}>
-              Read how to prepare for a firefighter interview
-            </Link>
-            , or check the{" "}
-            <Link href="/faq" className={TEXT_LINK}>
-              FAQ
-            </Link>
-            .
-          </p>
+        <div className="mx-auto max-w-5xl">
+          <PracticeCard title="Anyone with a firefighter interview coming up.">
+            <p className={`mb-8 ${BODY}`}>
+              Entry-level or lateral, any department. You don&apos;t need fire
+              experience to use it. The questions cover what oral boards
+              consistently evaluate, so the practice carries over wherever
+              you&apos;re testing.
+            </p>
+            {/* Stacked full width on mobile, primary on top. */}
+            <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
+              <a href={APP_SIGNUP_URL} data-cta="main" className={PRIMARY_BUTTON}>
+                Sign up free
+              </a>
+              <Link href="/#try" className={SECONDARY_BUTTON}>
+                Try one question first
+              </Link>
+            </div>
+            <p className="mt-4 text-base text-text-muted">
+              Practice free. No credit card to sign up.
+            </p>
+            <p className="mt-8 text-base leading-relaxed text-text-muted">
+              New to the board?{" "}
+              <Link href="/guides/how-to-prepare-for-a-firefighter-oral-board" className={TEXT_LINK}>
+                Read how to prepare for a firefighter interview
+              </Link>
+              , or check the{" "}
+              <Link href="/faq" className={TEXT_LINK}>
+                FAQ
+              </Link>
+              .
+            </p>
+          </PracticeCard>
         </div>
       </Shell>
     </main>
