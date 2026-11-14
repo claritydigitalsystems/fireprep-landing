@@ -765,8 +765,14 @@ export default function Home() {
 
               {/* slot: subcopy */}
               <p className="mb-10 text-lg leading-relaxed text-text-secondary">
-                Your first session&apos;s feedback is free. After that, scored
-                feedback and progress tracking take a plan.{" "}
+                Sign up and run a full practice board. Your first session&apos;s
+                feedback is free:{" "}
+                <strong className="font-semibold text-text-primary">
+                  every answer scored against its rubric, with the one thing to fix
+                  next time
+                </strong>
+                . After that, scored feedback and progress tracking take a
+                plan.{" "}
                 <Link href="/faq#how-much-does-it-cost" className={TEXT_LINK}>
                   See pricing
                 </Link>
